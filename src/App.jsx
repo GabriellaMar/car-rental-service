@@ -8,7 +8,7 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 // const test = import.meta.env.VITE_API_TEST;
  const MainPage = lazy(() => import('./pages/MainPage/MainPage'));
-const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
+const CataloguePage = lazy(() => import('./pages/CataloguePage/CataloguePage'));
 const FavoritesPage = lazy(() => import('./pages/FavoritesPage/FavoritesPage'));
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Layout />}>
          <Route index element={<MainPage />} /> 
-          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog" element={<CataloguePage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
             {/* <Route path=":half" element={<HalfPage />} /> */}
           {/* </Route> */}
