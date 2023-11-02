@@ -44,10 +44,17 @@ export const CardButton = styled.button`
 export const ImageWrapper = styled.div`
    position: relative;
    margin-bottom: 14px;
+   object-fit: cover;
+   width: 274px;
+   height: 268px;
 
 `
 export const CarImg = styled.img`
    border-radius: 13px;
+   max-width: 100%;
+   /* max-height: 100%; */
+    height: 268px; 
+   
 `
 export const CarModelTittle = styled.h3`
    font-size: 16px;

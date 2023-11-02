@@ -13,9 +13,14 @@ width: 90px;
     position: relative;
 `
 export const LogoText = styled.span`
-    color: 'blue';
+    font-weight:700;
+    color: #3470FF;
     cursor: pointer;
     text-transform: uppercase;
+span {
+    color: #121417;
+}
+   
 `
 export const StyledWrapper = styled.div`
     position: absolute;
