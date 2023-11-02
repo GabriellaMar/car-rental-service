@@ -2,18 +2,18 @@ import { Suspense } from "react"
 import { Outlet } from 'react-router-dom';
 import { Header } from "../Header/Header.jsx"
 
- const Layout = ()=>{
-   return ( 
-   <>
-   <Header />
-   <main>
-   <Suspense fallback={<div>Loading...</div>}>
+const Layout = () => {
+  return (
+    <>
+      <Header />
+      <main>
+        <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
         </Suspense>
-   </main>
-   
-   </>
-   )
+      </main>
+
+    </>
+  )
 }
 
 export default Layout;

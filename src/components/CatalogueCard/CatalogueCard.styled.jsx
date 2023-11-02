@@ -24,20 +24,24 @@ export const CarInfoList = styled.ul`
     display: flex;
     gap: 12px;
     align-items: center;
-    color: rgba(18, 20, 23, 0.5);
+    /* color: rgba(18, 20, 23, 0.5); */
     margin-bottom: 4px;
 `
+
+export const CarInfoItem = styled.li`
+  color: var(--text-black);
+ `
 export const CardButton = styled.button`
    padding: 12px 98px;
    border: transparent;
    border-radius: 12px;
-   background-color: #3470FF;
+   background-color: var(--blue);
    color: #FFFFFF;
    margin-top: 24px;
    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 &:hover,
 &:focus {
-   background-color: #0B44CD;
+   background-color: var(--hover-blue)
 }
 `
 
@@ -60,10 +64,10 @@ export const CarModelTittle = styled.h3`
    font-size: 16px;
    font-weight: 500;
    line-height: calc(24/16);
-   color: #121417;
+   color: var(--black)
 
    span {
-      color: blue;
+      color:  var(--blue);
     }
 `
 export const StyledIcon = styled(LiaHeart)`
@@ -72,7 +76,7 @@ export const StyledIcon = styled(LiaHeart)`
    right: 16px;
    width: 18px;
    height: 18px;
-   fill: rgba(255, 255, 255, 0.8);
+   fill: var(--heart-white);
 `
 export const StyledIconBlue = styled(LiaHeartSolid)`
    position: absolute;
@@ -80,5 +84,5 @@ export const StyledIconBlue = styled(LiaHeartSolid)`
    right: 16px;
    width: 18px;
    height: 18px;
-   fill: #3470FF;
+   fill: var(--blue);
 `

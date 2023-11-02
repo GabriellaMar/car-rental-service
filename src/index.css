@@ -1,4 +1,13 @@
 @import-normalize;
+ :root {
+--black: #121417;
+--text-black:  rgba(18, 20, 23, 0.5);
+--blue: #0B44CD;
+--hover-blue: #0B44CD;
+--white: #FFFFFF;
+--heart-white: rgba(255, 255, 255, 0.8);
+--gray: #363535;
+ }
 /* bring in normalize.css styles */
 /* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Manrope:wght@400;500;600;700;900&display=swap'); */
 

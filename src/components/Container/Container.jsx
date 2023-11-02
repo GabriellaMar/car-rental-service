@@ -1,8 +1,7 @@
-import { Styledcontainer } from "./Container.styled"
+import { StyledContainer } from "./Container.styled"
 
-export const Container = ({children}) =>{
-return (
-    <Styledcontainer>{children}</Styledcontainer>
-)
-
+export const Container = ({ children }) => {
+    return (
+        <StyledContainer>{children}</StyledContainer>
+    )
 }

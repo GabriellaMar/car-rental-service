@@ -1,8 +1,20 @@
-import { useState } from 'react'
-import volvo from '../../images/CardCars/Volvo1.jpg'
-import { CarImg, CarInfoList, CarInfoWrapper, CardButton, CardWrapper, ImageWrapper, CarModelWrapper, CarModelTittle, StyledIcon } from './CatalogueCard.styled'
 
-export const CatalogueCard = ({ advert , toggleModal}) => {
+
+import {
+    CarImg,
+    CarInfoList,
+    CarInfoWrapper,
+    CardButton,
+    CardWrapper,
+    ImageWrapper,
+    CarModelWrapper,
+    CarModelTittle,
+    StyledIcon,
+    CarInfoItem
+} from './CatalogueCard.styled'
+// import { Modal } from '../Modal/Modal'
+
+export const CatalogueCard = ({ advert, openModal }) => {
     const {
         id,
         year,
@@ -21,14 +33,11 @@ export const CatalogueCard = ({ advert , toggleModal}) => {
         mileage,
         rentalConditions } = advert
 
-       
 
+    const location = address.split(' ');
+    const country = location[location.length - 1];
+    const city = location[(location.length - 1) - 1];
 
-        const location = address.split(' ');
-        const country = location[location.length-1];
-        const city = location[(location.length-1)-1];
-        
-       
     return (
         <CardWrapper>
             <ImageWrapper>
@@ -47,18 +56,18 @@ export const CatalogueCard = ({ advert , toggleModal}) => {
             </CarInfoWrapper>
             <div>
                 <CarInfoList>
-                    <li>{city} | </li>
-                    <li>{country} | </li>
-                    <li>{rentalCompany}  </li>
+                    <CarInfoItem>{city} | </CarInfoItem>
+                    <CarInfoItem>{country} | </CarInfoItem>
+                    <CarInfoItem>{rentalCompany}  </CarInfoItem>
                     {/* <li>Premium</li> */}
                 </CarInfoList>
                 <CarInfoList>
-                    <li>{type}</li>
-                    <li>{model} </li>
-                    <li>{mileage}</li>
-                    <li>{functionalities[0]}</li>
+                    <CarInfoItem>{type}</CarInfoItem>
+                    <CarInfoItem>{model} </CarInfoItem>
+                    <CarInfoItem>{mileage}</CarInfoItem>
+                    <CarInfoItem>{functionalities[0]}</CarInfoItem>
                 </CarInfoList>
-                <CardButton type='button'  onClick={toggleModal}>Learn more</CardButton>
+                <CardButton type='button' onClick={openModal}>Learn more</CardButton>
             </div>
         </CardWrapper>
     )

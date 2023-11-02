@@ -1,3 +1,4 @@
+import { RxCross2 } from 'react-icons/rx';
 import styled from 'styled-components';
 
 export const ModalBackdrop = styled.div`
@@ -18,12 +19,14 @@ export const ModalContent = styled.div`
   position: fixed;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
-  border-radius: 8px;
-  border: 1px solid rgba(220, 227, 229, 0.8);
+  max-width: 541px;
+ max-height: 752px;
+  background-color: var(--white);
+  border-radius: 24px;
+  /* border: 1px solid rgba(220, 227, 229, 0.8); */
   box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
   margin: 0 20px;
-  /* padding: 28px 20px; */
+   padding: 40px; 
   overflow: hidden;
 
   @media screen and (max-width: 374px) {
@@ -42,3 +45,12 @@ export const ModalContent = styled.div`
     /* padding: 32px; */
   }
 `;
+
+export const CloseModalBtn = styled(RxCross2)`
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 0px;
+  left: 520px;
+  margin-left: auto;
+`

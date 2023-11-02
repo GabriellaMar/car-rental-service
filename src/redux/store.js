@@ -20,12 +20,12 @@ import { advertReducer } from './slice/advertSlice';
 //   };
 
 export const store = configureStore({
-    reducer: {
+  reducer: {
     //   auth: persistReducer(authPersistConfig, authReducer), 
-      advert: advertReducer,
-        // filter: filterReducer
-    },
-    middleware: getDefaultMiddleware =>
+    advert: advertReducer,
+    // filter: filterReducer
+  },
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
