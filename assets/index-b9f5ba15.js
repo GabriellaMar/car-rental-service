@@ -118,32 +118,29 @@ Error generating stack: `+i.message+`
     margin: 0 auto;
   }
 `,ok=({children:e})=>j.jsx(rk,{children:e}),ik="/car-rental-service/assets/logo-d74e376a.png",lk=gn.img`
-width: 60px;
-height: 60px;
+    width: 60px;
+    height: 60px;
 
 `,uk=gn.div`
-position: absolute;
-top: -14px;
-width: 90px;
+    position: absolute;
+    top: -14px;
+    width: 90px;
      
     position: relative;
 `,sk=gn.span`
     font-weight:700;
-    color: #3470FF;
+    color: var(--blue);
     cursor: pointer;
     text-transform: uppercase;
 span {
-    color: #121417;
+    color: var(--black);
 }
    
 `,ak=gn.div`
     position: absolute;
 bottom: 5px;
 left: -8px;  
-
-    /* width: 80px;
-    height: 80px;  */
-   
+  
 `,ck=()=>j.jsx(j.Fragment,{children:j.jsxs(uk,{children:[j.jsx(lk,{src:ik}),j.jsx(ak,{children:j.jsxs(sk,{children:["Rent ",j.jsx("span",{children:"CAR"})]})})]})}),fk=gn.ul`
     display: flex;
     align-items: center;
@@ -168,4 +165,4 @@ align-items: center; */
     0 0 20px #00baff,
     0 0 40px #00baff,
     0 0 80px #00baff;
-`,fC=()=>j.jsx(aC,{children:j.jsx(cC,{children:"404"})}),dC=P.lazy(()=>Xc(()=>import("./MainPage-4a72221f.js"),[])),pC=P.lazy(()=>Xc(()=>import("./CataloguePage-692f8116.js"),[])),hC=P.lazy(()=>Xc(()=>import("./FavoritesPage-5c9dcaf6.js"),[]));function mC(){return j.jsx(j.Fragment,{children:j.jsx(A0,{children:j.jsxs(Hn,{path:"/",element:j.jsx(mk,{}),children:[j.jsx(Hn,{index:!0,element:j.jsx(dC,{})}),j.jsx(Hn,{path:"/catalog",element:j.jsx(pC,{})}),j.jsx(Hn,{path:"/favorites",element:j.jsx(hC,{})}),j.jsx(Hn,{path:"*",element:j.jsx(fC,{})})]})})})}gs.createRoot(document.getElementById("root")).render(j.jsx(jn.StrictMode,{children:j.jsx(Lw,{store:Fy,children:j.jsx(M0,{basename:"/car-rental-service",children:j.jsx(mC,{})})})}));export{fl as R,jn as a,yC as b,Zm as c,ss as f,j,P as r,gn as s,mw as u};
+`,fC=()=>j.jsx(aC,{children:j.jsx(cC,{children:"404"})}),dC=P.lazy(()=>Xc(()=>import("./MainPage-71aed4e9.js"),[])),pC=P.lazy(()=>Xc(()=>import("./CataloguePage-79723b02.js"),[])),hC=P.lazy(()=>Xc(()=>import("./FavoritesPage-0a37e2a3.js"),[]));function mC(){return j.jsx(j.Fragment,{children:j.jsx(A0,{children:j.jsxs(Hn,{path:"/",element:j.jsx(mk,{}),children:[j.jsx(Hn,{index:!0,element:j.jsx(dC,{})}),j.jsx(Hn,{path:"/catalog",element:j.jsx(pC,{})}),j.jsx(Hn,{path:"/favorites",element:j.jsx(hC,{})}),j.jsx(Hn,{path:"*",element:j.jsx(fC,{})})]})})})}gs.createRoot(document.getElementById("root")).render(j.jsx(jn.StrictMode,{children:j.jsx(Lw,{store:Fy,children:j.jsx(M0,{basename:"/car-rental-service",children:j.jsx(mC,{})})})}));export{ok as C,fl as R,jn as a,Qm as b,Zm as c,yC as d,ss as f,j,P as r,gn as s,mw as u};
