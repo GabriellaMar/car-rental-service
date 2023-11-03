@@ -48,14 +48,16 @@ export const CardButton = styled.button`
 export const ImageWrapper = styled.div`
    position: relative;
    margin-bottom: 14px;
-   object-fit: cover;
-   width: 274px;
-   height: 268px;
+   /* object-fit: cover; */
+   width: 100%;
+   /* width: 274px; */
+   
 
 `
 export const CarImg = styled.img`
+display: block;
    border-radius: 13px;
-   max-width: 100%;
+   max-width: 274px;
    /* max-height: 100%; */
     height: 268px; 
    
@@ -70,19 +72,35 @@ export const CarModelTittle = styled.h3`
       color:  var(--blue);
     }
 `
-export const StyledIcon = styled(LiaHeart)`
-   position: absolute;
+export const StyledBtn = styled.button`
+position: absolute;
    top: 16px;
    right: 16px;
    width: 18px;
    height: 18px;
-   fill: var(--heart-white);
+   border: none;
+  cursor: pointer;
+  background-color: transparent;
 `
-export const StyledIconBlue = styled(LiaHeartSolid)`
-   position: absolute;
-   top: 16px;
-   right: 16px;
+
+
+export const StyledIcon = styled(LiaHeart)`
+   display: block;
+   /* top: 16px;
+   right: 16px; */
    width: 18px;
    height: 18px;
-   fill: var(--blue);
+   color: var(--heart-white);
+   
+  
+`
+
+export const StyledIconBlue = styled(LiaHeartSolid)`
+  display: block;
+   /* top: 16px;
+   right: 16px; */
+   width: 18px;
+   height: 18px;
+   color: var(--blue);
+  
 `

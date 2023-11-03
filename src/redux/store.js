@@ -1,4 +1,3 @@
-import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -9,21 +8,24 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+
+import storage from 'redux-persist/lib/storage';
+import { configureStore } from "@reduxjs/toolkit";
 import { advertReducer } from './slice/advertSlice';
+import { favoriteReducer } from './slice/favoriteSlice';
 
 
 
-// const advertPersistConfig = {
-//     // key: 'auth',
-//     // storage,
-//     // whitelist: ['token'],
-//   };
+const favoritePersistConfig = {
+    key: 'favorite',
+    storage,
+    whitelist: ['favorite'],
+  };
 
 export const store = configureStore({
-  reducer: {
-    //   auth: persistReducer(authPersistConfig, authReducer), 
+  reducer: { 
     advert: advertReducer,
-    // filter: filterReducer
+    favorite: persistReducer(favoritePersistConfig, favoriteReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

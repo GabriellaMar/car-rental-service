@@ -20,7 +20,9 @@ export const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 541px;
- max-height: 752px;
+  max-height: 752px; 
+  /* height: 90vh; */
+
   background-color: var(--white);
   border-radius: 24px;
   /* border: 1px solid rgba(220, 227, 229, 0.8); */
@@ -28,19 +30,17 @@ export const ModalContent = styled.div`
   margin: 0 20px;
    padding: 40px; 
   overflow: hidden;
+  overflow-y: scroll;
 
-  @media screen and (max-width: 374px) {
-    /* width: 90vw; */
+
+  @media screen and (max-width: 768px) {
+    max-width: 441px;
+ 
   }
 
-  @media screen and (min-width: 375px) and (max-width: 767px) {
-    /* width: 90vw; */
-    /* max-width: 468px; */
-    /* padding: 32px; */
-  }
-
-  @media screen and (min-width: 768px) {
-    /* width: 468px; */
+  @media screen and (min-width: 1440px) {
+    max-width: 541px;
+  max-height: 752px; 
     margin: 0 auto;
     /* padding: 32px; */
   }

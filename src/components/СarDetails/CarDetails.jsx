@@ -13,37 +13,62 @@ import {
     CarFunctionality
 } from "./CarDetails.styled"
 
-export const CarDetails = () => {
+export const CarDetails = ({ data, country, city }) => {
+   
+    if (!data) {
+        return
+    }
+    const {
+        id,
+        year,
+        make,
+        model,
+        type,
+        img,
+        description,
+        fuelConsumption,
+        engineSize,
+        accessories,
+        functionalities,
+        rentalPrice,
+        rentalCompany,
+        address,
+        mileage,
+        rentalConditions } = data;
+
+
+    const conditionsArray = rentalConditions.split('\n');
+    const number = parseInt(conditionsArray[0].match(/\d+/))
+
     return (
         <ModalWindow>
 
-            <CarImage />
-            <CarModalTittle>KUBIK <span>Kubik</span>, 2008 </CarModalTittle>
+            <CarImage src={img} alt={make} />
+            <CarModalTittle>{make} <span>{model}</span>, {year} </CarModalTittle>
             <CarModalList>
-                <CarModalItem>Kiev | </CarModalItem>
-                <CarModalItem>Ukraine | </CarModalItem>
-                <CarModalItem>id: 9582 | </CarModalItem>
-                <CarModalItem>Year: 2008 |</CarModalItem>
-                <CarModalItem>Type: SUV  </CarModalItem>
-                {/* <li>Premium</li> */}
+                <CarModalItem>{city} | </CarModalItem>
+                <CarModalItem>{country} | </CarModalItem>
+                <CarModalItem>id: {id} | </CarModalItem>
+                <CarModalItem>{year} |</CarModalItem>
+                <CarModalItem>Type: {type}  </CarModalItem>
             </CarModalList>
             <CarModalList>
-                <CarModalItem>Fuel Consumption: 10.5 |</CarModalItem>
-                <CarModalItem>Engine Size: 3.6L V6 </CarModalItem>
+                <CarModalItem>Fuel Consumption: {fuelConsumption} |</CarModalItem>
+                <CarModalItem>Engine Size: {engineSize} </CarModalItem>
             </CarModalList>
-            <CarDescription>The Buick Enclave is a stylish and spacious SUV known for its comfortable ride and luxurious features.</CarDescription>
+            <CarDescription>{description}</CarDescription>
             <CarInfoTittle>Accessories and functionalities:</CarInfoTittle>
-            <CarFunctionality>Leather seats  | Panoramic sunroof | Power liftgate</CarFunctionality>
-            <CarFunctionality>Premium audio system | Remote start |  Blind-spot monitoring</CarFunctionality>
+            <CarFunctionality>{accessories.join(' | ')}</CarFunctionality>
+            <CarFunctionality>{functionalities.join(' | ')}</CarFunctionality>
             <CarInfoTittle>Rental Conditions: </CarInfoTittle>
             <CarDescriptionList>
-                <CarDescriptionItem>Minimum age : <span>25</span></CarDescriptionItem>
-                <CarDescriptionItem>Valid driver’s license</CarDescriptionItem>
+                <CarDescriptionItem>Minimum age : <span>{number}</span></CarDescriptionItem>
+                <CarDescriptionItem>{conditionsArray[1]}</CarDescriptionItem>
             </CarDescriptionList>
             <CarDescriptionList>
-                <CarDescriptionItem>Security deposite required </CarDescriptionItem>
-                <CarDescriptionItem>Mileage: <span>5,858</span></CarDescriptionItem>
-                <CarDescriptionItem>Price: <span>40$</span></CarDescriptionItem>
+                <CarDescriptionItem>{conditionsArray[2]} </CarDescriptionItem>
+                <CarDescriptionItem>Mileage: <span>{mileage}</span></CarDescriptionItem>
+                <CarDescriptionItem>Price: <span>{rentalPrice}</span></CarDescriptionItem>
             </CarDescriptionList>
             <CarModalBtn type='button'>Rental car</CarModalBtn>
         </ModalWindow>

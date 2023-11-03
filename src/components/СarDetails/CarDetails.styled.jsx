@@ -7,8 +7,10 @@ export const ModalWindow = styled.div`
   background-color: #FFFFFF; */
 `
 export const CarImage = styled.img`
-    max-width: 461px;
-    max-height: 248px;
+width: 100%;
+margin-bottom: 14px;
+    /* max-width: 461px;
+    max-height: 248px; */
 
 `
 export const CarModalTittle = styled.h2`
@@ -16,6 +18,7 @@ export const CarModalTittle = styled.h2`
     font-weight: 500;
     line-height: calc(24/18);
     color: var(--black);
+    margin-bottom: 8px;
 
    span {
       color: var(--blue);
@@ -89,5 +92,6 @@ export const CarModalList = styled.ul`
     font-size: 12px;
     line-height: calc(18/12);
     margin-bottom: 4px;
+    color: var(--text-black);
  `
  

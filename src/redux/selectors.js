@@ -8,3 +8,5 @@ export const selectAdvertLoading = state => state.advert.isLoading;
 
 // Селектор для отримання помилки
 export const selectAdvertError = state => state.advert.error;
+// Селектор для додавання фавориту
+export const selectFavorites = state=> state.favorite.favorite;

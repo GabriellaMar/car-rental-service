@@ -9,8 +9,8 @@ import { CarDetails } from '../СarDetails/CarDetails';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = ({ closeModal }) => {
-
+export const Modal = ({ closeModal, data, country, city }) => {
+// console.log("CARD:", data)
 
   const handleBackdropClick = (event) => {
     if (event.currentTarget === event.target) {
@@ -35,7 +35,7 @@ export const Modal = ({ closeModal }) => {
     >
       <ModalContent>
         <CloseModalBtn onClick={closeModal} />
-        <CarDetails />
+        <CarDetails data={data} country={country} city={city}/>
       </ModalContent>
     </ModalBackdrop>,
     modalRoot
