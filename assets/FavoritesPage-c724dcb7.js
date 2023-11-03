@@ -1,0 +1,1 @@
+import{u as a,s as i,a as l,j as r,C as n}from"./index-4ba9a1e3.js";import{C as c}from"./CatalogueList.styled-70fe3edc.js";const u=()=>{const s=a(i),o=a(l),t=o.filter(e=>s.includes(e.id));return console.log(o),console.log(t),console.log(s),r.jsx(n,{children:t.map(e=>r.jsx(c,{advert:e},e.id))})};export{u as default};
