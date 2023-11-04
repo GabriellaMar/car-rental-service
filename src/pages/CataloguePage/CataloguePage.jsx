@@ -9,6 +9,7 @@ import { Container } from '../../components/Container/Container.jsx';
 
 
 const CatalogPage = ({ adverts }) => {
+    console.log('ADVERTS', adverts)
     const dispatch = useDispatch();
     const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 12;
@@ -29,14 +30,14 @@ const CatalogPage = ({ adverts }) => {
     }, [adverts]);
     
 
-    const totalPages = Math.ceil(adverts.length / cardsPerPage)
+    // const totalPages = Math.ceil(adverts.length / cardsPerPage)
     
 
     return (
         <>
             <Container>
                 <CatalogueList adverts={loadedCards} />
-            <button onClick={loadMore}>LOAD MORE</button>
+          {adverts.length>=cardsPerPage  && <button onClick={loadMore}>LOAD MORE</button>}
             </Container>
         </>
     );

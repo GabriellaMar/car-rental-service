@@ -42,11 +42,15 @@ export const CatalogueCard = ({ advert }) => {
         mileage,
         rentalConditions } = advert
     const [showModal, setShowModal] = useState(false);
-    const favorite = useSelector(selectFavorites);
-
+    const favorite = useSelector(state => state.favorite.favorite);
+    console.log('FAVORITE', favorite)
+console.log("ІДЕНТИФІКАТОР КАРДКИ", id)
     
     // const [isFavorite, setIsFavorite] = useState(false);
-    const statusFavorite = favorite.includes(id);
+    // const statusFavorite = favorite.includes(id);
+    const statusFavorite = favorite.some((favoriteItem) => favoriteItem.id === advert.id);
+      const [isFavorite, setIsFavorite] = useState(statusFavorite);
+    console.log('STATUS:', statusFavorite)
 
     const dispatch = useDispatch();
 
@@ -70,14 +74,27 @@ export const CatalogueCard = ({ advert }) => {
     const handleAddFavorites = () => {
         console.log("ADDDDDD!!!")
         dispatch(addFavoriteThunk(advert))
-        //  setIsFavorite(true)
+          setIsFavorite(true)
     }
 
-    const handleDeleteFavorites = (advertId) => {
-        console.log('Delete!!!')
-        dispatch(deleteFavoriteThunk(advertId))
-        //  setIsFavorite(false)
+    const handleDeleteFavorites = () => {
+        console.log(id);
+        console.log('Delete!!!');
+    
+        const indexOfFavorite = favorite.findIndex((favoriteItem) => favoriteItem.id === id);
+        
+        if (indexOfFavorite !== -1) {
+            const updatedFavorite = [...favorite];
+            updatedFavorite.splice(indexOfFavorite, 1);
+            // Зберегти оновлений список улюблених в localStorage
+            localStorage.setItem('favorite', JSON.stringify(updatedFavorite));
+            
+            dispatch(deleteFavoriteThunk(id));
+        }
+        setIsFavorite(false);
     }
+    
+    
     // const handleAdvertDetails = (advertId)=>{
     //     console.log(advertId)
     //     dispatch(getAdvertThunk(advertId))
@@ -89,8 +106,8 @@ export const CatalogueCard = ({ advert }) => {
         <CardWrapper>
             <ImageWrapper>
                 <CarImg src={img} alt={make} />
-                <StyledBtn onClick={!statusFavorite ? handleAddFavorites : handleDeleteFavorites} type='button'>
-                    {!statusFavorite ? <StyledIcon /> : <StyledIconBlue />}
+                <StyledBtn onClick={!isFavorite ? handleAddFavorites : handleDeleteFavorites} type='button'>
+                    {!isFavorite ? <StyledIcon /> : <StyledIconBlue />}
                 </StyledBtn>
 
                 {/* <StyledIconBlue onClick={()=>handleDeleteFavorites(id)}/> */}

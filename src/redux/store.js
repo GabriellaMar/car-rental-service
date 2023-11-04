@@ -16,16 +16,17 @@ import { favoriteReducer } from './slice/favoriteSlice';
 
 
 
-const favoritePersistConfig = {
-    key: 'favorite',
-    storage,
-    whitelist: ['favorite'],
-  };
+// const favoritePersistConfig = {
+//     key: 'favorite',
+//     storage,
+//     whitelist: ['favorite'],
+//   };
 
 export const store = configureStore({
   reducer: { 
     advert: advertReducer,
-    favorite: persistReducer(favoritePersistConfig, favoriteReducer),
+    favorite:  favoriteReducer,
+    // favorite: persistReducer(favoritePersistConfig, favoriteReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

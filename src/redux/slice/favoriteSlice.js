@@ -20,7 +20,7 @@ const favoriteSlice = createSlice({
         })
         .addCase(addFavoriteThunk.fulfilled, (state, action) => {
           state.isLoading = false;
-          state.favorite.push(action.payload);
+          state.favorite.push(action.payload );
           state.error = null;
         })
         .addCase(addFavoriteThunk.rejected, (state, action) => {
@@ -34,7 +34,7 @@ const favoriteSlice = createSlice({
           .addCase(deleteFavoriteThunk.fulfilled, (state, action) => {
             state.isLoading = false;
             // state.favorite.push(action.payload);
-            state.favorite = state.favorite.filter((favorite) => favorite.id !== action.payload.id)
+            state.favorite = state.favorite.filter((item) => item.id !== action.payload.id)
             state.error = null;
           })
           .addCase(deleteFavoriteThunk.rejected, (state, action) => {

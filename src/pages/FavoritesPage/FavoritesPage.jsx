@@ -3,27 +3,26 @@ import { Container } from "../../components/Container/Container";
 import { CatalogueList } from "../../components/GatalogueList/CatalogueList";
 import { selectAdvertList, selectFavorites } from "../../redux/selectors";
 import { CatalogueCard } from "../../components/CatalogueCard/CatalogueCard";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { fetchAdvertThunk } from "../../redux/operation";
+import { AdvertList } from "./FavoritesPage.styled";
+
 
 const FavoritesPage = () => {
-    const favorite = useSelector(selectFavorites);
-    const favoriteCards = useSelector(selectAdvertList);
-    const filteredFavoriteCards = favoriteCards.filter((card) => favorite.includes(card.id));
-    console.log(favoriteCards)
-    console.log(filteredFavoriteCards)
+    const [showFavorite, setShowFavorite] = useState(true); // Показати обрані за замовчуванням
 
-    console.log(favorite)
+    const favorite = useSelector(state => state.favorite.favorite);
+    console.log('FAVORITE на сторінці Фейворит', favorite);
 
     return (
         <Container>
-            {filteredFavoriteCards.map((card) => (
-                <CatalogueCard advert={card} key={card.id} />))}
-
-
+            <AdvertList>
+            {showFavorite && favorite.map((card) => (
+                <CatalogueCard advert={card} key={card.id} />
+            ))}
+            </AdvertList>
         </Container>
     )
 }
-
 
 export default FavoritesPage;
