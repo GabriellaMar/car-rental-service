@@ -1,4 +1,6 @@
 
+// import { RentalCarBtn } from "../RentalCarBtn/RentalCarBtn";
+import { RentalCarBtn } from "../RentalBtn/RentalCarBtn";
 import {
     CarDescription,
     CarDescriptionList,
@@ -9,7 +11,7 @@ import {
     CarModalTittle,
     ModalWindow,
     CarDescriptionItem,
-    CarModalBtn,
+    // CarModalBtn,
     CarFunctionality
 } from "./CarDetails.styled"
 
@@ -70,7 +72,8 @@ export const CarDetails = ({ data, country, city }) => {
                 <CarDescriptionItem>Mileage: <span>{mileage}</span></CarDescriptionItem>
                 <CarDescriptionItem>Price: <span>{rentalPrice}</span></CarDescriptionItem>
             </CarDescriptionList>
-            <CarModalBtn type='button'>Rental car</CarModalBtn>
+            {/* <CarModalBtn type='button'>Rental car</CarModalBtn> */}
+            <RentalCarBtn />
         </ModalWindow>
     )
 }

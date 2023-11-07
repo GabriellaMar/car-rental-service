@@ -1,43 +1,39 @@
 
 import { useDispatch, useSelector } from "react-redux";
-import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
+// import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
 import { useEffect, useState} from "react";
 import { fetchAdvertThunk } from "../../redux/operation.js";
 import { Container } from '../../components/Container/Container.jsx';
+// import { SearchSection } from "../../components/Search/Search.jsx";
+import { selectAdvertList } from "../../redux/selectors.js";
+import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
+import SearchSection from "../../components/Search/Search.jsx";
 
 
 
 
-const CatalogPage = ({ adverts }) => {
-    console.log('ADVERTS', adverts)
+const CatalogPage = () => {
+   
+const adverts = useSelector(selectAdvertList);
     const dispatch = useDispatch();
-    const [currentPage, setCurrentPage] = useState(1);
-    const cardsPerPage = 12;
-    const [loadedCards, setloadedCards] = useState([]);
+    const [filteredAdverts, setFilteredAdverts] = useState([]);
 
     useEffect(() => {
-        dispatch(fetchAdvertThunk({ page: currentPage, limit: cardsPerPage }));
-    }, [currentPage]);
+        dispatch(fetchAdvertThunk( ));
+    }, [ dispatch]);
 
-    const loadMore = () => {
-        setCurrentPage(currentPage + 1);
+    const updateFilteredAdverts = (filteredData) => {
+        setFilteredAdverts(filteredData);
     };
-
-
-    useEffect(() => {
-        setloadedCards([...loadedCards, ...adverts]);
-        console.log(loadedCards)
-    }, [adverts]);
-    
-
-    // const totalPages = Math.ceil(adverts.length / cardsPerPage)
-    
 
     return (
         <>
             <Container>
-                <CatalogueList adverts={loadedCards} />
-          {adverts.length>=cardsPerPage  && <button onClick={loadMore}>LOAD MORE</button>}
+      
+                 {/* <SearchSection  adverts={adverts} />  */}
+                 <SearchSection adverts={adverts}  updateFilteredAdverts={updateFilteredAdverts} />
+              {/* <CatalogueList  adverts={adverts}  /> */}
+              <CatalogueList adverts={filteredAdverts.length > 0 ? filteredAdverts : adverts} />
             </Container>
         </>
     );

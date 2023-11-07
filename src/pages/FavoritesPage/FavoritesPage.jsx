@@ -9,7 +9,7 @@ import { AdvertList } from "./FavoritesPage.styled";
 
 
 const FavoritesPage = () => {
-    const [showFavorite, setShowFavorite] = useState(true); // Показати обрані за замовчуванням
+    const [showFavorite, setShowFavorite] = useState(true); 
 
     const favorite = useSelector(state => state.favorite.favorite);
     console.log('FAVORITE на сторінці Фейворит', favorite);

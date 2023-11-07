@@ -1,0 +1,256 @@
+
+
+import { toast } from 'react-toastify';
+import {
+    FilterContainer,
+    InputBlock,
+    Label,
+    MileageInputLeft,
+    MileageInputRight,
+    MileageInputWrapper,
+    ModelDropdown, ModelInput,
+    ModelInputBtn,
+    ModelList,
+    PriceInput,
+    PriceInputBtn,
+    PriceList,
+    SearchBtn,
+    InputsWrapper,
+    PriceDropdown,
+    ArrowUp,
+    ArrowDown,
+    ModelListItem,
+    PriceListItem
+} from './Search.style';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilter } from '../../redux/slice/filterSlice';
+// import { CatalogueList } from '../GatalogueList/CatalogueList';
+
+
+export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
+
+    const filter = useSelector(state => state.filter.filter);
+    // console.log(filter)
+    const dispatch = useDispatch();
+
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [model, setModel] = useState('');
+    const [cars, setCars] = useState([]);
+
+    const [price, setPrice] = useState('');
+    const [startMileage, setStartMileage] = useState('');
+    const [endMileage, setEndMileage] = useState('');
+     const [filteredAdverts, setFilteredAdverts] = useState([]);
+    const [showMessage, setShowMessage] = useState(false); //
+
+ 
+
+    const getUniqueModels = () => {
+        const make = adverts.map((advert) => advert.make);
+        const uniqueModels = [...new Set(make)];
+        setCars(uniqueModels);
+    };
+
+    useEffect(() => {
+        getUniqueModels();
+    }, [adverts]);
+
+  
+
+    const minPrice = 30;
+    const maxPrice = 500;
+    const step = 10;
+
+    const priceOptions = [];
+    for (let i = minPrice; i <= maxPrice; i += step) {
+        priceOptions.push(i);
+    }
+
+    // dispatch(setFilter({ model, price, startMileage, endMileage }));
+
+
+    const handleSearch = async () => {
+        console.log(adverts)
+        console.log(filter)
+
+       
+       
+        const filteredCars= adverts.filter((advert) => {
+             console.log("ADVERT CARS:", advert.make)
+             console.log("FILTER CARS:", filter.model)
+             if (model && filter.model && !advert.make.toLowerCase().includes(filter.model.toLowerCase())) {
+                return false;
+            }
+    
+                if (price && !isNaN(price) && parseFloat(advert.price) === parseFloat(filter.price)) {
+                return true;
+            }
+    
+            if (startMileage !== '' && endMileage !== '') {
+                const numberStartMileage = Number(startMileage);
+                const numberEndMileage = Number(endMileage);
+                if (numberStartMileage < numberEndMileage) {
+                    return true;
+                }
+            }
+    
+            return true;
+        })
+    
+     dispatch(setFilter({ model, price, startMileage, endMileage }));
+       updateFilteredAdverts(filteredCars)
+       
+        console.log('FilteredAdverts', filteredCars)
+    
+   
+}
+
+    const toggleDropdown = (field) => {
+        setIsDropdownOpen(isDropdownOpen === field ? null : field);
+    };
+
+
+    const reset = ()=>{
+       
+            setModel('');
+            setPrice('');
+            setStartMileage('');
+            setEndMileage('');
+            updateFilteredAdverts(adverts)
+            // setShowNoCarsMessage(false);
+          };
+    
+
+    const handleChange = (e) => {
+        const inputValue = e.target.name; 
+        switch (inputValue) {
+            case 'model':
+                setModel(e.target.value); 
+                break;
+            case 'price':
+                setPrice(e.target.value); 
+                break;
+            case 'endMileage':
+                setEndMileage(e.target.value);
+                break;
+                case 'startMileage':
+                setStartMileage(e.target.value);
+            default:
+                return;
+        }
+        if (!isDropdownOpen) {
+            setIsDropdownOpen(true);
+        }
+    }
+
+
+    return (
+        <FilterContainer>
+            <InputsWrapper>
+                <InputBlock>
+                    <Label htmlFor="modelTitle">Car brand</Label>
+                    <ModelInput
+                        id="modelTitle"
+                        name='model'
+                        placeholder="Enter the text"
+                        value={model}
+                        onChange={handleChange}
+                    />
+                    <ModelInputBtn onClick={() => toggleDropdown('model')} type="button">
+                        {isDropdownOpen === 'model' ? <ArrowUp /> : <ArrowDown />}
+                    </ModelInputBtn>
+                    {isDropdownOpen === 'model' && (
+                        <ModelDropdown>
+                            <ModelList>
+                                {cars
+                                    .filter((car) =>
+                                        car.toLowerCase().includes(model.toLowerCase())
+                                    )
+                                    .map((car, index) => (
+                                        <ModelListItem
+                                            key={index}
+                                            onClick={() => setModel(car)}
+                                        >{car}</ModelListItem >
+                                    ))}
+                            </ModelList>
+                        </ModelDropdown>
+                    )}
+                </InputBlock>
+                <InputBlock>
+                    <Label htmlFor="priceTitle">Price/ 1 hour </Label>
+                    <PriceInput
+                        id="priceTitle"
+                        name='price'
+                        placeholder="To $"
+                        value={price}
+                        onChange={handleChange}
+                    />
+                    <PriceInputBtn type="button" onClick={() => toggleDropdown('price')}>
+                        {isDropdownOpen === 'price' ? <ArrowUp /> : <ArrowDown />}
+                    </PriceInputBtn>
+                    {isDropdownOpen === 'price' && (
+                        <PriceDropdown>
+                            <PriceList>
+                            {priceOptions.map((priceOption, index) => (
+                    <PriceListItem
+                        key={index}
+                        onClick={() => setPrice(priceOption)}
+                    >
+                        {priceOption}
+                    </PriceListItem>
+                ))}
+                            </PriceList>
+                        </PriceDropdown>
+                    )}
+                </InputBlock>
+                <InputBlock>
+                    <Label htmlFor="mileageTitle">Сar mileage / km </Label>
+                    <MileageInputWrapper>
+                        <MileageInputLeft
+                            id="mileageTitle"
+                            name = 'startMileage'
+                            placeholder="from"
+                            value={startMileage}
+                            onChange={handleChange}
+                        />
+                        <MileageInputRight
+                            type="number"
+                            name = 'endMileage'
+                            placeholder="to"
+                            value = {endMileage}
+                            onChange={handleChange}
+                        />
+                    </MileageInputWrapper>
+                </InputBlock>
+                <SearchBtn type="button" onClick={ handleSearch } >
+                    Search
+                </SearchBtn>
+                 <SearchBtn type="button" onClick = {reset}>
+        Reset
+      </SearchBtn> 
+           {/* <CatalogueList  adverts={adverts}  /> */}
+            </InputsWrapper>
+
+        </FilterContainer>
+
+    )
+};
+
+export default SearchSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // onKeyDown={event => handleInputKeyPress(event, 'mileage')}
+  //   onKeyDown={event => handleInputKeyPress(event, 'price')}
+        // onKeyDown={event => handleInputKeyPress(event, 'mileage')}

@@ -18,7 +18,8 @@ import {
 import { Modal } from '../Modal/Modal';
 import { useState } from 'react';
 import { selectFavorites } from '../../redux/selectors';
-import { addFavoriteThunk, deleteFavoriteThunk } from '../../redux/operation';
+
+import { addFavorite, deleteFavorite } from '../../redux/slice/favoriteSlice';
 
 
 
@@ -40,17 +41,12 @@ export const CatalogueCard = ({ advert }) => {
         rentalCompany,
         address,
         mileage,
-        rentalConditions } = advert
+        rentalConditions } = advert;
+
     const [showModal, setShowModal] = useState(false);
-    const favorite = useSelector(state => state.favorite.favorite);
-    console.log('FAVORITE', favorite)
-console.log("ІДЕНТИФІКАТОР КАРДКИ", id)
-    
-    // const [isFavorite, setIsFavorite] = useState(false);
-    // const statusFavorite = favorite.includes(id);
-    const statusFavorite = favorite.some((favoriteItem) => favoriteItem.id === advert.id);
-      const [isFavorite, setIsFavorite] = useState(statusFavorite);
-    console.log('STATUS:', statusFavorite)
+    const favoriteCars = useSelector(selectFavorites);
+
+    const statusFavorite = favoriteCars.some((item) => item.id === advert.id);
 
     const dispatch = useDispatch();
 
@@ -73,51 +69,29 @@ console.log("ІДЕНТИФІКАТОР КАРДКИ", id)
 
     const handleAddFavorites = () => {
         console.log("ADDDDDD!!!")
-        dispatch(addFavoriteThunk(advert))
-          setIsFavorite(true)
+        dispatch(addFavorite(advert))
+
     }
 
     const handleDeleteFavorites = () => {
         console.log(id);
         console.log('Delete!!!');
-    
-        const indexOfFavorite = favorite.findIndex((favoriteItem) => favoriteItem.id === id);
-        
-        if (indexOfFavorite !== -1) {
-            const updatedFavorite = [...favorite];
-            updatedFavorite.splice(indexOfFavorite, 1);
-            // Зберегти оновлений список улюблених в localStorage
-            localStorage.setItem('favorite', JSON.stringify(updatedFavorite));
-            
-            dispatch(deleteFavoriteThunk(id));
-        }
-        setIsFavorite(false);
-    }
-    
-    
-    // const handleAdvertDetails = (advertId)=>{
-    //     console.log(advertId)
-    //     dispatch(getAdvertThunk(advertId))
-    //     toggleModal()
 
-    // }
+        dispatch(deleteFavorite(id));
+    }
 
     return (
         <CardWrapper>
             <ImageWrapper>
                 <CarImg src={img} alt={make} />
-                <StyledBtn onClick={!isFavorite ? handleAddFavorites : handleDeleteFavorites} type='button'>
-                    {!isFavorite ? <StyledIcon /> : <StyledIconBlue />}
+                <StyledBtn onClick={!statusFavorite ? handleAddFavorites : handleDeleteFavorites} type='button'>
+                    {!statusFavorite ? <StyledIcon /> : <StyledIconBlue />}
                 </StyledBtn>
-
-                {/* <StyledIconBlue onClick={()=>handleDeleteFavorites(id)}/> */}
-
             </ImageWrapper>
             <CarInfoWrapper>
                 <CarModelWrapper>
                     <CarModelTittle>{make} <span>{model}</span>, {year}
                     </CarModelTittle>
-
                 </CarModelWrapper>
                 <p>{rentalPrice}</p>
             </CarInfoWrapper>
@@ -140,3 +114,4 @@ console.log("ІДЕНТИФІКАТОР КАРДКИ", id)
         </CardWrapper>
     )
 }
+
