@@ -2,16 +2,10 @@
 import styled from 'styled-components';
 
 export const ModalWindow = styled.div`
-  /* max-width: 541px;
-  max-height: 752px;
-  background-color: #FFFFFF; */
 `
 export const CarImage = styled.img`
 width: 100%;
 margin-bottom: 14px;
-    /* max-width: 461px;
-    max-height: 248px; */
-
 `
 export const CarModalTittle = styled.h2`
     font-size: 18px;
@@ -34,7 +28,6 @@ export const CarModalList = styled.ul`
     gap: 12px;
     align-items: center;
     margin-bottom: 4px;
-    /* color: rgba(18, 20, 23, 0.5); */
  `
 
  export const CarModalItem = styled.li`
@@ -71,20 +64,6 @@ export const CarModalList = styled.ul`
     span {
         color: var(--blue);
     }
- `
-
- export const CarModalBtn = styled.button`
-    padding: 12px 50px;
-    background-color: var(--blue);
-    color: var(--white);
-    border-color: transparent;
-    border-radius: 12px;
-    margin-top: 16px;
-
-    &:hover,
-    &:focus {
-    background-color: var(--hover-blue);
-}
  `
 
  export const CarFunctionality = styled.p`

@@ -1,8 +1,6 @@
 
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
-// import PropTypes from 'prop-types';
-
 import { CloseModalBtn, ModalBackdrop, ModalContent } from './Modal.styled';
 import { CarDetails } from '../СarDetails/CarDetails';
 
@@ -10,7 +8,6 @@ import { CarDetails } from '../СarDetails/CarDetails';
 const modalRoot = document.querySelector('#modal-root');
 
 export const Modal = ({ closeModal, data, country, city }) => {
-// console.log("CARD:", data)
 
   const handleBackdropClick = (event) => {
     if (event.currentTarget === event.target) {
@@ -35,7 +32,7 @@ export const Modal = ({ closeModal, data, country, city }) => {
     >
       <ModalContent>
         <CloseModalBtn onClick={closeModal} />
-        <CarDetails data={data} country={country} city={city}/>
+        <CarDetails data={data} country={country} city={city} />
       </ModalContent>
     </ModalBackdrop>,
     modalRoot

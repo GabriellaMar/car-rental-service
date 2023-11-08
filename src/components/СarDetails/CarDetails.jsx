@@ -1,4 +1,5 @@
 
+import { RentalCarBtn } from "../RentalBtn/RentalCarBtn";
 import {
     CarDescription,
     CarDescriptionList,
@@ -9,12 +10,11 @@ import {
     CarModalTittle,
     ModalWindow,
     CarDescriptionItem,
-    CarModalBtn,
     CarFunctionality
 } from "./CarDetails.styled"
 
 export const CarDetails = ({ data, country, city }) => {
-   
+
     if (!data) {
         return
     }
@@ -31,8 +31,6 @@ export const CarDetails = ({ data, country, city }) => {
         accessories,
         functionalities,
         rentalPrice,
-        rentalCompany,
-        address,
         mileage,
         rentalConditions } = data;
 
@@ -42,7 +40,6 @@ export const CarDetails = ({ data, country, city }) => {
 
     return (
         <ModalWindow>
-
             <CarImage src={img} alt={make} />
             <CarModalTittle>{make} <span>{model}</span>, {year} </CarModalTittle>
             <CarModalList>
@@ -70,7 +67,7 @@ export const CarDetails = ({ data, country, city }) => {
                 <CarDescriptionItem>Mileage: <span>{mileage}</span></CarDescriptionItem>
                 <CarDescriptionItem>Price: <span>{rentalPrice}</span></CarDescriptionItem>
             </CarDescriptionList>
-            <CarModalBtn type='button'>Rental car</CarModalBtn>
+            <RentalCarBtn />
         </ModalWindow>
     )
 }

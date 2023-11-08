@@ -1,19 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Manrope:wght@400;500;600;700;900&display=swap'); 
 @import-normalize;
  :root {
 --black: #121417;
 --text-black:  rgba(18, 20, 23, 0.5);
---blue: #0B44CD;
---hover-blue: #0B44CD;
+--blue: #1752b2;
+--hover-blue: #134698;;
 --white: #FFFFFF;
 --heart-white: rgba(255, 255, 255, 0.8);
 --gray: #363535;
+--dropdawn:  #6d6c6c;
  }
-/* bring in normalize.css styles */
-/* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Manrope:wght@400;500;600;700;900&display=swap'); */
+
 
 body {
-  /* background-color: #000; */
-  /* background-image: url('./assets/background.png'); */
+
   background-size: auto 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -24,6 +25,8 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0;
+  
+
 }
 h1,
 h2,
@@ -47,4 +50,28 @@ img {
 }
 button {
   cursor: pointer;
+}
+@font-face {
+  font-family:'Manrope-400';
+  src: url(./fonts/Manrope-Regular.ttf);
+}
+
+@font-face {
+  font-family: Manrope-500;
+  src: url(./fonts/Manrope-Medium.ttf);
+}
+
+@font-face {
+  font-family: Manrope-600;
+  src: url(./fonts/Manrope-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Manrope-400;
+  src: url(./fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Montserrat-600';
+  src: url(./fonts/Montserrat-SemiBold.ttf);
 }

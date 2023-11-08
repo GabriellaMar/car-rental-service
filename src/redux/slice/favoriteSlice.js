@@ -1,48 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { addFavoriteThunk, deleteFavoriteThunk } from '../operation';
+
 
 export const initialState = {
   favorite: [],
-  isLoading: false,
-  error: null,
-
 }
 
 const favoriteSlice = createSlice({
-    name: 'favorite',
-    initialState: initialState,
-  
-    extraReducers: builder =>
-      builder
-        .addCase(addFavoriteThunk.pending, (state) => {
-          state.isLoading = true;
-          state.error = null;
-        })
-        .addCase(addFavoriteThunk.fulfilled, (state, action) => {
-          state.isLoading = false;
-          state.favorite.push(action.payload );
-          state.error = null;
-        })
-        .addCase(addFavoriteThunk.rejected, (state, action) => {
-          state.isLoading = true;
-          state.error = action.payload;
-        })
-        .addCase(deleteFavoriteThunk.pending, (state) => {
-            state.isLoading = true;
-            state.error = null;
-          })
-          .addCase(deleteFavoriteThunk.fulfilled, (state, action) => {
-            state.isLoading = false;
-            // state.favorite.push(action.payload);
-            state.favorite = state.favorite.filter((item) => item.id !== action.payload.id)
-            state.error = null;
-          })
-          .addCase(deleteFavoriteThunk.rejected, (state, action) => {
-            state.isLoading = true;
-            state.error = action.payload;
-          })
-  
-    })
+  name: 'favorite',
+  initialState: initialState,
+  // add favorite
+  reducers: {
+    addFavorite(state, action) {
+      state.favorite.push(action.payload)
+    },
+    // delete  favorite
+    deleteFavorite(state, action) {
+      const index = state.favorite.findIndex(favorite => favorite.id === action.payload);
+      state.favorite.splice(index, 1);
+    }
+  }
 
+})
 
-    export const favoriteReducer = favoriteSlice.reducer;
+export const { addFavorite, deleteFavorite } = favoriteSlice.actions
+export const favoriteReducer = favoriteSlice.reducer;

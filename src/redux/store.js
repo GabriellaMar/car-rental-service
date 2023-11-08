@@ -1,3 +1,4 @@
+import { configureStore } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,
@@ -10,30 +11,35 @@ import {
 } from 'redux-persist';
 
 import storage from 'redux-persist/lib/storage';
-import { configureStore } from "@reduxjs/toolkit";
+;
 import { advertReducer } from './slice/advertSlice';
 import { favoriteReducer } from './slice/favoriteSlice';
+import { filterReducer } from './slice/filterSlice';
 
 
 
-// const favoritePersistConfig = {
-//     key: 'favorite',
-//     storage,
-//     whitelist: ['favorite'],
-//   };
+const favoritePersistConfig = {
+    key: 'favorite',
+    storage,
+     whitelist: ['favorite'],
+  };
 
+  const persistedFavoriteReducer = persistReducer(favoritePersistConfig, favoriteReducer);
 export const store = configureStore({
   reducer: { 
     advert: advertReducer,
-    favorite:  favoriteReducer,
-    // favorite: persistReducer(favoritePersistConfig, favoriteReducer),
+    filter: filterReducer,
+   favorite: persistedFavoriteReducer,
+   
+  
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
+  getDefaultMiddleware({
+    serializableCheck: {
+      ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+    },
+  }),
 });
 
 export const persistor = persistStore(store);
+

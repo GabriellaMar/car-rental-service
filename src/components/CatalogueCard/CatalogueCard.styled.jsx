@@ -10,6 +10,7 @@ export const CardWrapper = styled.div`
     max-width: 274px;
     max-height: 426px;
     margin: 0 auto;
+    /* box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25); */
  `
 
 export const CarModelWrapper = styled.div`
@@ -18,6 +19,7 @@ export const CarModelWrapper = styled.div`
     margin-bottom: 8px;
 `
 export const CarInfoList = styled.ul`
+    font-family: 'Manrope', sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: calc(18/12);
@@ -29,16 +31,20 @@ export const CarInfoList = styled.ul`
 `
 
 export const CarInfoItem = styled.li`
+
   color: var(--text-black);
+ color: rgba(229, 225, 225, 0.5);
  `
 export const CardButton = styled.button`
    padding: 12px 98px;
    border: transparent;
    border-radius: 12px;
    background-color: var(--blue);
-   color: #FFFFFF;
+   color: rgba(243, 240, 240, 0.996);
    margin-top: 24px;
    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
+  
 &:hover,
 &:focus {
    background-color: var(--hover-blue)
@@ -48,25 +54,22 @@ export const CardButton = styled.button`
 export const ImageWrapper = styled.div`
    position: relative;
    margin-bottom: 14px;
-   /* object-fit: cover; */
    width: 100%;
-   /* width: 274px; */
-   
-
 `
 export const CarImg = styled.img`
-display: block;
+   display: block;
    border-radius: 13px;
    max-width: 274px;
-   /* max-height: 100%; */
-    height: 268px; 
+   height: 268px; 
    
 `
 export const CarModelTittle = styled.h3`
+   font-family: 'Manrope', sans-serif;
    font-size: 16px;
    font-weight: 500;
    line-height: calc(24/16);
-   color: var(--black)
+   color: rgba(243, 240, 240, 0.996);
+  
 
    span {
       color:  var(--blue);
@@ -81,24 +84,26 @@ position: absolute;
    border: none;
   cursor: pointer;
   background-color: transparent;
+
 `
 
 
 export const StyledIcon = styled(LiaHeart)`
    display: block;
-   /* top: 16px;
-   right: 16px; */
    width: 18px;
    height: 18px;
    color: var(--heart-white);
+
+   &:hover,
+   &:focus{
+   color: var(--blue);
+  }
    
   
 `
 
 export const StyledIconBlue = styled(LiaHeartSolid)`
   display: block;
-   /* top: 16px;
-   right: 16px; */
    width: 18px;
    height: 18px;
    color: var(--blue);

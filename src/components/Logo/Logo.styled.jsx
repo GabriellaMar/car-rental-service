@@ -1,25 +1,39 @@
 import styled from 'styled-components';
+import { NavLink } from "react-router-dom"
 
 export const LogoImg = styled.img`
-    width: 60px;
-    height: 60px;
-
+    width: 70px;
+    height: 70px;
+    padding-left: 5px;
 `
 export const LogoStyledWrapper = styled.div`
     position: absolute;
-    top: -14px;
-    width: 90px;
-     
+    top: -16px;
+    width: 100px;
     position: relative;
+
 `
-export const LogoText = styled.span`
+export const LogoText = styled.p`
+    
+    font-family: 'Manrope', sans-serif;
     font-weight:700;
+    font-size: 18px;
     color: var(--blue);
     cursor: pointer;
     text-transform: uppercase;
+    /* text-shadow: 2px 2px 6px rgba(219, 218, 218, 0.872); */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+        text-shadow: 2px 2px 6px rgba(219, 218, 218, 0.872); 
+    }
+    
 span {
-    color: var(--black);
+    color: #e7e4e4f4;
 }
+
    
 `
 export const StyledWrapper = styled.div`

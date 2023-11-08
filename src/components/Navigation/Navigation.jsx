@@ -1,23 +1,30 @@
 import { NavLink } from "react-router-dom"
 import { Logo } from "../Logo/Logo.jsx"
-import { NavigationList } from "./Navigation.styled"
+import { NavigationItem,  NavigationWrapper, NavLinkStyled, NavigationList, GoBackIcon } from "./Navigation.styled"
+import { useLocation } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 
 export const Navigation =() =>{
+    const location = useLocation();
+    const pageLocation =
+      location.pathname === '/catalog' || location.pathname === '/favorites';
+  
     return (
-        <nav>
+        <NavigationWrapper>
             <NavigationList>
-                <li>
-                    <NavLink to='/'>
-                        <Logo />
-                        </NavLink>
-                </li>
-                <li>
-                <NavLink to="/catalog"> Catalogue</NavLink>
-                </li>
-                <li>
-                <NavLink to="/favorites"> Favorites</NavLink>
-                </li>
+                <NavigationItem>
+                    <NavLinkStyled to='/'><Logo /></NavLinkStyled>
+                </NavigationItem>
+                <NavigationItem>
+                <NavLinkStyled to="/catalog"> Catalogue</NavLinkStyled>
+                </NavigationItem>
+                <NavigationItem>
+                <NavLinkStyled to="/favorites"> Favorites</NavLinkStyled>
+                </NavigationItem>
             </NavigationList>
-        </nav>
+            {pageLocation && (
+           <NavLinkStyled to='/'> <GoBackIcon /></NavLinkStyled> 
+          )}
+        </NavigationWrapper>
     )
 }

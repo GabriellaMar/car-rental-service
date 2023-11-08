@@ -6,10 +6,8 @@ export const Logo = () => {
         <>
             <LogoStyledWrapper>
                 <LogoImg src={logoImg}></LogoImg>
-
                 <StyledWrapper>
                     <LogoText>Rent <span>CAR</span></LogoText>
-
                 </StyledWrapper>
             </LogoStyledWrapper>
         </>

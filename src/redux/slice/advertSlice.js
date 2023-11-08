@@ -5,6 +5,7 @@ export const initialState = {
   advert: [],
   isLoading: false,
   error: null,
+  filter: '',
 }
 
 const advertSlice = createSlice({
