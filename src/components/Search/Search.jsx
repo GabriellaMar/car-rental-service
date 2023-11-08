@@ -27,11 +27,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from '../../redux/slice/filterSlice';
 
 
-
 export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
 
     const filter = useSelector(state => state.filter.filter);
-
     const dispatch = useDispatch();
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);

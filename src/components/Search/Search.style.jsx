@@ -113,12 +113,9 @@ export const Label = styled.label`
   line-height: 18px;
   color: #fff;
   margin-bottom: 8px;
-`;
+  `
 
 export const ModelInput = styled.input`
-  display: flex;
-  width: 224px;
-  padding: 10px 10px 10px 18px;
   justify-content: center;
   align-items: center;
   gap: 32px;
