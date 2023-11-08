@@ -1,11 +1,20 @@
-import{s as r,j as t,r as o,u as s,C as n}from"./index-35c9ccf2.js";import{C as p}from"./CatalogueCard-91a68314.js";import{C as d}from"./MainPage.styled-f17aed01.js";const x=r.ul`
+import{s as e,j as t,r as o,u as n,C as s}from"./index-3835ebe4.js";import{C as p}from"./CatalogueCard-f09f1250.js";import"./RentalCarBtn.styled-b5ac50a4.js";const d=e.ul`
 
    display: flex;
    flex-wrap: wrap;
    column-gap: 20px;
    row-gap: 30px;
    padding : 20px;
-  `,c="/car-rental-service/assets/Nocar-bdb983a9.png",g=r.section`
+   
+  `,x=e.div`
+  height: 100vh;
+  background: linear-gradient(
+    -60deg,
+    rgb(23, 26, 32) 49%,
+    rgb(187, 206, 226) 100%,
+    rgb(206, 206, 206) 70%
+  );
+`,c="/car-rental-service/assets/Nocar-bdb983a9.png",g=e.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,7 +25,7 @@ import{s as r,j as t,r as o,u as s,C as n}from"./index-35c9ccf2.js";import{C as 
     rgb(181, 186, 196) 100%,
     rgb(205, 206, 206) 50%
   );
-`,l=r.img`
+`,l=e.img`
   display: block;
   width: 100%;
   height: 100%;
@@ -30,7 +39,7 @@ import{s as r,j as t,r as o,u as s,C as n}from"./index-35c9ccf2.js";import{C as 
     width: 100%;
     height: 100%;
   }
-`,h=r.p`
+`,h=e.p`
   background-color: transparent;
   border: none;
   padding: 28px;
@@ -57,4 +66,4 @@ import{s as r,j as t,r as o,u as s,C as n}from"./index-35c9ccf2.js";import{C as 
     font-size: 38px;
     margin-top: 100px;
   }
-`,m=()=>t.jsxs(g,{children:[t.jsx(h,{children:"No cars available"}),t.jsx(l,{src:c,alt:"set Of Cars"})]}),v=()=>{const[i,f]=o.useState(!0),a=s(e=>e.favorite.favorite);return t.jsx(d,{children:t.jsx(n,{children:a.length>0?t.jsx(x,{children:i&&a.map(e=>t.jsx(p,{advert:e},e.id))}):t.jsx(m,{})})})};export{v as default};
+`,m=()=>t.jsxs(g,{children:[t.jsx(h,{children:"No cars available"}),t.jsx(l,{src:c,alt:"set Of Cars"})]}),w=()=>{const[a,f]=o.useState(!0),i=n(r=>r.favorite.favorite);return t.jsx(x,{children:t.jsx(s,{children:i.length>0?t.jsx(d,{children:a&&i.map(r=>t.jsx(p,{advert:r},r.id))}):t.jsx(m,{})})})};export{w as default};

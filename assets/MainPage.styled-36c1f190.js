@@ -1,17 +1,4 @@
-import{s as t}from"./index-35c9ccf2.js";const e="/car-rental-service/assets/BMW-7ee50d55.jpg",o=t.a`
-display: inline-block;
-padding: 12px 50px;
-background-color: var(--blue);
-color: var(--white);
-border-color: transparent;
-border-radius: 12px;
-margin-top: 16px;
-
-&:hover,
-&:focus {
-background-color: var(--hover-blue);
-}
-`,r=t.h1`
+import{s as t}from"./index-3835ebe4.js";import"./RentalCarBtn.styled-b5ac50a4.js";const e="/car-rental-service/assets/BMW-7ee50d55.jpg",a=t.h1`
    color: #e1e0e0;
   font-weight: bold;
   font-size: 40px;
@@ -32,8 +19,7 @@ background-color: var(--hover-blue);
     font-weight: 700;
      padding-top: 15px; 
   }
-`,a=t.p`
-     /* color: #b0bbd6; */
+`,n=t.p`
   color: var(--blue);
   font-weight: 600;
   font-size: 26px;
@@ -50,7 +36,7 @@ background-color: var(--hover-blue);
     font-size: 36px;
     line-height: 1.6;
   }
-`,n=t.p`
+`,r=t.p`
    color: #b0bbd6;
   font-weight: 400;
   font-size: 16px;
@@ -68,7 +54,7 @@ background-color: var(--hover-blue);
 
   }
 
-`,d=t.a`
+`,p=t.a`
 display: block;
 padding: 12px 50px;
 max-width: 100px;
@@ -92,7 +78,7 @@ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
 
-`,p=t.div`
+`,d=t.div`
 
   display: flex;
   background: linear-gradient(
@@ -112,10 +98,9 @@ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `,g=t.div`
     /* padding-top: 100px; */
    
-`,l=t.div`
-max-width: 700px;
-margin-left: 500px;
-text-align: right; 
+`,h=t.div`
+ max-width: 700px; 
+
 `,s=t.div`
 height: 100%;
  background: linear-gradient(
@@ -125,4 +110,4 @@ height: 100%;
     rgb(206, 206, 206) 70%
   );
  
-`;export{s as C,p as H,l as S,g as T,r as a,a as b,n as c,d,o as e};
+`;export{s as C,d as H,h as S,g as T,a,n as b,r as c,p as d};
