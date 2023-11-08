@@ -4,7 +4,7 @@ import { CatalogueCard } from "../../components/CatalogueCard/CatalogueCard";
 import {  useState } from "react";
 import { AdvertList } from "./FavoritesPage.styled";
 import { NoFaviriteCars } from "../../components/NoFavorite/NoFavorite";
-import { CatalogPageWrapper } from "../MainPage/MainPage.styled";
+import { FovoritePageWrapper } from "../FavoritesPage/FavoritesPage.styled";
 
 
 const FavoritesPage = () => {
@@ -13,7 +13,7 @@ const FavoritesPage = () => {
     const favorite = useSelector(state => state.favorite.favorite);
    
     return (
-        <CatalogPageWrapper>
+        <FovoritePageWrapper>
             <Container>
                 {favorite.length > 0 ? (<AdvertList>
                     {showFavorite && favorite.map((card) => (
@@ -21,7 +21,7 @@ const FavoritesPage = () => {
                     ))}
                 </AdvertList>) : (<NoFaviriteCars />)}
             </Container>
-        </CatalogPageWrapper>
+        </FovoritePageWrapper>
     )
 }
 

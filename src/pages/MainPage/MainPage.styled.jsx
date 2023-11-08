@@ -25,7 +25,6 @@ export const HeroTittle = styled.h1`
   }
 `
 export const HeroText= styled.p`
-     /* color: #b0bbd6; */
   color: var(--blue);
   font-weight: 600;
   font-size: 26px;
@@ -111,9 +110,8 @@ export const TextWrapper = styled.div`
    
 `
 export const StyledTextWrapper = styled.div`
-max-width: 700px;
-margin-left: 500px;
-text-align: right; 
+ max-width: 700px; 
+
 `
 
 export const CatalogPageWrapper = styled.div`

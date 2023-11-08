@@ -7,5 +7,14 @@ export const AdvertList = styled.ul`
    column-gap: 20px;
    row-gap: 30px;
    padding : 20px;
+   
   `
-// export const FavoriteWrapper = styled(AdvertList)
+export const FovoritePageWrapper = styled.div`
+  height: 100vh;
+  background: linear-gradient(
+    -60deg,
+    rgb(23, 26, 32) 49%,
+    rgb(187, 206, 226) 100%,
+    rgb(206, 206, 206) 70%
+  );
+`
