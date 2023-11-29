@@ -14,7 +14,7 @@ export const NavigationItem = styled.li`
 
 export const NavLinkStyled = styled(NavLink)`
     display: inline-block;
-    color: #e7e4e4f4;
+    color: #ece9e9;
     font-family: 'Manrope', sans-serif;
     font-weight: 600;
     font-size: 20px;

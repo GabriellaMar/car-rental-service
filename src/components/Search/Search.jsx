@@ -20,9 +20,11 @@ import {
     ArrowUp,
     ArrowDown,
     ModelListItem,
-    PriceListItem
+    PriceListItem,
+    MileageFirstText,
+    MileageSecondText
 } from './Search.style';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from '../../redux/slice/filterSlice';
 
@@ -41,27 +43,22 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
 
 
 
-    
-    // const getUniqueModels = () => {
-    //     const make = adverts.map((advert) => advert.make);
-    //     const uniqueModels = [...new Set(make)];
-    //     setCars(uniqueModels);
-    // };
-    
-
-    useEffect(() => {
-        const getUniqueModels = () => {
-            const make = adverts.map((advert) => advert.make);
-            const uniqueModels = [...new Set(make)];
-            setCars(uniqueModels);
-        };
-        getUniqueModels();
+    const getUniqueModels = useCallback(() => {
+        const make = adverts.map((advert) => advert.make);
+        const uniqueModels = [...new Set(make)];
+        setCars(uniqueModels);
     }, [adverts]);
+    
+    useEffect(() => {
+        getUniqueModels();
+    }, [getUniqueModels]);
 
 
     useEffect(() => {
         dispatch(setFilter({ model, price, startMileage, endMileage }));
     }, [model, price, startMileage, endMileage, dispatch])
+
+    
 
 
     const minPrice = 30;
@@ -84,6 +81,7 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
                 toast.error('Car brand should contain only EN letters !');
                 return;
             }
+
         }
 
         const filteredCars = adverts.filter((advert) => {
@@ -118,6 +116,7 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
         });
 
         updateFilteredAdverts(filteredCars);
+        setIsDropdownOpen(false);
     };
 
     const toggleDropdown = (field) => {
@@ -153,9 +152,9 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
             default:
                 return;
         }
-        if (!isDropdownOpen) {
-            setIsDropdownOpen(true);
-        }
+        // if (!isDropdownOpen) {
+        //     setIsDropdownOpen(true);
+        // }
     }
 
 
@@ -180,7 +179,11 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
                                 {sortCars.map((car, index) => (
                                         <ModelListItem
                                             key={index}
-                                            onClick={() => setModel(car)}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                setModel(car);
+                                                setIsDropdownOpen(false); 
+                                            }}
                                         >{car}</ModelListItem >
                                     ))}
                             </ModelList>
@@ -206,7 +209,10 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
                                 {priceOptions.map((priceOption, index) => (
                                     <PriceListItem
                                         key={index}
-                                        onClick={() => setPrice(priceOption)}
+                                        onClick={(e) => {
+                                        e.stopPropagation();
+                                        setPrice(priceOption)
+                                        setIsDropdownOpen(false)}}
                                     >
                                         {priceOption}
                                     </PriceListItem>
@@ -217,18 +223,18 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
                 </InputBlock>
                 <InputBlock>
                     <Label htmlFor="mileageTitle">Сar mileage / km </Label>
-                    <MileageInputWrapper>
+                    <MileageInputWrapper> 
+                        <MileageFirstText>from</MileageFirstText>
                         <MileageInputLeft
                             id="mileageTitle"
                             name='startMileage'
-                            placeholder="from"
                             value={startMileage}
                             onChange={handleChange}
                         />
+                        < MileageSecondText>to</ MileageSecondText>
                         <MileageInputRight
                             type="number"
                             name='endMileage'
-                            placeholder="to"
                             value={endMileage}
                             onChange={handleChange}
                         />

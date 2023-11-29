@@ -56,7 +56,7 @@ export const ModelDropdown = styled.div`
   padding: 8px 8px 8px 18px;
   color: #5c5d5e;
   z-index: 10;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 1px solid rgba(18, 20, 23, 0.05);
   background: rgba(248, 246, 246, 0.996);
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
@@ -111,7 +111,8 @@ export const Label = styled.label`
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  color: #fff;
+  /* color: #fff; */
+  color:  #6e6e6e ;
   margin-bottom: 8px;
   `
 
@@ -119,7 +120,7 @@ export const ModelInput = styled.input`
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-radius: 14px;
+  border-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
@@ -177,7 +178,7 @@ export const PriceDropdown = styled.div`
   padding: 8px 8px 8px 18px;
 
   z-index: 10;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 1px solid rgba(18, 20, 23, 0.05);
   background: rgba(248, 246, 246, 0.996);
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
@@ -232,7 +233,7 @@ export const PriceInput = styled.input`
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-radius: 14px;
+  border-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
@@ -256,6 +257,7 @@ export const PriceInput = styled.input`
 //-------------MileageInput
 
 export const MileageInputWrapper = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -263,14 +265,15 @@ export const MileageInputWrapper = styled.div`
 `;
 
 export const MileageInputLeft = styled.input`
+  /* position: relative; */
   display: flex;
   width: 100px;
   padding: 10px 10px 10px 14px;
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
@@ -281,16 +284,16 @@ export const MileageInputLeft = styled.input`
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  &::placeholder {
+  /* &::placeholder {
     color: #5c5d5e;
-  }
+  } */
   @media (min-width: 768px) {
     width: 130px;
-    padding: 12px 12px 12px 18px;
+    padding: 12px 12px 12px 63px;
   }
   @media (min-width: 1440px) {
     width: 160px;
-    padding: 14px 14px 14px 18px;
+    padding: 14px 14px 14px 63px;
   }
 `;
 
@@ -301,8 +304,8 @@ export const MileageInputRight = styled.input`
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   /* background: #f7f7fb; */
   background: rgba(248, 246, 246, 0.996);
   border: none;
@@ -314,18 +317,34 @@ export const MileageInputRight = styled.input`
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  &::placeholder {
+  /* &::placeholder {
     color: #5c5d5e;
-  }
+  } */
   @media (min-width: 768px) {
     width: 130px;
-    padding: 12px 12px 12px 18px;
+    padding: 12px 12px 12px 42px;
   }
   @media (min-width: 1440px) {
     width: 160px;
-    padding: 14px 14px 14px 18px;
+    padding: 14px 14px 14px 42px;
   }
 `;
+
+export const MileageFirstText = styled.p`
+position: absolute;
+/* top: 12px; */
+left: 18px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--dropdawn);  
+
+`
+export const MileageSecondText = styled(MileageFirstText)`
+position: absolute;
+left: 255px; 
+`
 
 //-----Other elements
 
@@ -337,7 +356,7 @@ export const SearchBtn = styled.button`
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  border-radius: 12px;
+  border-radius: 10px;
   background: #1752b2;
   border: none;
   cursor: pointer;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import { Container } from '../Container/Container.jsx';
 // import { CardButton } from '../CatalogueCard/CatalogueCard.styled';
 
 export const AdvertList = styled.ul`
@@ -28,3 +29,6 @@ export const LoadMoreBtn = styled.button`
 }
 
 `
+// export const StyledContainer = styled(Container)`
+// background: red;
+// `
