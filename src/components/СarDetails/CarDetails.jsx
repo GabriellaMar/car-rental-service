@@ -43,14 +43,14 @@ export const CarDetails = ({ data, country, city }) => {
             <CarImage src={img} alt={make} />
             <CarModalTittle>{make} <span>{model}</span>, {year} </CarModalTittle>
             <CarModalList>
-                <CarModalItem>{city} | </CarModalItem>
-                <CarModalItem>{country} | </CarModalItem>
-                <CarModalItem>id: {id} | </CarModalItem>
-                <CarModalItem>{year} |</CarModalItem>
+                <CarModalItem>{city}  </CarModalItem>
+                <CarModalItem>{country}  </CarModalItem>
+                <CarModalItem>id: {id}  </CarModalItem>
+                <CarModalItem>{year} </CarModalItem>
                 <CarModalItem>Type: {type}  </CarModalItem>
             </CarModalList>
             <CarModalList>
-                <CarModalItem>Fuel Consumption: {fuelConsumption} |</CarModalItem>
+                <CarModalItem>Fuel Consumption: {fuelConsumption} </CarModalItem>
                 <CarModalItem>Engine Size: {engineSize} </CarModalItem>
             </CarModalList>
             <CarDescription>{description}</CarDescription>

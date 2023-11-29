@@ -40,13 +40,21 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
     const [endMileage, setEndMileage] = useState('');
 
 
-    const getUniqueModels = () => {
-        const make = adverts.map((advert) => advert.make);
-        const uniqueModels = [...new Set(make)];
-        setCars(uniqueModels);
-    };
+
+    
+    // const getUniqueModels = () => {
+    //     const make = adverts.map((advert) => advert.make);
+    //     const uniqueModels = [...new Set(make)];
+    //     setCars(uniqueModels);
+    // };
+    
 
     useEffect(() => {
+        const getUniqueModels = () => {
+            const make = adverts.map((advert) => advert.make);
+            const uniqueModels = [...new Set(make)];
+            setCars(uniqueModels);
+        };
         getUniqueModels();
     }, [adverts]);
 
@@ -141,6 +149,7 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
                 break;
             case 'startMileage':
                 setStartMileage(e.target.value);
+                break;
             default:
                 return;
         }

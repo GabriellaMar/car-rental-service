@@ -6,7 +6,7 @@ export const CarInfoWrapper = styled.div`
     justify-content: space-between;
  `
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.li`
     max-width: 274px;
     max-height: 426px;
     margin: 0 auto;

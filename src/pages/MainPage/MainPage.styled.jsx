@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import heroImg from '../../images/CardCars/BMW.jpg'
-import { RentalCarBtn } from '../../components/RentalBtn/RentalCarBtn';
+// import { RentalCarBtn } from '../../components/RentalBtn/RentalCarBtn';
 // import heroImg from '../../images/CardCars/home-banner@2x.jpg'
 export const HeroTittle = styled.h1`
    color: #e1e0e0;
@@ -48,6 +48,8 @@ export const HeroSubtittle =styled.p`
   font-size: 16px;
   line-height: 1.2;
   width: 900px;
+  text-align: right;
+  margin-left: auto;
   
   @media (min-width: 768px) {
     font-size: 18px;
@@ -56,7 +58,7 @@ export const HeroSubtittle =styled.p`
   @media (min-width: 1440px) {
     font-size: 26px;
     line-height: 1.6;
-    margin-left: auto;
+    /* margin-left: auto; */
 
   }
 
@@ -107,20 +109,21 @@ export const Hero = styled.div`
 `;
 export const TextWrapper = styled.div`
     /* padding-top: 100px; */
-   
+    /* max-width: 700px;  */
+    
 `
-export const StyledTextWrapper = styled.div`
- max-width: 700px; 
+// export const StyledTextWrapper = styled.div`
+//  max-width: 700px; 
 
-`
+// `
 
-export const CatalogPageWrapper = styled.div`
-height: 100%;
- background: linear-gradient(
-    -60deg,
-    rgb(23, 26, 32) 49%,
-    rgb(187, 206, 226) 100%,
-    rgb(206, 206, 206) 70%
-  );
+// export const CatalogPageWrapper = styled.div`
+// height: 100%;
+//  background: linear-gradient(
+//     -60deg,
+//     rgb(23, 26, 32) 49%,
+//     rgb(187, 206, 226) 100%,
+//     rgb(206, 206, 206) 70%
+//   );
  
-`
+// `

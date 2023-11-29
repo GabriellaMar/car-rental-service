@@ -32,16 +32,11 @@ export const CatalogueCard = ({ advert }) => {
         model,
         type,
         img,
-        description,
-        fuelConsumption,
-        engineSize,
-        accessories,
         functionalities,
         rentalPrice,
         rentalCompany,
         address,
-        mileage,
-        rentalConditions } = advert;
+        mileage} = advert;
 
     const [showModal, setShowModal] = useState(false);
     const favoriteCars = useSelector(selectFavorites);
@@ -55,6 +50,8 @@ export const CatalogueCard = ({ advert }) => {
     const location = address.split(' ');
     const country = location[location.length - 1];
     const city = location[(location.length - 1) - 1];
+
+   
 
 
 
