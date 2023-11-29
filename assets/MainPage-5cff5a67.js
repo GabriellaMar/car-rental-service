@@ -1,4 +1,4 @@
-import{s as t}from"./index-3835ebe4.js";import"./RentalCarBtn.styled-b5ac50a4.js";const e="/car-rental-service/assets/BMW-7ee50d55.jpg",a=t.h1`
+import{s as t,j as e,C as n}from"./index-4a81ba41.js";const o="/car-rental-service/assets/BMW-7ee50d55.jpg",r=t.h1`
    color: #e1e0e0;
   font-weight: bold;
   font-size: 40px;
@@ -19,7 +19,7 @@ import{s as t}from"./index-3835ebe4.js";import"./RentalCarBtn.styled-b5ac50a4.js
     font-weight: 700;
      padding-top: 15px; 
   }
-`,n=t.p`
+`,a=t.p`
   color: var(--blue);
   font-weight: 600;
   font-size: 26px;
@@ -36,12 +36,14 @@ import{s as t}from"./index-3835ebe4.js";import"./RentalCarBtn.styled-b5ac50a4.js
     font-size: 36px;
     line-height: 1.6;
   }
-`,r=t.p`
+`,i=t.p`
    color: #b0bbd6;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   width: 900px;
+  text-align: right;
+  margin-left: auto;
   
   @media (min-width: 768px) {
     font-size: 18px;
@@ -50,11 +52,11 @@ import{s as t}from"./index-3835ebe4.js";import"./RentalCarBtn.styled-b5ac50a4.js
   @media (min-width: 1440px) {
     font-size: 26px;
     line-height: 1.6;
-    margin-left: auto;
+    /* margin-left: auto; */
 
   }
 
-`,p=t.a`
+`,d=t.a`
 display: block;
 padding: 12px 50px;
 max-width: 100px;
@@ -78,7 +80,7 @@ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
 
-`,d=t.div`
+`,h=t.div`
 
   display: flex;
   background: linear-gradient(
@@ -86,7 +88,7 @@ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
       rgba(47, 48, 58, 0.1),
       rgba(47, 48, 58, 0.5)
     ),
-    url(${e});
+    url(${o});
 
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -95,19 +97,8 @@ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   height: 100vh;
   z-index: 100;
-`,g=t.div`
+`;t.div`
     /* padding-top: 100px; */
-   
-`,h=t.div`
- max-width: 700px; 
-
-`,s=t.div`
-height: 100%;
- background: linear-gradient(
-    -60deg,
-    rgb(23, 26, 32) 49%,
-    rgb(187, 206, 226) 100%,
-    rgb(206, 206, 206) 70%
-  );
- 
-`;export{s as C,d as H,h as S,g as T,a,n as b,r as c,p as d};
+    /* max-width: 700px;  */
+    
+`;const l=()=>e.jsx(h,{children:e.jsxs(n,{children:[e.jsx(r,{children:"Best Cars For The Best Journey"}),e.jsx(a,{children:" Welcome to Car Rental Service!"}),e.jsx(i,{children:"We Provide Best Cars With The Best Prices. We Make Your Drive Memorable. "}),e.jsx(i,{children:" Enjoy Your Holiday With Us"}),e.jsx(d,{href:"tel:+380730000000",children:"Rental car"})]})});export{l as default};

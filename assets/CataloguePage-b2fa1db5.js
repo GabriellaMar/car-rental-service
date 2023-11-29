@@ -1,21 +1,21 @@
-import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./index-3835ebe4.js";import{C as G,u as A,s as Q}from"./CatalogueCard-f09f1250.js";import{C as Z}from"./MainPage.styled-36c1f190.js";import"./RentalCarBtn.styled-b5ac50a4.js";const H=r.ul`
+import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./index-4a81ba41.js";import{C as q,u as A,s as G}from"./CatalogueCard-263384a6.js";const Q=r.ul`
    display: flex;
    flex-wrap: wrap;
    column-gap: 20px;
    row-gap: 30px;
    padding : 20px;
    
-`,J=r.button`
-   display: inline-block;
+`,Z=r.button`
+   /* display: inline-block; */
    padding: 12px 98px;
    border: transparent;
    border-radius: 12px;
    background-color: var(--blue);
-   color: rgba(243, 240, 240, 0.996);
-   margin: 0 auto;
+   color: rgba(243, 240, 240, 0.996); 
    margin-top: 40px;
    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
    box-shadow: 0px 3.43693px 3.43693px 0px rgba(0, 0, 0, 0.25);
+   /* margin: 0 auto;  */
 
   
 &:hover,
@@ -23,7 +23,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
    background-color: var(--hover-blue)
 }
 
-`,K=({adverts:n})=>{const[s,a]=i.useState(1),d=12,p=()=>{a(s+1)},x=d*s;return e.jsx(e.Fragment,{children:e.jsxs(H,{children:[n.slice(0,s*d).map(l=>e.jsx(G,{advert:l},l.id)),n.length>x&&e.jsx(J,{onClick:p,children:"LOAD MORE"})]})})};function X(n){return F({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function Y(n){return F({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const _=r.section`
+`,H=({adverts:n})=>e.jsx(e.Fragment,{children:e.jsx(Q,{children:n.length>0&&n.map(p=>e.jsx(q,{advert:p},p.id))})});function J(n){return D({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function K(n){return D({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const X=r.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -35,19 +35,19 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   @media (min-width: 1440px) {
     padding: 50px 0px 80px;
   }
-`,ee=r.div`
+`,Y=r.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
   gap: 18px;
-`,v=r.div`
+`,L=r.div`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`,te=r.button`
+`,_=r.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -56,7 +56,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   border: none;
   cursor: pointer;
   outline: none;
-`,re=r.div`
+`,ee=r.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -92,7 +92,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,ne=r.ul`
+`,te=r.ul`
 
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,oe=r.li`
+`,re=r.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -112,14 +112,14 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   &:hover {
     color: var(--blue);
   }
-`,y=r.label`
+`,S=r.label`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   color: #fff;
   margin-bottom: 8px;
-  `,ie=r.input`
+  `,ne=r.input`
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -142,17 +142,17 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
   }
-`,P=r(X)`
+`,E=r(J)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,z=r(Y)`
+`,F=r(K)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,ae=r.button`
+`,oe=r.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -161,7 +161,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   border: none;
   cursor: pointer;
   outline: none;
-`,pe=r.div`
+`,ie=r.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -194,14 +194,14 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,se=r.ul`
+`,ae=r.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,le=r.li`
+`,pe=r.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -213,7 +213,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   &:hover {
     color: var(--blue);
   }
-`,de=r.input`
+`,se=r.input`
   display: flex;
   width: 125px;
   padding: 10px 10px 10px 18px;
@@ -239,12 +239,12 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
   }
-`,ce=r.div`
+`,le=r.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-`,xe=r.input`
+`,de=r.input`
   display: flex;
   width: 100px;
   padding: 10px 10px 10px 14px;
@@ -274,7 +274,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
     width: 160px;
     padding: 14px 14px 14px 18px;
   }
-`,ge=r.input`
+`,ce=r.input`
   display: flex;
   width: 100px;
   padding: 10px 10px 10px 14px;
@@ -305,7 +305,7 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
     width: 160px;
     padding: 14px 14px 14px 18px;
   }
-`,I=r.button`
+`,B=r.button`
   padding: 10px 20px;
   color: #fff;
   font-family: 'Manrope', sans-serif;
@@ -328,4 +328,4 @@ import{s as r,r as i,j as e,G as F,u as E,a as $,Q as h,f as U,C as q}from"./ind
   @media (min-width: 1440px) {
     padding: 13px 44px;
   }
-`,ue=({adverts:n,updateFilteredAdverts:s})=>{const a=E(t=>t.filter.filter),d=A(),[p,x]=i.useState(!1),[l,f]=i.useState(""),[B,D]=i.useState([]),[c,w]=i.useState(""),[g,M]=i.useState(""),[u,L]=i.useState(""),T=()=>{const t=n.map(C=>C.make),o=[...new Set(t)];D(o)};i.useEffect(()=>{T()},[n]),i.useEffect(()=>{d($({model:l,price:c,startMileage:g,endMileage:u}))},[l,c,g,u,d]);const k=30,j=500,N=10,S=[];for(let t=k;t<=j;t+=N)S.push(t);const W=B.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,o)=>t.localeCompare(o)),O=async()=>{if(a.model!==""&&!/^[a-zA-Z\s]+$/i.test(a.model)){h.error("Car brand should contain only EN letters !");return}const t=n.filter(o=>{if(l&&a.model&&!o.make.toLowerCase().includes(a.model.toLowerCase()))return!1;if(c&&!isNaN(c)&&parseFloat(o.price)===parseFloat(a.price)){if(Number(c)<k)return h.warn(`Price cannot be less than ${k}!`),!1;if(Number(c)>j)return h.warn(`Price cannot be greater than ${j}!`),!1}if(g!==""&&u!==""){const C=Number(g),V=Number(u);if(C>=V)return h.warn("Start mileage should be less than end mileage!"),!1}if(g<1e3||u>6620){h.error("Mileage should be in the range of 1000 to 6620!");return}return!0});s(t)},b=t=>{x(p===t?null:t)},R=()=>{f(""),w(""),M(""),L(""),s(n)},m=t=>{switch(t.target.name){case"model":f(t.target.value);break;case"price":w(t.target.value);break;case"endMileage":L(t.target.value);break;case"startMileage":M(t.target.value);default:return}p||x(!0)};return e.jsx(_,{children:e.jsxs(ee,{children:[e.jsxs(v,{children:[e.jsx(y,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ie,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:m,onClick:()=>b("model")}),e.jsx(te,{onClick:()=>b("model"),type:"button",children:p==="model"?e.jsx(z,{}):e.jsx(P,{})}),p==="model"&&e.jsx(re,{children:e.jsx(ne,{children:W.map((t,o)=>e.jsx(oe,{onClick:()=>f(t),children:t},o))})})]}),e.jsxs(v,{children:[e.jsx(y,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(de,{id:"priceTitle",name:"price",placeholder:"To $",value:c,onChange:m,onClick:()=>b("price")}),e.jsx(ae,{type:"button",onClick:()=>b("price"),children:p==="price"?e.jsx(z,{}):e.jsx(P,{})}),p==="price"&&e.jsx(pe,{children:e.jsx(se,{children:S.map((t,o)=>e.jsx(le,{onClick:()=>w(t),children:t},o))})})]}),e.jsxs(v,{children:[e.jsx(y,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(ce,{children:[e.jsx(xe,{id:"mileageTitle",name:"startMileage",placeholder:"from",value:g,onChange:m}),e.jsx(ge,{type:"number",name:"endMileage",placeholder:"to",value:u,onChange:m})]})]}),e.jsx(I,{type:"button",onClick:O,children:"Search"}),e.jsx(I,{type:"button",onClick:R,children:"Reset"})]})})},we=()=>{const n=E(Q),s=A(),[a,d]=i.useState([]);i.useEffect(()=>{s(U())},[s]);const p=x=>{d(x)};return e.jsx(Z,{children:e.jsxs(q,{children:[e.jsx(ue,{adverts:n,updateFilteredAdverts:p}),e.jsx(K,{adverts:a.length>0?a:n})]})})};export{we as default};
+`,xe=({adverts:n,updateFilteredAdverts:p})=>{const s=T(t=>t.filter.filter),u=A(),[a,m]=i.useState(!1),[l,g]=i.useState(""),[k,h]=i.useState([]),[d,j]=i.useState(""),[c,P]=i.useState(""),[x,z]=i.useState("");i.useEffect(()=>{(()=>{const o=n.map(M=>M.make),v=[...new Set(o)];h(v)})()},[n]),i.useEffect(()=>{u(V({model:l,price:d,startMileage:c,endMileage:x}))},[l,d,c,x,u]);const C=30,y=500,N=10,I=[];for(let t=C;t<=y;t+=N)I.push(t);const O=k.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,o)=>t.localeCompare(o)),R=async()=>{if(s.model!==""&&!/^[a-zA-Z\s]+$/i.test(s.model)){b.error("Car brand should contain only EN letters !");return}const t=n.filter(o=>{if(l&&s.model&&!o.make.toLowerCase().includes(s.model.toLowerCase()))return!1;if(d&&!isNaN(d)&&parseFloat(o.price)===parseFloat(s.price)){if(Number(d)<C)return b.warn(`Price cannot be less than ${C}!`),!1;if(Number(d)>y)return b.warn(`Price cannot be greater than ${y}!`),!1}if(c!==""&&x!==""){const v=Number(c),M=Number(x);if(v>=M)return b.warn("Start mileage should be less than end mileage!"),!1}if(c<1e3||x>6620){b.error("Mileage should be in the range of 1000 to 6620!");return}return!0});p(t)},f=t=>{m(a===t?null:t)},U=()=>{g(""),j(""),P(""),z(""),p(n)},w=t=>{switch(t.target.name){case"model":g(t.target.value);break;case"price":j(t.target.value);break;case"endMileage":z(t.target.value);break;case"startMileage":P(t.target.value);break;default:return}a||m(!0)};return e.jsx(X,{children:e.jsxs(Y,{children:[e.jsxs(L,{children:[e.jsx(S,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ne,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:w,onClick:()=>f("model")}),e.jsx(_,{onClick:()=>f("model"),type:"button",children:a==="model"?e.jsx(F,{}):e.jsx(E,{})}),a==="model"&&e.jsx(ee,{children:e.jsx(te,{children:O.map((t,o)=>e.jsx(re,{onClick:()=>g(t),children:t},o))})})]}),e.jsxs(L,{children:[e.jsx(S,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(se,{id:"priceTitle",name:"price",placeholder:"To $",value:d,onChange:w,onClick:()=>f("price")}),e.jsx(oe,{type:"button",onClick:()=>f("price"),children:a==="price"?e.jsx(F,{}):e.jsx(E,{})}),a==="price"&&e.jsx(ie,{children:e.jsx(ae,{children:I.map((t,o)=>e.jsx(pe,{onClick:()=>j(t),children:t},o))})})]}),e.jsxs(L,{children:[e.jsx(S,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(le,{children:[e.jsx(de,{id:"mileageTitle",name:"startMileage",placeholder:"from",value:c,onChange:w}),e.jsx(ce,{type:"number",name:"endMileage",placeholder:"to",value:x,onChange:w})]})]}),e.jsx(B,{type:"button",onClick:R,children:"Search"}),e.jsx(B,{type:"button",onClick:U,children:"Reset"})]})})},he=()=>{const n=T(G),p=A(),[s,u]=i.useState([]),[a,m]=i.useState(1),l=12;i.useEffect(()=>{p(W({page:a,limit:l}))},[p,a]),i.useEffect(()=>{u(h=>[...h,...n])},[n]);const g=()=>{m(a+1)},k=h=>{u(h)};return e.jsxs($,{children:[e.jsx(xe,{adverts:n,updateFilteredAdverts:k}),e.jsx(H,{adverts:s.length>0?s:n}),n.length>=l&&e.jsx(Z,{onClick:g,children:"LOAD MORE"})]})};export{he as default};
