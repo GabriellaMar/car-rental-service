@@ -1,11 +1,11 @@
-import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./index-4a81ba41.js";import{C as q,u as A,s as G}from"./CatalogueCard-263384a6.js";const Q=r.ul`
+import{s as o,j as e,G as B,u as D,r,a as U,Q as m,f as q,C as G}from"./index-3f14ecbc.js";import{C as Q,u as A,s as Z}from"./CatalogueCard-4f7c433a.js";const H=o.ul`
    display: flex;
    flex-wrap: wrap;
    column-gap: 20px;
    row-gap: 30px;
    padding : 20px;
    
-`,Z=r.button`
+`,J=o.button`
    /* display: inline-block; */
    padding: 12px 98px;
    border: transparent;
@@ -23,7 +23,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
    background-color: var(--hover-blue)
 }
 
-`,H=({adverts:n})=>e.jsx(e.Fragment,{children:e.jsx(Q,{children:n.length>0&&n.map(p=>e.jsx(q,{advert:p},p.id))})});function J(n){return D({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function K(n){return D({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const X=r.section`
+`,K=({adverts:n})=>e.jsx(H,{children:n.length>0&&n.map(p=>e.jsx(Q,{advert:p},p.id))});function X(n){return B({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function Y(n){return B({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const _=o.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -35,19 +35,19 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   @media (min-width: 1440px) {
     padding: 50px 0px 80px;
   }
-`,Y=r.div`
+`,ee=o.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
   gap: 18px;
-`,L=r.div`
+`,M=o.div`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`,_=r.button`
+`,te=o.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -56,7 +56,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   border: none;
   cursor: pointer;
   outline: none;
-`,ee=r.div`
+`,oe=o.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   padding: 8px 8px 8px 18px;
   color: #5c5d5e;
   z-index: 10;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 1px solid rgba(18, 20, 23, 0.05);
   background: rgba(248, 246, 246, 0.996);
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
@@ -92,7 +92,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,te=r.ul`
+`,ne=o.ul`
 
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,re=r.li`
+`,re=o.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -112,18 +112,19 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   &:hover {
     color: var(--blue);
   }
-`,S=r.label`
+`,L=o.label`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  color: #fff;
+  /* color: #fff; */
+  color:  #6e6e6e ;
   margin-bottom: 8px;
-  `,ne=r.input`
+  `,ie=o.input`
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-radius: 14px;
+  border-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
@@ -142,17 +143,17 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
   }
-`,E=r(J)`
+`,E=o(X)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,F=r(K)`
+`,F=o(Y)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,oe=r.button`
+`,ae=o.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -161,7 +162,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   border: none;
   cursor: pointer;
   outline: none;
-`,ie=r.div`
+`,pe=o.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -171,7 +172,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   padding: 8px 8px 8px 18px;
 
   z-index: 10;
-  border-radius: 14px;
+  border-radius: 10px;
   border: 1px solid rgba(18, 20, 23, 0.05);
   background: rgba(248, 246, 246, 0.996);
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
@@ -194,14 +195,14 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,ae=r.ul`
+`,se=o.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,pe=r.li`
+`,le=o.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -213,14 +214,14 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   &:hover {
     color: var(--blue);
   }
-`,se=r.input`
+`,de=o.input`
   display: flex;
   width: 125px;
   padding: 10px 10px 10px 18px;
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-radius: 14px;
+  border-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
@@ -239,20 +240,22 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
   }
-`,le=r.div`
+`,xe=o.div`
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-`,de=r.input`
+`,ce=o.input`
+  /* position: relative; */
   display: flex;
   width: 100px;
   padding: 10px 10px 10px 14px;
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
@@ -263,26 +266,26 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  &::placeholder {
+  /* &::placeholder {
     color: #5c5d5e;
-  }
+  } */
   @media (min-width: 768px) {
     width: 130px;
-    padding: 12px 12px 12px 18px;
+    padding: 12px 12px 12px 63px;
   }
   @media (min-width: 1440px) {
     width: 160px;
-    padding: 14px 14px 14px 18px;
+    padding: 14px 14px 14px 63px;
   }
-`,ce=r.input`
+`,ge=o.input`
   display: flex;
   width: 100px;
   padding: 10px 10px 10px 14px;
   justify-content: center;
   align-items: center;
   gap: 32px;
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   /* background: #f7f7fb; */
   background: rgba(248, 246, 246, 0.996);
   border: none;
@@ -294,18 +297,31 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  &::placeholder {
+  /* &::placeholder {
     color: #5c5d5e;
-  }
+  } */
   @media (min-width: 768px) {
     width: 130px;
-    padding: 12px 12px 12px 18px;
+    padding: 12px 12px 12px 42px;
   }
   @media (min-width: 1440px) {
     width: 160px;
-    padding: 14px 14px 14px 18px;
+    padding: 14px 14px 14px 42px;
   }
-`,B=r.button`
+`,N=o.p`
+position: absolute;
+/* top: 12px; */
+left: 18px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--dropdawn);  
+
+`,ue=o(N)`
+position: absolute;
+left: 255px; 
+`,T=o.button`
   padding: 10px 20px;
   color: #fff;
   font-family: 'Manrope', sans-serif;
@@ -313,7 +329,7 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  border-radius: 12px;
+  border-radius: 10px;
   background: #1752b2;
   border: none;
   cursor: pointer;
@@ -328,4 +344,4 @@ import{s as r,j as e,G as D,u as T,r as i,a as V,Q as b,f as W,C as $}from"./ind
   @media (min-width: 1440px) {
     padding: 13px 44px;
   }
-`,xe=({adverts:n,updateFilteredAdverts:p})=>{const s=T(t=>t.filter.filter),u=A(),[a,m]=i.useState(!1),[l,g]=i.useState(""),[k,h]=i.useState([]),[d,j]=i.useState(""),[c,P]=i.useState(""),[x,z]=i.useState("");i.useEffect(()=>{(()=>{const o=n.map(M=>M.make),v=[...new Set(o)];h(v)})()},[n]),i.useEffect(()=>{u(V({model:l,price:d,startMileage:c,endMileage:x}))},[l,d,c,x,u]);const C=30,y=500,N=10,I=[];for(let t=C;t<=y;t+=N)I.push(t);const O=k.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,o)=>t.localeCompare(o)),R=async()=>{if(s.model!==""&&!/^[a-zA-Z\s]+$/i.test(s.model)){b.error("Car brand should contain only EN letters !");return}const t=n.filter(o=>{if(l&&s.model&&!o.make.toLowerCase().includes(s.model.toLowerCase()))return!1;if(d&&!isNaN(d)&&parseFloat(o.price)===parseFloat(s.price)){if(Number(d)<C)return b.warn(`Price cannot be less than ${C}!`),!1;if(Number(d)>y)return b.warn(`Price cannot be greater than ${y}!`),!1}if(c!==""&&x!==""){const v=Number(c),M=Number(x);if(v>=M)return b.warn("Start mileage should be less than end mileage!"),!1}if(c<1e3||x>6620){b.error("Mileage should be in the range of 1000 to 6620!");return}return!0});p(t)},f=t=>{m(a===t?null:t)},U=()=>{g(""),j(""),P(""),z(""),p(n)},w=t=>{switch(t.target.name){case"model":g(t.target.value);break;case"price":j(t.target.value);break;case"endMileage":z(t.target.value);break;case"startMileage":P(t.target.value);break;default:return}a||m(!0)};return e.jsx(X,{children:e.jsxs(Y,{children:[e.jsxs(L,{children:[e.jsx(S,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ne,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:w,onClick:()=>f("model")}),e.jsx(_,{onClick:()=>f("model"),type:"button",children:a==="model"?e.jsx(F,{}):e.jsx(E,{})}),a==="model"&&e.jsx(ee,{children:e.jsx(te,{children:O.map((t,o)=>e.jsx(re,{onClick:()=>g(t),children:t},o))})})]}),e.jsxs(L,{children:[e.jsx(S,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(se,{id:"priceTitle",name:"price",placeholder:"To $",value:d,onChange:w,onClick:()=>f("price")}),e.jsx(oe,{type:"button",onClick:()=>f("price"),children:a==="price"?e.jsx(F,{}):e.jsx(E,{})}),a==="price"&&e.jsx(ie,{children:e.jsx(ae,{children:I.map((t,o)=>e.jsx(pe,{onClick:()=>j(t),children:t},o))})})]}),e.jsxs(L,{children:[e.jsx(S,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(le,{children:[e.jsx(de,{id:"mileageTitle",name:"startMileage",placeholder:"from",value:c,onChange:w}),e.jsx(ce,{type:"number",name:"endMileage",placeholder:"to",value:x,onChange:w})]})]}),e.jsx(B,{type:"button",onClick:R,children:"Search"}),e.jsx(B,{type:"button",onClick:U,children:"Reset"})]})})},he=()=>{const n=T(G),p=A(),[s,u]=i.useState([]),[a,m]=i.useState(1),l=12;i.useEffect(()=>{p(W({page:a,limit:l}))},[p,a]),i.useEffect(()=>{u(h=>[...h,...n])},[n]);const g=()=>{m(a+1)},k=h=>{u(h)};return e.jsxs($,{children:[e.jsx(xe,{adverts:n,updateFilteredAdverts:k}),e.jsx(H,{adverts:s.length>0?s:n}),n.length>=l&&e.jsx(Z,{onClick:g,children:"LOAD MORE"})]})};export{he as default};
+`,he=({adverts:n,updateFilteredAdverts:p})=>{const s=D(t=>t.filter.filter),h=A(),[a,c]=r.useState(!1),[l,b]=r.useState(""),[j,f]=r.useState([]),[d,C]=r.useState(""),[g,S]=r.useState(""),[u,P]=r.useState(""),z=r.useCallback(()=>{const t=n.map(x=>x.make),i=[...new Set(t)];f(i)},[n]);r.useEffect(()=>{z()},[z]),r.useEffect(()=>{h(U({model:l,price:d,startMileage:g,endMileage:u}))},[l,d,g,u,h]);const v=30,y=500,O=10,I=[];for(let t=v;t<=y;t+=O)I.push(t);const R=j.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,i)=>t.localeCompare(i)),V=async()=>{if(s.model!==""&&!/^[a-zA-Z\s]+$/i.test(s.model)){m.error("Car brand should contain only EN letters !");return}const t=n.filter(i=>{if(l&&s.model&&!i.make.toLowerCase().includes(s.model.toLowerCase()))return!1;if(d&&!isNaN(d)&&parseFloat(i.price)===parseFloat(s.price)){if(Number(d)<v)return m.warn(`Price cannot be less than ${v}!`),!1;if(Number(d)>y)return m.warn(`Price cannot be greater than ${y}!`),!1}if(g!==""&&u!==""){const x=Number(g),$=Number(u);if(x>=$)return m.warn("Start mileage should be less than end mileage!"),!1}if(g<1e3||u>6620){m.error("Mileage should be in the range of 1000 to 6620!");return}return!0});p(t),c(!1)},w=t=>{c(a===t?null:t)},W=()=>{b(""),C(""),S(""),P(""),p(n)},k=t=>{switch(t.target.name){case"model":b(t.target.value);break;case"price":C(t.target.value);break;case"endMileage":P(t.target.value);break;case"startMileage":S(t.target.value);break;default:return}};return e.jsx(_,{children:e.jsxs(ee,{children:[e.jsxs(M,{children:[e.jsx(L,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ie,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:k,onClick:()=>w("model")}),e.jsx(te,{onClick:()=>w("model"),type:"button",children:a==="model"?e.jsx(F,{}):e.jsx(E,{})}),a==="model"&&e.jsx(oe,{children:e.jsx(ne,{children:R.map((t,i)=>e.jsx(re,{onClick:x=>{x.stopPropagation(),b(t),c(!1)},children:t},i))})})]}),e.jsxs(M,{children:[e.jsx(L,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(de,{id:"priceTitle",name:"price",placeholder:"To $",value:d,onChange:k,onClick:()=>w("price")}),e.jsx(ae,{type:"button",onClick:()=>w("price"),children:a==="price"?e.jsx(F,{}):e.jsx(E,{})}),a==="price"&&e.jsx(pe,{children:e.jsx(se,{children:I.map((t,i)=>e.jsx(le,{onClick:x=>{x.stopPropagation(),C(t),c(!1)},children:t},i))})})]}),e.jsxs(M,{children:[e.jsx(L,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(xe,{children:[e.jsx(N,{children:"from"}),e.jsx(ce,{id:"mileageTitle",name:"startMileage",value:g,onChange:k}),e.jsx(ue,{children:"to"}),e.jsx(ge,{type:"number",name:"endMileage",value:u,onChange:k})]})]}),e.jsx(T,{type:"button",onClick:V,children:"Search"}),e.jsx(T,{type:"button",onClick:W,children:"Reset"})]})})},me=()=>{const n=D(Z),p=A(),[s,h]=r.useState([]),[a,c]=r.useState(1),l=12;r.useEffect(()=>{p(q({page:a,limit:l}))},[p,a]),r.useEffect(()=>{h(f=>[...f,...n])},[n]);const b=()=>{c(a+1)},j=f=>{h(f)};return e.jsxs(G,{children:[e.jsx(he,{adverts:n,updateFilteredAdverts:j}),e.jsx(K,{adverts:s.length>0?s:n}),n.length>=l&&e.jsx(J,{onClick:b,children:"LOAD MORE"})]})};export{me as default};

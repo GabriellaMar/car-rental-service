@@ -1,4 +1,4 @@
-import{s as t,j as e,C as n}from"./index-4a81ba41.js";const o="/car-rental-service/assets/BMW-7ee50d55.jpg",r=t.h1`
+import{s as t,j as e,C as n}from"./index-3f14ecbc.js";const o="/car-rental-service/assets/BMW-7ee50d55.jpg",r=t.h1`
    color: #e1e0e0;
   font-weight: bold;
   font-size: 40px;
