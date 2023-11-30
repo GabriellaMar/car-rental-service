@@ -1,4 +1,4 @@
-import{s as o,j as e,G as B,u as D,r,a as q,Q as m,f as G,C as O}from"./index-76cb6b65.js";import{C as Q,u as N,s as Z}from"./CatalogueCard-5f5978e9.js";const H=o.ul`
+import{s as o,j as e,G as B,u as D,r,a as q,Q as m,f as G,C as O}from"./index-265b4502.js";import{C as Q,u as N,s as Z}from"./CatalogueCard-9dc2566d.js";const H=o.ul`
    display: flex;
    flex-wrap: wrap;
    column-gap: 30px;
