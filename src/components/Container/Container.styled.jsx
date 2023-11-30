@@ -7,7 +7,7 @@ align-items: center;
     width: 320px;
     padding: 0 10px;
     margin: 0 auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
    
 
   @media (min-width: 768px) {

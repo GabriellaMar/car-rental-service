@@ -10,7 +10,7 @@ export const HeroTittle = styled.h1`
   text-align: right;
   text-shadow: 1px 1px 2px #5c5757;
   margin-left:  400px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   margin-bottom: 15px;
 
   @media (min-width: 768px) {
@@ -29,7 +29,8 @@ export const HeroText= styled.p`
   font-weight: 600;
   font-size: 26px;
   line-height: 1.2;
-  text-align: right;
+  margin-left: auto;
+  /* text-align: right; */
   margin-bottom: 13px;
   
 
@@ -100,7 +101,7 @@ export const Hero = styled.div`
     url(${heroImg});
 
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-size: cover;
   background-position: center;
   width: 100%;
