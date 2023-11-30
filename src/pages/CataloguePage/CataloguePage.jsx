@@ -6,8 +6,6 @@ import { Container } from '../../components/Container/Container.jsx';
 import { selectAdvertList } from "../../redux/selectors.js";
 import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
 import SearchSection from "../../components/Search/Search.jsx";
-// import { ToastContainer, toast } from 'react-toastify';
-// import { CatalogPageWrapper } from "../MainPage/MainPage.styled.jsx";
 import { LoadMoreBtn } from "../../components/GatalogueList/CatalogueList.styled.jsx";
 
 
@@ -17,7 +15,6 @@ const CatalogPage = () => {
     const adverts = useSelector(selectAdvertList);
 
     const dispatch = useDispatch();
-    // const [filteredAdverts, setFilteredAdverts] = useState([]);
     const [loadedCards, setloadedCards] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 12;
@@ -50,7 +47,7 @@ const CatalogPage = () => {
                 <SearchSection adverts={adverts} updateFilteredAdverts={updateFilteredAdverts} />
                 <CatalogueList adverts={loadedCards.length > 0 ? loadedCards : adverts} />
                 {adverts.length>=cardsPerPage  && (
-                <LoadMoreBtn onClick={loadMore}>LOAD MORE</LoadMoreBtn>
+                <LoadMoreBtn onClick={loadMore}>Load</LoadMoreBtn>
             )}
             </Container>
     );

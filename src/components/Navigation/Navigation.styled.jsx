@@ -65,6 +65,7 @@ export const GoBackIcon = styled(FaArrowLeft)`
 `;
 export const NavigationWrapper = styled.nav`
 display: flex;
+flex-direction: row;
 align-items: center;
 justify-content: space-between;
 `

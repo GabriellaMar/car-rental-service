@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom"
+// import { NavLink } from "react-router-dom"
 import { Logo } from "../Logo/Logo.jsx"
 import { NavigationItem,  NavigationWrapper, NavLinkStyled, NavigationList, GoBackIcon } from "./Navigation.styled"
 import { useLocation } from 'react-router-dom';
-import { Navigate } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 
 export const Navigation =() =>{
     const location = useLocation();

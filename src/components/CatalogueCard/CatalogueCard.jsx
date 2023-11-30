@@ -7,12 +7,13 @@ import {
     CardButton,
     CardWrapper,
     ImageWrapper,
-    CarModelWrapper,
+    // CarModelWrapper,
     CarModelTittle,
     StyledIcon,
     CarInfoItem,
     StyledIconBlue,
-    StyledBtn
+    StyledBtn,
+    InfoTextWrapper
 } from './CatalogueCard.styled'
 
 import { Modal } from '../Modal/Modal';
@@ -86,28 +87,27 @@ export const CatalogueCard = ({ advert }) => {
                 </StyledBtn>
             </ImageWrapper>
             <CarInfoWrapper>
-                <CarModelWrapper>
                     <CarModelTittle>{make} <span>{model}</span>, {year}
                     </CarModelTittle>
-                </CarModelWrapper>
                 <p>{rentalPrice}</p>
             </CarInfoWrapper>
-            <div>
+            <InfoTextWrapper>
                 <CarInfoList>
-                    <CarInfoItem>{city} | </CarInfoItem>
-                    <CarInfoItem>{country} | </CarInfoItem>
+                    <CarInfoItem>{city} </CarInfoItem>
+                    <CarInfoItem>{country} </CarInfoItem>
                     <CarInfoItem>{rentalCompany}  </CarInfoItem>
+                    <CarInfoItem>{type}</CarInfoItem>
                     {/* <li>Premium</li> */}
                 </CarInfoList>
                 <CarInfoList>
-                    <CarInfoItem>{type}</CarInfoItem>
+                   
                     <CarInfoItem>{model} </CarInfoItem>
                     <CarInfoItem>{mileage}</CarInfoItem>
                     <CarInfoItem>{functionalities[0]}</CarInfoItem>
                 </CarInfoList>
-                <CardButton type='button' onClick={toggleModal}>Learn more</CardButton>
+            </InfoTextWrapper>
+            <CardButton type='button' onClick={toggleModal}>Learn more</CardButton>
                 {showModal && <Modal closeModal={toggleModal} data={advert} country={country} city={city} />}
-            </div>
         </CardWrapper>
     )
 }

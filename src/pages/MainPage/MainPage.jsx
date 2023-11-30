@@ -1,10 +1,12 @@
 import { Container } from "../../components/Container/Container.jsx";
+import { Services } from "../../components/Services/Services.jsx";
 import { Hero, HeroRentalBtn, HeroSubtittle, HeroText, HeroTittle } from "./MainPage.styled.jsx";
 
 
 
 const MainPage = () => {
     return (
+        <>
         <Hero>
             <Container>
                 {/* <TextWrapper> */}
@@ -15,9 +17,12 @@ const MainPage = () => {
                         <HeroSubtittle> Enjoy Your Holiday With Us</HeroSubtittle>
                     {/* </StyledTextWrapper> */}
                     <HeroRentalBtn href="tel:+380730000000">Rental car</HeroRentalBtn>
+                  
                 {/* </TextWrapper> */}
             </Container>
         </Hero>
+          <Services />
+          </>
     )
 }
 

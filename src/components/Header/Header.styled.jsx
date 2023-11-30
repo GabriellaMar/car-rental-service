@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   position: relative;
-  padding: 10px 25px;
+  padding: 10px 0px;
   /* background: rgb(29, 32, 37); */
   /* background: linear-gradient(
     -80deg,
@@ -17,6 +17,7 @@ export const HeaderContainer = styled.header`
     rgb(242, 245, 248) 98%,
     rgb(244, 246, 249) 130%
   );
+
   
 
 
