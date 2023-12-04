@@ -5,12 +5,11 @@ import heroImg from '../../images/CardCars/BMW.jpg'
 export const HeroTittle = styled.h1`
    color: #e1e0e0;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 1.6;
   text-align: right;
   text-shadow: 1px 1px 2px #5c5757;
-  margin-left:  400px;
-  /* margin: 0 auto; */
+  margin-left: auto;
   margin-bottom: 15px;
 
   @media (min-width: 768px) {
@@ -21,7 +20,6 @@ export const HeroTittle = styled.h1`
     font-size: 66px;
     line-height: 1.2;
     font-weight: 700;
-     padding-top: 15px; 
   }
 `
 export const HeroText= styled.p`
@@ -29,8 +27,7 @@ export const HeroText= styled.p`
   font-weight: 600;
   font-size: 26px;
   line-height: 1.2;
-  margin-left: auto;
-  /* text-align: right; */
+   text-align: right; 
   margin-bottom: 13px;
   
 
@@ -73,7 +70,7 @@ background-color: #980d0dd3;
 color:  #eceaea;
 border-color: transparent;
 border-radius: 12px;
-margin-top: 16px;
+margin-top: 26px;
 margin-left: auto;
 margin-right: 20px;
 margin-bottom: 15px;
@@ -91,7 +88,7 @@ transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `
 
 export const Hero = styled.div`
-
+padding: 35px 0px;
   display: flex;
   background: linear-gradient(
       to right,
@@ -105,12 +102,15 @@ export const Hero = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 550px;
   z-index: 100;
 `;
 export const TextWrapper = styled.div`
-    /* padding-top: 100px; */
-    /* max-width: 700px;  */
+   .textWrapper {
+    display: block;
+    margin-left: auto;
+   } 
     
 `
 // export const StyledTextWrapper = styled.div`

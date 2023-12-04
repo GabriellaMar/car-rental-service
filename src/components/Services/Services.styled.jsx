@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const ServicesSection = styled.section`
-padding: 30px 20px;
+padding: 50px 20px;
 background: linear-gradient(
     -125deg,
-    rgb(75, 77, 86) 47%,
+    rgb(113, 114, 123) 47%,
     rgb(142, 142, 143) 98%,
     rgb(179, 179, 180) 130%
   );
@@ -17,18 +17,42 @@ position: relative;
     width: 120px;
     height: 120px;
     
-   background:  rgb(65, 67, 76) ;
+   background:  rgb(95, 97, 105) ;
    /* background:  rgb(76, 77, 87) ; */
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
+    overflow: hidden;
+  position: relative;
 
     &:hover,
     &:focus {
-        transform: scale(1.08);
-        box-shadow: 1px 1px 8px rgba(174, 173, 173, 0.872); 
+        transform: scale(1.13);
+        box-shadow: 1px 1px 8px rgba(241, 240, 240, 0.872); 
         transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
         color: var(--white);
     }
+
+    .information {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 10px;
+  display: flex;
+  z-index: 2;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ece7e7;
+  color: var(--dropdawn)
+}
+#serviceInfo {
+  border-top: 10px solid var(--blue);
+}
 `
 export const ServicesList = styled.ul`
 display: flex;
@@ -65,6 +89,6 @@ export const ServicesTittle = styled.h2`
     font-weight: 600;
     font-size: 25px;
     /* text-align: center; */
-    color: #b7bed0;
+    color: #c4cbdc;
     margin-bottom: 20px;
 `

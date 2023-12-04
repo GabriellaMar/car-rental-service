@@ -2,11 +2,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchAdvertThunk } from "../../redux/operation.js";
-import { Container } from '../../components/Container/Container.jsx';
+// import { Container } from '../../components/Container/Container.jsx';
 import { selectAdvertList } from "../../redux/selectors.js";
 import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
 import SearchSection from "../../components/Search/Search.jsx";
-import { LoadMoreBtn } from "../../components/GatalogueList/CatalogueList.styled.jsx";
+
+import {StyledWrapper } from "../CataloguePage/CataloguePage.styled.jsx";
+import { LoadMoreBtn } from "./CataloguePage.styled.jsx";
+import { Container } from "../../components/Container/Container.jsx";
 
 
 
@@ -43,13 +46,18 @@ const CatalogPage = () => {
 
 
     return (
+            // < StyledWrapper>
             <Container>
+                < StyledWrapper>
                 <SearchSection adverts={adverts} updateFilteredAdverts={updateFilteredAdverts} />
-                <CatalogueList adverts={loadedCards.length > 0 ? loadedCards : adverts} />
-                {adverts.length>=cardsPerPage  && (
+                <CatalogueList adverts={loadedCards.length > 0 ? loadedCards : adverts} >
+                 </CatalogueList>
+                 {adverts.length>=cardsPerPage  && (
                 <LoadMoreBtn onClick={loadMore}>Load</LoadMoreBtn>
-            )}
+                )}
+                </StyledWrapper>
             </Container>
+            // </ StyledWrapper>
     );
 }
 

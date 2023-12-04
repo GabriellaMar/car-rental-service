@@ -26,7 +26,9 @@ export const fetchAdvertThunk = createAsyncThunk('advert/fetchAllAdvert',
 
             const response = await axios.get(url.href);
             const adverts = response.data;
+            console.log(adverts)
             return adverts;
+            
         } catch (error) {
             return thunkApi.rejectWithValue(error.message);
         }

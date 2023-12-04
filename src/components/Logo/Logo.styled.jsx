@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { NavLink } from "react-router-dom"
+
+
+
 
 export const LogoImg = styled.img`
     width: 70px;
@@ -7,7 +9,7 @@ export const LogoImg = styled.img`
     padding-left: 5px;
 `
 export const LogoStyledWrapper = styled.div`
-    position: absolute;
+     position: ${(props) => (props.absolutePosition ? 'absolute' : 'relative')};
     top: -16px;
     width: 100px;
     position: relative;
