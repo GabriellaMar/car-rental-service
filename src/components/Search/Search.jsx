@@ -107,8 +107,8 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
                     return false;
                 }
             }
-            if (startMileage < 1000 || endMileage > 6620) {
-                toast.error('Mileage should be in the range of 1000 to 6620!');
+            if (startMileage < 1000 || endMileage > 7000) {
+                toast.error('Mileage should be in the range of 1000 to 7000!');
                 return;
             }
 

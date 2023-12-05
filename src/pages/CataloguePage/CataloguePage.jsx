@@ -1,9 +1,9 @@
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchAdvertThunk } from "../../redux/operation.js";
 // import { Container } from '../../components/Container/Container.jsx';
-import { selectAdvertList } from "../../redux/selectors.js";
+// import { selectAdvertList } from "../../redux/selectors.js";
 import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
 import SearchSection from "../../components/Search/Search.jsx";
 
@@ -13,9 +13,9 @@ import { Container } from "../../components/Container/Container.jsx";
 
 
 
-const CatalogPage = () => {
+const CatalogPage = ({adverts}) => {
 
-    const adverts = useSelector(selectAdvertList);
+    // const adverts = useSelector(selectAdvertList);
 
     const dispatch = useDispatch();
     const [loadedCards, setloadedCards] = useState([]);
@@ -53,7 +53,7 @@ const CatalogPage = () => {
                 <CatalogueList adverts={loadedCards.length > 0 ? loadedCards : adverts} >
                  </CatalogueList>
                  {adverts.length>=cardsPerPage  && (
-                <LoadMoreBtn onClick={loadMore}>Load</LoadMoreBtn>
+                <LoadMoreBtn onClick={loadMore}>Load more</LoadMoreBtn>
                 )}
                 </StyledWrapper>
             </Container>

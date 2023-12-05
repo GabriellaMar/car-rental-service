@@ -4,24 +4,19 @@ import { Container } from "../../components/Container/Container.jsx";
 import { Services } from "../../components/Services/Services.jsx";
 import { Hero, HeroRentalBtn, HeroSubtittle, HeroText, HeroTittle, TextWrapper } from "./MainPage.styled.jsx";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchAdvertThunk } from "../../redux/operation.js";
-import { selectAdvertList } from "../../redux/selectors.js";
+// import { useDispatch, useSelector } from "react-redux";
+// import { fetchAdvertThunk } from "../../redux/operation.js";
+ import { selectAdvertList } from "../../redux/selectors.js";
 import { Footer } from "../../components/Footer/Footer.jsx";
+import { useSelector } from "react-redux";
 
 
 
 
 const MainPage = () => {
+  const adverts = useSelector(selectAdvertList);
+   console.log('Main page', adverts);
 
-    const dispatch = useDispatch();
-    const adverts = useSelector(selectAdvertList);
- 
-   useEffect(() => {
-     dispatch(fetchAdvertThunk());
-   }, [dispatch]);
-
-   console.log("Advert", adverts);
     useEffect(() => {
         gsap.fromTo(".textWrapper", { 
           x: -200,
@@ -49,7 +44,7 @@ const MainPage = () => {
             </Container>
         </Hero>
           <Services />
-          <CarsSliderSection adverts={adverts}/>
+          <CarsSliderSection adverts ={adverts}/>
           <Footer />
           </>
     )
