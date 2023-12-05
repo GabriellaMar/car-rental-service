@@ -1,1 +1,0 @@
-import{R as e,e as a,g as c}from"./index-36919090.js";function r(t=e){const o=t===e?a:c(t);return function(){const{store:s}=o();return s}}const u=r();function i(t=e){const o=t===e?u:r(t);return function(){return o().dispatch}}const f=i(),x=t=>t.advert.advert,p=t=>t.favorite.favorite;export{p as a,x as s,f as u};
