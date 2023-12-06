@@ -19,8 +19,8 @@ export const SliderSection = styled.section`
 `
 export const SliderWrapper = styled.div`
  /* position: relative;  */
-  width: 600px;
-  height: 400px;
+  width: 300px;
+  height: 325px;
   /* height: 752px; */
   overflow: hidden;
    /* margin: 0 auto;  */
@@ -28,6 +28,16 @@ export const SliderWrapper = styled.div`
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
+
+  @media (min-width: 768px) {
+    width: 280px;
+  height: 200px;
+  }
+  @media (min-width: 1440px) {
+    width: 600px;
+  height: 400px;
+    
+  }
 `;
 
 export const SlideImage = styled.img`
@@ -39,8 +49,8 @@ export const SlideImage = styled.img`
 export const SliderTittle = styled.h2`
   display: inline-block;
   position: absolute;
-  top: 30px; 
-  right: 120px;
+  top: -45px; 
+  right: 0px;
   padding: 4px 10px;
   width: 200px;
   color: #ece9e9;
@@ -53,20 +63,54 @@ export const SliderTittle = styled.h2`
    background-color: #eceaea94; 
   margin-bottom: 35px;
   text-align: center;
+   @media (min-width: 768px) {
+    right: 40px;
+    font-weight: 600;
+  font-size: 15px;
+  } 
+
+  @media (min-width: 1440px) {
+    width: 200px;
+    top: 30px; 
+  right: 120px;
+    
+  }
+
 `;
 export const SliderText =styled.p`
-  max-width: 450px;
+  max-width: 300px;
+  height: 125px;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 15px;
   color: var(--text-color);
+
+   @media (min-width: 768px) {
+    max-width: 300px;
+    font-size: 15px;
+    
+  } 
+  @media (min-width: 1440px) {
+    max-width: 450px;
+    font-size: 20px;
+  }
+
 `
 
 export const FlexWrapper = styled.div`
   display:  flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative; 
-  gap: 35px;
+  gap: 25px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  @media (min-width: 1440px) {
+    gap: 35px;
+    
+  }
 
 `
 
@@ -75,13 +119,36 @@ export const ArrowWrapper =styled.div`
   display: flex;
   gap: 12px;
   bottom: 0px;
+  left: 10px;
+  margin-top: 15px;
+
+  @media (min-width: 768px) {
+    margin-top: 10px;
+    bottom: 0px;
+  left: 410px;
+  }
+  @media (min-width: 1440px) {
+   
+    
+  bottom: 0px;
   left: 920px;
-  margin-top: 10px;
+  }
 
 `
 export const SliderSectionTittle = styled(ServicesTittle)`
-   color: #ece9e9;
-   margin-bottom: 15px;
+  font-size: 20px;
+  color: #ece9e9;
+  margin-bottom: 65px;
+
+   @media (min-width: 768px) {
+  margin-bottom: 25px;
+  font-size: 22px;
+  } 
+
+  @media (min-width: 1440px) {
+  
+  margin-bottom: 15px;
+  } 
 `
 // export const Description = styled.p`
 //   position: absolute;
