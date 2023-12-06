@@ -1,8 +1,8 @@
 // import { useDispatch, useSelector } from "react-redux";
 import gsap from 'gsap';
 import { useCallback, useEffect, useState } from "react";
-import { FaArrowLeftLong , FaArrowRightLong} from "react-icons/fa6";
-import { SliderSection , SliderWrapper, SlideImage, SliderTittle, SliderText} from "./CarsSliderSection.styled"
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { SliderSection, SliderWrapper, SlideImage, SliderTittle, SliderText, FlexWrapper, ArrowWrapper, SliderSectionTittle } from "./CarsSliderSection.styled"
 import { Container } from '../Container/Container';
 // import { selectAdvertList } from "../../redux/selectors";
 // import { fetchAdvertThunk } from "../../redux/operation";
@@ -56,29 +56,30 @@ export const CarsSliderSection = ({ adverts }) => {
   return (
     <SliderSection>
       <Container>
-      <h2>Our Cars</h2>
-      { adverts.map((advert, index) => ( index === activeSlide && 
-           <SliderText key={advert.id}>{advert.description}</SliderText>
-      ))}
-      <SliderWrapper>
-        {adverts.map((advert, index) => (
+      <SliderSectionTittle>Our Cars</SliderSectionTittle>
+         <FlexWrapper> 
+        {adverts.map((advert, index) => (index === activeSlide &&
           <>
-           {index === activeSlide && 
-           <SliderTittle>{advert.make}</SliderTittle>
-           }
-          <SlideImage
-            key={advert.id}
-            src={advert.img}
-            alt={`Car ${index}`}
-            className={`slide-${index} ${index === activeSlide ? 'active' : ''}`}
-          />
+            <SliderTittle>{advert.make} {advert.model}</SliderTittle>
+            <SliderText key={advert.id}>{advert.description}</SliderText>
           </>
-        ))}
-      </SliderWrapper>
-      <div>
-      <FaArrowLeftLong onClick={prevSlide} onMouseEnter={pause} onMouseLeave={resume} />
-      <FaArrowRightLong onClick={nextSlide} onMouseEnter={pause} onMouseLeave={resume} />
-      </div>
+        ))
+        }
+        <SliderWrapper>
+          {adverts.map((advert, index) => (
+            <SlideImage
+              key={advert.id}
+              src={advert.img}
+              alt={`Car ${index}`}
+              className={`slide-${index} ${index === activeSlide ? 'active' : ''}`}
+            />
+          ))}
+        </SliderWrapper>
+         </FlexWrapper> 
+         <ArrowWrapper>
+          <FaArrowLeftLong onClick={prevSlide} onMouseEnter={pause} onMouseLeave={resume} />
+          <FaArrowRightLong onClick={nextSlide} onMouseEnter={pause} onMouseLeave={resume} />
+        </ArrowWrapper>
       </Container>
     </SliderSection>
   );

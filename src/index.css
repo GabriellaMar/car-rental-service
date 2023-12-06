@@ -10,6 +10,7 @@
 --heart-white: rgba(255, 255, 255, 0.8);
 --gray: #363535;
 --dropdawn:  #6d6c6c;
+--text-color:  #595959;
  }
 
 
@@ -25,8 +26,9 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0; 
-  background:  rgb(230, 234, 251) 98%;
-  background:  rgba(222, 222, 223, 0.837) 37%;
+  /* background:  rgb(230, 234, 251) 98%; */
+  background:  rgba(212, 212, 213, 0.837) 37%;
+  
 
 }
 h1,

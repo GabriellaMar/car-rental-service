@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 
 export const ServicesSection = styled.section`
-padding: 50px 20px;
+padding: 40px 20px;
+padding-bottom: 60px;
 background: linear-gradient(
     -125deg,
-    rgb(113, 114, 123) 47%,
-    rgb(142, 142, 143) 98%,
-    rgb(179, 179, 180) 130%
+    rgb(134, 135, 145) 47%,
+    rgb(164, 164, 166) 98%,
+    rgb(199, 199, 200) 130%
   );
-    background-color:  rgb(96, 98, 109) ; 
+    
   
 `
 
 export const ServicesItem = styled.li`
 position: relative;
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     
-   background:  rgb(95, 97, 105) ;
+   background:  rgb(120, 122, 131) ;
    /* background:  rgb(76, 77, 87) ; */
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
@@ -84,11 +85,10 @@ export const ServicesImg = styled.img`
 `;
 
 export const ServicesTittle = styled.h2`
-  
     font-family: 'Manrope', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 25px;
-    /* text-align: center; */
-    color: #c4cbdc;
+    color: #cfd6e7;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `

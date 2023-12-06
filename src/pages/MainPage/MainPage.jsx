@@ -6,15 +6,15 @@ import { Hero, HeroRentalBtn, HeroSubtittle, HeroText, HeroTittle, TextWrapper }
 import { useEffect } from "react";
 // import { useDispatch, useSelector } from "react-redux";
 // import { fetchAdvertThunk } from "../../redux/operation.js";
- import { selectAdvertList } from "../../redux/selectors.js";
+//  import { selectAdvertList } from "../../redux/selectors.js";
 import { Footer } from "../../components/Footer/Footer.jsx";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 
 
 
-const MainPage = () => {
-  const adverts = useSelector(selectAdvertList);
+const MainPage = ({adverts}) => {
+  // const adverts = useSelector(selectAdvertList);
    console.log('Main page', adverts);
 
     useEffect(() => {

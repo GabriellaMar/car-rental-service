@@ -11,10 +11,11 @@ export const AdvertList = styled.ul`
   `
 export const FovoritePageWrapper = styled.div`
   height: 100vh;
-  background: linear-gradient(
+  margin: 0 auto;
+  /* background: linear-gradient(
     -60deg,
     rgb(23, 26, 32) 49%,
     rgb(187, 206, 226) 100%,
     rgb(206, 206, 206) 70%
-  );
+  ); */
 `

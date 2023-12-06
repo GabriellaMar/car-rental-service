@@ -4,8 +4,7 @@ import { MdEmail } from 'react-icons/md';
 
 export const FooterWrapper = styled.footer`
 display: flex;
-/* justify-content: space-between; */
-    /* padding: 30px, 35px; */
+
     width: 100%;
     height: 200px;
     background: linear-gradient(
@@ -18,6 +17,7 @@ display: flex;
 `
 export const ContactWrapper = styled.div`
   display: flex;
+  padding: 30px, 35px; 
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;

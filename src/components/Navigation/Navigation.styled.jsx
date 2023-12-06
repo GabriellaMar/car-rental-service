@@ -44,7 +44,7 @@ export const NavLinkStyled = styled(NavLink)`
 export const GoBackIcon = styled(FaArrowLeft)`
   width: 13px;
   height: 13px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   padding: 10px;
   color:  #e7e4e4f4;
   border-radius: 50%;

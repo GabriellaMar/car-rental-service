@@ -1,7 +1,7 @@
 
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import { fetchAdvertThunk } from "../../redux/operation.js";
+// import { fetchAdvertThunk } from "../../redux/operation.js";
 // import { Container } from '../../components/Container/Container.jsx';
 // import { selectAdvertList } from "../../redux/selectors.js";
 import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
@@ -13,19 +13,19 @@ import { Container } from "../../components/Container/Container.jsx";
 
 
 
-const CatalogPage = ({adverts}) => {
+const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
 
     // const adverts = useSelector(selectAdvertList);
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const [loadedCards, setloadedCards] = useState([]);
-    const [currentPage, setCurrentPage] = useState(1);
+    // const [currentPage, setCurrentPage] = useState(1);
     const cardsPerPage = 12;
 
-    useEffect(() => {
-        dispatch(fetchAdvertThunk({page: currentPage, limit: cardsPerPage}));
+    // useEffect(() => {
+    //     dispatch(fetchAdvertThunk({page: currentPage, limit: cardsPerPage}));
         
-    }, [dispatch, currentPage]);
+    // }, [dispatch, currentPage]);
 
   
     useEffect(() => {
