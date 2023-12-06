@@ -1,4 +1,4 @@
-import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./index-541786bd.js";import{C as Q}from"./CatalogueCard-53562401.js";const Z=o.ul`
+import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./index-e17a4760.js";import{C as O}from"./CatalogueCard-535bc2d4.js";const Q=o.ul`
    display: flex;
    flex-wrap: wrap;
    column-gap: 30px;
@@ -6,7 +6,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
    padding : 20px;
    justify-content: center;
    
-`,H=({adverts:n})=>e.jsx(Z,{children:n.length>0&&n.map(p=>e.jsx(Q,{advert:p},p.id))});function J(n){return B({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function K(n){return B({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const X=o.section`
+`,Z=({adverts:n})=>e.jsx(Q,{children:n.length>0&&n.map(p=>e.jsx(O,{advert:p},p.id))});function H(n){return E({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function J(n){return E({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const K=o.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -18,19 +18,19 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   @media (min-width: 1440px) {
     padding: 50px 0px 80px;
   }
-`,Y=o.div`
+`,X=o.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
   gap: 18px;
-`,v=o.div`
+`,M=o.div`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`,_=o.button`
+`,Y=o.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -39,7 +39,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   border: none;
   cursor: pointer;
   outline: none;
-`,ee=o.div`
+`,_=o.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -75,7 +75,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,te=o.ul`
+`,ee=o.ul`
 
   display: flex;
   flex-direction: column;
@@ -83,7 +83,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,oe=o.li`
+`,te=o.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -95,7 +95,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   &:hover {
     color: var(--blue);
   }
-`,S=o.label`
+`,v=o.label`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -103,7 +103,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   /* color: #fff; */
   color:  #6e6e6e ;
   margin-bottom: 8px;
-  `,ne=o.input`
+  `,oe=o.input`
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -126,17 +126,17 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
   }
-`,E=o(J)`
+`,I=o(H)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,F=o(K)`
+`,F=o(J)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,re=o.button`
+`,ne=o.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -145,7 +145,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   border: none;
   cursor: pointer;
   outline: none;
-`,ie=o.div`
+`,re=o.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -178,14 +178,14 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,ae=o.ul`
+`,ie=o.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,pe=o.li`
+`,ae=o.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -197,7 +197,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   &:hover {
     color: var(--blue);
   }
-`,se=o.input`
+`,pe=o.input`
   display: flex;
   width: 125px;
   padding: 10px 10px 10px 18px;
@@ -223,13 +223,13 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
   }
-`,le=o.div`
+`,se=o.div`
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-`,de=o.input`
+`,le=o.input`
   /* position: relative; */
   display: flex;
   width: 100px;
@@ -260,7 +260,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
     width: 160px;
     padding: 14px 14px 14px 63px;
   }
-`,xe=o.input`
+`,de=o.input`
   display: flex;
   width: 100px;
   padding: 10px 10px 10px 14px;
@@ -291,7 +291,7 @@ import{s as o,j as e,G as B,u as U,b as D,r,c as q,Q as m,f as G,C as O}from"./i
     width: 160px;
     padding: 14px 14px 14px 42px;
   }
-`,N=o.p`
+`,T=o.p`
 position: absolute;
 /* top: 12px; */
 left: 18px;
@@ -301,10 +301,10 @@ left: 18px;
   line-height: 20px;
   color: var(--dropdawn);  
 
-`,ce=o(N)`
+`,xe=o(T)`
 position: absolute;
 left: 255px; 
-`,T=o.button`
+`,B=o.button`
   padding: 10px 20px;
   color: #fff;
   font-family: 'Manrope', sans-serif;
@@ -327,7 +327,7 @@ left: 255px;
   @media (min-width: 1440px) {
     padding: 13px 44px;
   }
-`,ge=({adverts:n,updateFilteredAdverts:p})=>{const s=U(t=>t.filter.filter),h=D(),[a,c]=r.useState(!1),[l,b]=r.useState(""),[j,f]=r.useState([]),[d,C]=r.useState(""),[g,L]=r.useState(""),[u,P]=r.useState(""),z=r.useCallback(()=>{const t=n.map(x=>x.make),i=[...new Set(t)];f(i)},[n]);r.useEffect(()=>{z()},[z]),r.useEffect(()=>{h(q({model:l,price:d,startMileage:g,endMileage:u}))},[l,d,g,u,h]);const y=30,M=500,A=10,I=[];for(let t=y;t<=M;t+=A)I.push(t);const W=j.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,i)=>t.localeCompare(i)),V=async()=>{if(s.model!==""&&!/^[a-zA-Z\s]+$/i.test(s.model)){m.error("Car brand should contain only EN letters !");return}const t=n.filter(i=>{if(l&&s.model&&!i.make.toLowerCase().includes(s.model.toLowerCase()))return!1;if(d&&!isNaN(d)&&parseFloat(i.price)===parseFloat(s.price)){if(Number(d)<y)return m.warn(`Price cannot be less than ${y}!`),!1;if(Number(d)>M)return m.warn(`Price cannot be greater than ${M}!`),!1}if(g!==""&&u!==""){const x=Number(g),R=Number(u);if(x>=R)return m.warn("Start mileage should be less than end mileage!"),!1}if(g<1e3||u>7e3){m.error("Mileage should be in the range of 1000 to 7000!");return}return!0});p(t),c(!1)},w=t=>{c(a===t?null:t)},$=()=>{b(""),C(""),L(""),P(""),p(n)},k=t=>{switch(t.target.name){case"model":b(t.target.value);break;case"price":C(t.target.value);break;case"endMileage":P(t.target.value);break;case"startMileage":L(t.target.value);break;default:return}};return e.jsx(X,{children:e.jsxs(Y,{children:[e.jsxs(v,{children:[e.jsx(S,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ne,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:k,onClick:()=>w("model")}),e.jsx(_,{onClick:()=>w("model"),type:"button",children:a==="model"?e.jsx(F,{}):e.jsx(E,{})}),a==="model"&&e.jsx(ee,{children:e.jsx(te,{children:W.map((t,i)=>e.jsx(oe,{onClick:x=>{x.stopPropagation(),b(t),c(!1)},children:t},i))})})]}),e.jsxs(v,{children:[e.jsx(S,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(se,{id:"priceTitle",name:"price",placeholder:"To $",value:d,onChange:k,onClick:()=>w("price")}),e.jsx(re,{type:"button",onClick:()=>w("price"),children:a==="price"?e.jsx(F,{}):e.jsx(E,{})}),a==="price"&&e.jsx(ie,{children:e.jsx(ae,{children:I.map((t,i)=>e.jsx(pe,{onClick:x=>{x.stopPropagation(),C(t),c(!1)},children:t},i))})})]}),e.jsxs(v,{children:[e.jsx(S,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(le,{children:[e.jsx(N,{children:"from"}),e.jsx(de,{id:"mileageTitle",name:"startMileage",value:g,onChange:k}),e.jsx(ce,{children:"to"}),e.jsx(xe,{type:"number",name:"endMileage",value:u,onChange:k})]})]}),e.jsx(T,{type:"button",onClick:V,children:"Search"}),e.jsx(T,{type:"button",onClick:$,children:"Reset"})]})})},ue=o.button`
+`,ce=({adverts:n,updateFilteredAdverts:p})=>{const s=R(t=>t.filter.filter),h=U(),[a,c]=i.useState(!1),[l,b]=i.useState(""),[f,D]=i.useState([]),[d,j]=i.useState(""),[g,S]=i.useState(""),[u,L]=i.useState(""),z=i.useCallback(()=>{const t=n.map(x=>x.make),r=[...new Set(t)];D(r)},[n]);i.useEffect(()=>{z()},[z]),i.useEffect(()=>{h(q({model:l,price:d,startMileage:g,endMileage:u}))},[l,d,g,u,h]);const y=30,C=500,N=10,P=[];for(let t=y;t<=C;t+=N)P.push(t);const W=f.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,r)=>t.localeCompare(r)),A=async()=>{if(s.model!==""&&!/^[a-zA-Z\s]+$/i.test(s.model)){m.error("Car brand should contain only EN letters !");return}const t=n.filter(r=>{if(l&&s.model&&!r.make.toLowerCase().includes(s.model.toLowerCase()))return!1;if(d&&!isNaN(d)&&parseFloat(r.price)===parseFloat(s.price)){if(Number(d)<y)return m.warn(`Price cannot be less than ${y}!`),!1;if(Number(d)>C)return m.warn(`Price cannot be greater than ${C}!`),!1}if(g!==""&&u!==""){const x=Number(g),$=Number(u);if(x>=$)return m.warn("Start mileage should be less than end mileage!"),!1}if(g<1e3||u>7e3){m.error("Mileage should be in the range of 1000 to 7000!");return}return!0});p(t),c(!1)},w=t=>{c(a===t?null:t)},V=()=>{b(""),j(""),S(""),L(""),p(n)},k=t=>{switch(t.target.name){case"model":b(t.target.value);break;case"price":j(t.target.value);break;case"endMileage":L(t.target.value);break;case"startMileage":S(t.target.value);break;default:return}};return e.jsx(K,{children:e.jsxs(X,{children:[e.jsxs(M,{children:[e.jsx(v,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(oe,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:k,onClick:()=>w("model")}),e.jsx(Y,{onClick:()=>w("model"),type:"button",children:a==="model"?e.jsx(F,{}):e.jsx(I,{})}),a==="model"&&e.jsx(_,{children:e.jsx(ee,{children:W.map((t,r)=>e.jsx(te,{onClick:x=>{x.stopPropagation(),b(t),c(!1)},children:t},r))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(pe,{id:"priceTitle",name:"price",placeholder:"To $",value:d,onChange:k,onClick:()=>w("price")}),e.jsx(ne,{type:"button",onClick:()=>w("price"),children:a==="price"?e.jsx(F,{}):e.jsx(I,{})}),a==="price"&&e.jsx(re,{children:e.jsx(ie,{children:P.map((t,r)=>e.jsx(ae,{onClick:x=>{x.stopPropagation(),j(t),c(!1)},children:t},r))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(se,{children:[e.jsx(T,{children:"from"}),e.jsx(le,{id:"mileageTitle",name:"startMileage",value:g,onChange:k}),e.jsx(xe,{children:"to"}),e.jsx(de,{type:"number",name:"endMileage",value:u,onChange:k})]})]}),e.jsx(B,{type:"button",onClick:A,children:"Search"}),e.jsx(B,{type:"button",onClick:V,children:"Reset"})]})})},ge=o.button`
    width: 200px; 
    font-size: 16px;
    font-weight: 500;
@@ -347,10 +347,10 @@ left: 255px;
 &:focus {
    background-color: var(--hover-blue)
 }
-`,he=o.div`
+`,ue=o.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 
-`,me=({adverts:n})=>{const p=D(),[s,h]=r.useState([]),[a,c]=r.useState(1),l=12;r.useEffect(()=>{p(G({page:a,limit:l}))},[p,a]),r.useEffect(()=>{h(f=>[...f,...n])},[n]);const b=()=>{c(a+1)},j=f=>{h(f)};return e.jsx(O,{children:e.jsxs(he,{children:[e.jsx(ge,{adverts:n,updateFilteredAdverts:j}),e.jsx(H,{adverts:s.length>0?s:n}),n.length>=l&&e.jsx(ue,{onClick:b,children:"Load more"})]})})};export{me as default};
+`,fe=({adverts:n,currentPage:p,setCurrentPage:s})=>{const[h,a]=i.useState([]),c=12;i.useEffect(()=>{a(f=>[...f,...n])},[n]);const l=()=>{s(p+1)},b=f=>{a(f)};return e.jsx(G,{children:e.jsxs(ue,{children:[e.jsx(ce,{adverts:n,updateFilteredAdverts:b}),e.jsx(Z,{adverts:h.length>0?h:n}),n.length>=c&&e.jsx(ge,{onClick:l,children:"Load more"})]})})};export{fe as default};

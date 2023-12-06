@@ -1,4 +1,4 @@
-import{s as t,j as e,r as o,u as n,C as s}from"./index-541786bd.js";import{C as p}from"./CatalogueCard-53562401.js";const d=t.ul`
+import{s as e,j as t,r as o,u as n,C as s}from"./index-e17a4760.js";import{C as p}from"./CatalogueCard-535bc2d4.js";const d=e.ul`
 
    display: flex;
    flex-wrap: wrap;
@@ -6,15 +6,16 @@ import{s as t,j as e,r as o,u as n,C as s}from"./index-541786bd.js";import{C as 
    row-gap: 30px;
    padding : 20px;
    
-  `,x=t.div`
+  `,x=e.div`
   height: 100vh;
-  background: linear-gradient(
+  margin: 0 auto;
+  /* background: linear-gradient(
     -60deg,
     rgb(23, 26, 32) 49%,
     rgb(187, 206, 226) 100%,
     rgb(206, 206, 206) 70%
-  );
-`,c="/car-rental-service/assets/Nocar-bdb983a9.png",g=t.section`
+  ); */
+`,c="/car-rental-service/assets/Nocar-bdb983a9.png",g=e.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +26,7 @@ import{s as t,j as e,r as o,u as n,C as s}from"./index-541786bd.js";import{C as 
     rgb(181, 186, 196) 100%,
     rgb(205, 206, 206) 50%
   );
-`,l=t.img`
+`,l=e.img`
   display: block;
   width: 100%;
   height: 100%;
@@ -39,7 +40,7 @@ import{s as t,j as e,r as o,u as n,C as s}from"./index-541786bd.js";import{C as 
     width: 100%;
     height: 100%;
   }
-`,h=t.p`
+`,h=e.p`
   background-color: transparent;
   border: none;
   padding: 28px;
@@ -66,4 +67,4 @@ import{s as t,j as e,r as o,u as n,C as s}from"./index-541786bd.js";import{C as 
     font-size: 38px;
     margin-top: 100px;
   }
-`,m=()=>e.jsxs(g,{children:[e.jsx(h,{children:"No cars available"}),e.jsx(l,{src:c,alt:"set Of Cars"})]}),u=()=>{const[a,f]=o.useState(!0),i=n(r=>r.favorite.favorite);return e.jsx(x,{children:e.jsx(s,{children:i.length>0?e.jsx(d,{children:a&&i.map(r=>e.jsx(p,{advert:r},r.id))}):e.jsx(m,{})})})};export{u as default};
+`,m=()=>t.jsxs(g,{children:[t.jsx(h,{children:"No cars available"}),t.jsx(l,{src:c,alt:"set Of Cars"})]}),v=()=>{const[a,f]=o.useState(!0),i=n(r=>r.favorite.favorite);return t.jsx(x,{children:t.jsx(s,{children:i.length>0?t.jsx(d,{children:a&&i.map(r=>t.jsx(p,{advert:r},r.id))}):t.jsx(m,{})})})};export{v as default};
