@@ -1,4 +1,4 @@
-import{s as e,j as t,r as o,u as n,C as s}from"./index-e17a4760.js";import{C as p}from"./CatalogueCard-535bc2d4.js";const d=e.ul`
+import{s as e,j as t,r as o,u as n,C as s}from"./index-e549480f.js";import{C as p}from"./CatalogueCard-8469cfbc.js";const d=e.ul`
 
    display: flex;
    flex-wrap: wrap;
