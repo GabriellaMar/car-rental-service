@@ -1,10 +1,10 @@
 import { gsap } from "gsap";
 import { ServicesItem, ServicesList, ServicesImg, ServicesSection, ServicesTittle } from "./Services.styled"
-import tire from '../../images/car-wheel.png';
-import tow from '../../images/towing-vehicle.png'
-import fuel from '../../images/icon-fuel.png'
-import driver from '../../images/icon-driver.png'
-import wash from '../../images/icon-car-wash.png'
+import tire from '../../images/icons/car-wheel.png';
+import tow from '../../images/icons/towing-vehicle.png'
+import fuel from '../../images/icons/icon-fuel.png'
+import driver from '../../images/icons/icon-driver.png'
+import wash from '../../images/icons/icon-car-wash.png'
 import { useEffect } from "react";
 import { Container } from "../Container/Container";
 export const Services = () => {
@@ -31,7 +31,7 @@ export const Services = () => {
                             alt="Tire icon"
                         />
                         <div className="information" id='serviceInfo'>
-                            <p>Wheel replacement</p>
+                            <p className="infoText">Wheel replacement</p>
                         </div>
                     </ServicesItem>
 
@@ -41,7 +41,7 @@ export const Services = () => {
                             alt="Driver icon"
                         />
                         <div className="information" id='serviceInfo'>
-                            <p>A personal driver</p>
+                            <p className="infoText">A personal driver</p>
                         </div>
                     </ServicesItem>
                     <ServicesItem className="service-card">
@@ -50,7 +50,7 @@ export const Services = () => {
                             alt="Fuel icon"
                         />
                         <div className="information" id='serviceInfo'>
-                            <p> Fuel delivery </p>
+                            <p className="infoText"> Fuel delivery </p>
                         </div>
                     </ServicesItem>
                     <ServicesItem className="service-card">
@@ -61,7 +61,7 @@ export const Services = () => {
                             height={80}
                         />
                         <div className="information" id='serviceInfo'>
-                            <p>Towing service</p>
+                            <p className="infoText">Towing service</p>
                         </div>
                     </ServicesItem>
                     <ServicesItem className="service-card">
@@ -70,7 +70,7 @@ export const Services = () => {
                             alt="Tire"
                         />
                         <div className="information" id='serviceInfo'>
-                            <p>  Car washing </p>
+                            <p className="infoText">  Car washing </p>
                         </div>
                     </ServicesItem>
 

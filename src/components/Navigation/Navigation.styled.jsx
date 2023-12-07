@@ -67,5 +67,11 @@ export const NavigationWrapper = styled.nav`
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: space-between;
+gap: 40px;
+`
+
+export const NavBtn = styled.button`
+  background: transparent;
+  border: none;
+  margin-left: auto;
 `

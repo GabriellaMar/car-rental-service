@@ -34,13 +34,12 @@ const MainPage = ({adverts}) => {
                  <TextWrapper className="textWrapper"> 
                     <HeroTittle>Best Cars For The Best Journey</HeroTittle>
                     <HeroText> Welcome to Car Rental Service!</HeroText>
-                    {/* <StyledTextWrapper> */}
+                     {/* <StyledTextWrapper>  */}
                         <HeroSubtittle>We Provide Best Cars With The Best Prices. <br />We Make Your Drive Memorable. </HeroSubtittle>
                         <HeroSubtittle> Enjoy Your Holiday With Us</HeroSubtittle>
-                    {/* </StyledTextWrapper> */}
-                    <HeroRentalBtn href="tel:+380730000000">Rental car</HeroRentalBtn>
-                  
+                   {/* </StyledTextWrapper>  */}
                  </TextWrapper> 
+                 <HeroRentalBtn href="tel:+380730000000">Rental car</HeroRentalBtn>
             </Container>
         </Hero>
           <Services />

@@ -19,7 +19,7 @@ export const SliderSection = styled.section`
 `
 export const SliderWrapper = styled.div`
  /* position: relative;  */
-  width: 300px;
+  width: 330px;
   height: 325px;
   /* height: 752px; */
   overflow: hidden;
@@ -30,7 +30,7 @@ export const SliderWrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
   @media (min-width: 768px) {
-    width: 280px;
+    width: 300px;
   height: 200px;
   }
   @media (min-width: 1440px) {
@@ -50,42 +50,48 @@ export const SliderTittle = styled.h2`
   display: inline-block;
   position: absolute;
   top: -45px; 
-  right: 0px;
-  padding: 4px 10px;
+  right: 8px;
+  padding: 6px 10px;
   width: 200px;
   color: #ece9e9;
   font-family: 'Manrope', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 15px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 100;
   border-radius: 10px;
-   background-color: #eceaea94; 
-  margin-bottom: 35px;
+  background-color: #eceaea94; 
+  background-color: #f8414192; 
+  /* margin-bottom: 35px; */
   text-align: center;
-   @media (min-width: 768px) {
+
+  @media (min-width: 768px) {
+    padding: 4px 10px;
     right: 40px;
     font-weight: 600;
-  font-size: 15px;
+    font-size: 18px;
   } 
 
   @media (min-width: 1440px) {
+    padding: 6px 10px;
+    font-size: 20px;
     width: 200px;
     top: 30px; 
-  right: 120px;
+    right: 120px;
     
   }
 
 `;
 export const SliderText =styled.p`
   max-width: 300px;
-  height: 125px;
+  height: 118px;
   font-weight: 500;
   font-size: 15px;
   color: var(--text-color);
 
    @media (min-width: 768px) {
     max-width: 300px;
+    /* height: 125px; */
     font-size: 15px;
     
   } 
@@ -102,7 +108,7 @@ export const FlexWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative; 
-  gap: 25px;
+  gap: 16px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -131,7 +137,7 @@ export const ArrowWrapper =styled.div`
    
     
   bottom: 0px;
-  left: 920px;
+  left: 935px;
   }
 
 `
@@ -141,12 +147,12 @@ export const SliderSectionTittle = styled(ServicesTittle)`
   margin-bottom: 65px;
 
    @media (min-width: 768px) {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   font-size: 22px;
   } 
 
-  @media (min-width: 1440px) {
-  
+   @media (min-width: 1440px) {
+    font-size: 25px;
   margin-bottom: 15px;
   } 
 `

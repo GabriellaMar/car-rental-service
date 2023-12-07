@@ -14,6 +14,32 @@ export const CarsSliderSection = ({ adverts }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
 
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo(".car-tittle", { 
+      x: 90,
+      opacity: 0,
+    }, 
+    { 
+      duration: 2,
+      x: 0,
+      opacity: 1,
+    } )
+    .fromTo(".description", { 
+      y: 40,
+      opacity: 0,
+    }, 
+    { 
+      duration: 2,
+      y: 0,
+      opacity: 1,
+    }, "-=1.3");
+   
+  }, [])
+
+  
+
   const nextSlide = useCallback(() => {
     const slide = activeSlide + 1 < adverts.length ? activeSlide + 1 : 0;
     animateSlide(activeSlide, slide);
@@ -32,7 +58,7 @@ export const CarsSliderSection = ({ adverts }) => {
       .set(`.slide-${from}`, { display: 'none' })
       .set(`.slide-${to}`, { display: 'block' })
       .from(`.slide-${to}`, { opacity: 0, duration: 0.5 })
-      .to(`.slide-${to}`, { opacity: 1, duration: 0.5 });
+      .to(`.slide-${to}`, { opacity: 1, duration: 0.5 })
   };
 
   useEffect(() => {
@@ -60,17 +86,17 @@ export const CarsSliderSection = ({ adverts }) => {
          <FlexWrapper> 
         {adverts.map((advert, index) => (index === activeSlide &&
           <>
-            <SliderTittle>{advert.make} {advert.model}</SliderTittle>
-            <SliderText key={advert.id}>{advert.description}</SliderText>
+            <SliderTittle className='car-tittle'>{advert.make} {advert.model}</SliderTittle>
+            <SliderText className= 'description' >{advert.description}</SliderText>
           </>
         ))
         }
-        <SliderWrapper>
+        <SliderWrapper onMouseEnter={pause} onMouseLeave={resume}>
           {adverts.map((advert, index) => (
             <SlideImage
               key={advert.id}
               src={advert.img}
-              alt={`Car ${index}`}
+              alt={advert.make}
               className={`slide-${index} ${index === activeSlide ? 'active' : ''}`}
             />
           ))}

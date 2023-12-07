@@ -11,7 +11,7 @@ export const Footer = () => {
             <ContactWrapper>
                 <ContactTitle>Contact Us</ContactTitle>
                 <ContactText><TelIcon /> +38 (095) 111 11 11</ContactText>
-                <ContactText><EmailIcon /> carRentalServise@gmail.com</ContactText>
+                <ContactText><EmailIcon /> rentCar@gmail.com</ContactText>
             </ContactWrapper>
             </FooterContentWrapper>
             </Container>
