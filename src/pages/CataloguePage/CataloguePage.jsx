@@ -10,6 +10,7 @@ import SearchSection from "../../components/Search/Search.jsx";
 import {StyledWrapper } from "../CataloguePage/CataloguePage.styled.jsx";
 import { LoadMoreBtn } from "./CataloguePage.styled.jsx";
 import { Container } from "../../components/Container/Container.jsx";
+import { Footer } from "../../components/Footer/Footer.jsx";
 
 
 
@@ -46,7 +47,7 @@ const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
 
 
     return (
-            // < StyledWrapper>
+            <>
             <Container>
                 < StyledWrapper>
                 <SearchSection adverts={adverts} updateFilteredAdverts={updateFilteredAdverts} />
@@ -57,7 +58,8 @@ const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
                 )}
                 </StyledWrapper>
             </Container>
-            // </ StyledWrapper>
+            <Footer />
+            </>
     );
 }
 

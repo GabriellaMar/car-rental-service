@@ -10,6 +10,7 @@ export const NavigationList = styled.ul`
 
     @media (min-width: 768px) {
     flex-direction: row;
+    margin-right: auto;
   }
 `
 export const NavigationItem = styled.li`
@@ -43,7 +44,6 @@ export const NavLinkStyled = styled(NavLink)`
         text-shadow: 2px 2px 6px rgba(219, 218, 218, 0.872); 
         color: var(--white);
     }
-    /* text-shadow: 2px 2px 5px #000000; */
 `;
 
 export const GoBackIcon = styled(FaArrowLeft)`
@@ -74,7 +74,6 @@ display: flex;
 flex-direction: row;
 align-items: center;
 gap: 40px;
-border: 1px solid red;
 `
 
 export const NavBtn = styled.button`

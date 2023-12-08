@@ -22,7 +22,7 @@ export const Navigation = () => {
       document.body.style.overflow = showNavMenu ? 'auto' : 'hidden';
     };
 
-    const showGoBackBtn = isMediumScreens || (!isMediumScreens && showNavMenu && pageLocation);
+    const showGoBackBtn = isMediumScreens || (!isMediumScreens && showNavMenu );
 
   return (
     <NavigationWrapper>
@@ -42,7 +42,7 @@ export const Navigation = () => {
           </NavBtn>)
         )
       }
-      {showGoBackBtn && (
+      {pageLocation && showGoBackBtn &&  (
         <NavLinkStyled to='/'> <GoBackIcon /></NavLinkStyled>
       )}
     </NavigationWrapper>

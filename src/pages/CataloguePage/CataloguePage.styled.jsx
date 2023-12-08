@@ -5,7 +5,7 @@ export const LoadMoreBtn = styled.button`
    font-size: 16px;
    font-weight: 500;
    line-height: 24px;
-   padding: 13px 8px;
+   padding: 8px;
    border: transparent;
    border-radius: 12px;
    background-color: var(--blue);

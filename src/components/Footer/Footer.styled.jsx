@@ -93,5 +93,5 @@ export const FooterContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 15px;
 `

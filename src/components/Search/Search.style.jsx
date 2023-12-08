@@ -21,9 +21,19 @@ export const InputsWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: column; */
+  
   justify-content: center;
   align-items: flex-end;
   gap: 18px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 1440px) {
+    
+  }
 `;
 
 export const InputBlock = styled.div`
@@ -80,6 +90,10 @@ export const ModelDropdown = styled.div`
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
+  @media (max-width: 768px) {
+    width: 182px;
+   
+  }
 `;
 
 export const ModelList = styled.ul`
@@ -117,15 +131,17 @@ export const Label = styled.label`
   `
 
 export const ModelInput = styled.input`
+  padding: 10px;
   justify-content: center;
   align-items: center;
+  width: 228px;
   gap: 32px;
   border-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
@@ -135,9 +151,12 @@ export const ModelInput = styled.input`
   }
   @media (min-width: 768px) {
     padding: 12px 12px 12px 18px;
+    width: 125px;
+    /* font-size: 16px; */
   }
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
+    font-size: 18px;
   }
 `;
 
@@ -201,6 +220,13 @@ export const PriceDropdown = styled.div`
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
+  @media (max-width: 768px) {
+    width: 182px;
+   
+  }
+  /* @media (min-width: 1440px) {
+   
+  } */
 `;
 
 export const PriceList = styled.ul`
@@ -228,8 +254,8 @@ export const PriceListItem = styled.li`
 
 export const PriceInput = styled.input`
   display: flex;
-  width: 125px;
-  padding: 10px 10px 10px 18px;
+  width: 228px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -238,7 +264,7 @@ export const PriceInput = styled.input`
   border: none;
   outline: none;
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
@@ -248,6 +274,8 @@ export const PriceInput = styled.input`
   }
   @media (min-width: 768px) {
     padding: 12px 12px 12px 18px;
+    width: 125px;
+    font-size: 18px;
   }
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
@@ -267,8 +295,8 @@ export const MileageInputWrapper = styled.div`
 export const MileageInputLeft = styled.input`
   /* position: relative; */
   display: flex;
-  width: 100px;
-  padding: 10px 10px 10px 14px;
+  /* width: 100px; */
+  padding: 10px 10px 10px 50px;
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -279,27 +307,30 @@ export const MileageInputLeft = styled.input`
   outline: none;
   color: #000;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  /* &::placeholder {
-    color: #5c5d5e;
-  } */
+  @media (max-width: 767px) {
+    width: 81px;
+  }
+ 
   @media (min-width: 768px) {
     width: 130px;
     padding: 12px 12px 12px 63px;
+    font-size: 18px;
   }
   @media (min-width: 1440px) {
     width: 160px;
     padding: 14px 14px 14px 63px;
+   
   }
 `;
 
 export const MileageInputRight = styled.input`
   display: flex;
-  width: 100px;
+  /* width: 100px; */
   padding: 10px 10px 10px 14px;
   justify-content: center;
   align-items: center;
@@ -312,38 +343,59 @@ export const MileageInputRight = styled.input`
   outline: none;
   color: #000;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  /* &::placeholder {
-    color: #5c5d5e;
-  } */
+  @media (max-width: 767px) {
+    width: 81px;
+  }
   @media (min-width: 768px) {
     width: 130px;
-    padding: 12px 12px 12px 42px;
+    padding: 12px 12px 12px 40px;
+    font-size: 18px;
   }
   @media (min-width: 1440px) {
     width: 160px;
     padding: 14px 14px 14px 42px;
+    
   }
 `;
 
 export const MileageFirstText = styled.p`
 position: absolute;
 /* top: 12px; */
-left: 18px;
+  left: 10px;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  color: var(--dropdawn);  
+  color: var(--dropdawn); 
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    left: 17px;
+  }
+  @media (min-width: 1440px) {
+
+  } 
 
 `
 export const MileageSecondText = styled(MileageFirstText)`
 position: absolute;
-left: 255px; 
+
+@media (max-width: 767px) {
+  left: 153px; 
+  }
+  
+  @media (min-width: 768px) {
+    left: 220px; 
+   
+  }
+  @media (min-width: 1440px) {
+    left: 255px; 
+  }
 `
 
 //-----Other elements

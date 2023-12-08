@@ -14,9 +14,7 @@ import { Footer } from "../../components/Footer/Footer.jsx";
 
 
 const MainPage = ({adverts}) => {
-  // const adverts = useSelector(selectAdvertList);
-   console.log('Main page', adverts);
-
+ 
     useEffect(() => {
         gsap.fromTo(".textWrapper", { 
           x: -200,

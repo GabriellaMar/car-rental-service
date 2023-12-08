@@ -5,6 +5,7 @@ import {  useState } from "react";
 import { AdvertList } from "./FavoritesPage.styled";
 import { NoFaviriteCars } from "../../components/NoFavorite/NoFavorite";
 import { FovoritePageWrapper } from "../FavoritesPage/FavoritesPage.styled";
+import { Footer } from "../../components/Footer/Footer";
 
 
 const FavoritesPage = () => {
@@ -21,6 +22,7 @@ const FavoritesPage = () => {
                     ))}
                 </AdvertList>) : (<NoFaviriteCars />)}
             </Container>
+            <Footer />
         </FovoritePageWrapper>
     )
 }

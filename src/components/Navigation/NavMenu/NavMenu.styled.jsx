@@ -10,7 +10,7 @@ export const NavMenuWrapper = styled.div`
   right: 0;
   padding: 45px 12px;
   width: 200px;
-  height: 300px;
+  height: 330px;
   background: #25252feb;
   z-index: 10;
   border-radius: 4px;
