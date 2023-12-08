@@ -1,4 +1,4 @@
-import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./index-b7f62e29.js";import{C as O}from"./CatalogueCard-47b5a75d.js";const Q=o.ul`
+import{s as i,j as e,G as E,u as R,a as U,r,b as q,Q as f,C as G}from"./index-f69e0c91.js";import{C as O}from"./CatalogueCard-fae3c4f3.js";import{F as Q}from"./Footer-7f7403a7.js";const Z=i.ul`
    display: flex;
    flex-wrap: wrap;
    column-gap: 30px;
@@ -6,7 +6,7 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
    padding : 20px;
    justify-content: center;
    
-`,Z=({adverts:n})=>e.jsx(Q,{children:n.length>0&&n.map(p=>e.jsx(O,{advert:p},p.id))});function H(n){return E({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function J(n){return E({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const K=o.section`
+`,H=({adverts:n})=>e.jsx(Z,{children:n.length>0&&n.map(p=>e.jsx(O,{advert:p},p.id))});function J(n){return E({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"6 9 12 15 18 9"}}]})(n)}function K(n){return E({tag:"svg",attr:{viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"},child:[{tag:"polyline",attr:{points:"18 15 12 9 6 15"}}]})(n)}const X=i.section`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -18,19 +18,29 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   @media (min-width: 1440px) {
     padding: 50px 0px 80px;
   }
-`,X=o.div`
+`,Y=i.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: column; */
+  
   justify-content: center;
   align-items: flex-end;
   gap: 18px;
-`,M=o.div`
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (min-width: 1440px) {
+    
+  }
+`,M=i.div`
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`,Y=o.button`
+`,_=i.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -39,7 +49,7 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   border: none;
   cursor: pointer;
   outline: none;
-`,_=o.div`
+`,ee=i.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -75,7 +85,11 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,ee=o.ul`
+  @media (max-width: 768px) {
+    width: 182px;
+   
+  }
+`,te=i.ul`
 
   display: flex;
   flex-direction: column;
@@ -83,7 +97,7 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,te=o.li`
+`,ie=i.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -95,7 +109,7 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   &:hover {
     color: var(--blue);
   }
-`,v=o.label`
+`,v=i.label`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -103,16 +117,18 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   /* color: #fff; */
   color:  #6e6e6e ;
   margin-bottom: 8px;
-  `,oe=o.input`
+  `,ne=i.input`
+  padding: 10px;
   justify-content: center;
   align-items: center;
+  width: 228px;
   gap: 32px;
   border-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
@@ -122,21 +138,24 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   }
   @media (min-width: 768px) {
     padding: 12px 12px 12px 18px;
+    width: 125px;
+    /* font-size: 16px; */
   }
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
+    font-size: 18px;
   }
-`,I=o(H)`
+`,F=i(J)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,F=o(J)`
+`,I=i(K)`
   width: 20px;
   height: 20px;
   margin: 0;
   color: #121417;
-`,ne=o.button`
+`,oe=i.button`
   position: absolute;
   padding: 0;
   right: 14px;
@@ -145,7 +164,7 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   border: none;
   cursor: pointer;
   outline: none;
-`,re=o.div`
+`,re=i.div`
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -178,14 +197,21 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   ::-webkit-scrollbar-track {
     background: rgba(243, 240, 240, 0.996);
   }
-`,ie=o.ul`
+  @media (max-width: 768px) {
+    width: 182px;
+   
+  }
+  /* @media (min-width: 1440px) {
+   
+  } */
+`,ae=i.ul`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
   width: 120px;
   margin-right: auto;
-`,ae=o.li`
+`,pe=i.li`
   font-family: 'Manrope', sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -197,10 +223,10 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   &:hover {
     color: var(--blue);
   }
-`,pe=o.input`
+`,se=i.input`
   display: flex;
-  width: 125px;
-  padding: 10px 10px 10px 18px;
+  width: 228px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -209,7 +235,7 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   border: none;
   outline: none;
   color: #000;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
@@ -219,21 +245,23 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   }
   @media (min-width: 768px) {
     padding: 12px 12px 12px 18px;
+    width: 125px;
+    font-size: 18px;
   }
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
   }
-`,se=o.div`
+`,le=i.div`
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-`,le=o.input`
+`,de=i.input`
   /* position: relative; */
   display: flex;
-  width: 100px;
-  padding: 10px 10px 10px 14px;
+  /* width: 100px; */
+  padding: 10px 10px 10px 50px;
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -244,25 +272,28 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   outline: none;
   color: #000;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  /* &::placeholder {
-    color: #5c5d5e;
-  } */
+  @media (max-width: 767px) {
+    width: 81px;
+  }
+ 
   @media (min-width: 768px) {
     width: 130px;
     padding: 12px 12px 12px 63px;
+    font-size: 18px;
   }
   @media (min-width: 1440px) {
     width: 160px;
     padding: 14px 14px 14px 63px;
+   
   }
-`,de=o.input`
+`,xe=i.input`
   display: flex;
-  width: 100px;
+  /* width: 100px; */
   padding: 10px 10px 10px 14px;
   justify-content: center;
   align-items: center;
@@ -275,36 +306,57 @@ import{s as o,j as e,G as E,u as R,a as U,r as i,b as q,Q as m,C as G}from"./ind
   outline: none;
   color: #000;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
 
-  /* &::placeholder {
-    color: #5c5d5e;
-  } */
+  @media (max-width: 767px) {
+    width: 81px;
+  }
   @media (min-width: 768px) {
     width: 130px;
-    padding: 12px 12px 12px 42px;
+    padding: 12px 12px 12px 40px;
+    font-size: 18px;
   }
   @media (min-width: 1440px) {
     width: 160px;
     padding: 14px 14px 14px 42px;
+    
   }
-`,T=o.p`
+`,T=i.p`
 position: absolute;
 /* top: 12px; */
-left: 18px;
+  left: 10px;
   font-family: 'Manrope', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  color: var(--dropdawn);  
+  color: var(--dropdawn); 
 
-`,xe=o(T)`
+  @media (min-width: 768px) {
+    font-size: 18px;
+    left: 17px;
+  }
+  @media (min-width: 1440px) {
+
+  } 
+
+`,ce=i(T)`
 position: absolute;
-left: 255px; 
-`,B=o.button`
+
+@media (max-width: 767px) {
+  left: 153px; 
+  }
+  
+  @media (min-width: 768px) {
+    left: 220px; 
+   
+  }
+  @media (min-width: 1440px) {
+    left: 255px; 
+  }
+`,B=i.button`
   padding: 10px 20px;
   color: #fff;
   font-family: 'Manrope', sans-serif;
@@ -327,12 +379,12 @@ left: 255px;
   @media (min-width: 1440px) {
     padding: 13px 44px;
   }
-`,ce=({adverts:n,updateFilteredAdverts:p})=>{const s=R(t=>t.filter.filter),h=U(),[a,c]=i.useState(!1),[l,b]=i.useState(""),[f,D]=i.useState([]),[d,j]=i.useState(""),[g,S]=i.useState(""),[u,L]=i.useState(""),z=i.useCallback(()=>{const t=n.map(x=>x.make),r=[...new Set(t)];D(r)},[n]);i.useEffect(()=>{z()},[z]),i.useEffect(()=>{h(q({model:l,price:d,startMileage:g,endMileage:u}))},[l,d,g,u,h]);const y=30,C=500,N=10,P=[];for(let t=y;t<=C;t+=N)P.push(t);const W=f.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,r)=>t.localeCompare(r)),A=async()=>{if(s.model!==""&&!/^[a-zA-Z\s]+$/i.test(s.model)){m.error("Car brand should contain only EN letters !");return}const t=n.filter(r=>{if(l&&s.model&&!r.make.toLowerCase().includes(s.model.toLowerCase()))return!1;if(d&&!isNaN(d)&&parseFloat(r.price)===parseFloat(s.price)){if(Number(d)<y)return m.warn(`Price cannot be less than ${y}!`),!1;if(Number(d)>C)return m.warn(`Price cannot be greater than ${C}!`),!1}if(g!==""&&u!==""){const x=Number(g),$=Number(u);if(x>=$)return m.warn("Start mileage should be less than end mileage!"),!1}if(g<1e3||u>7e3){m.error("Mileage should be in the range of 1000 to 7000!");return}return!0});p(t),c(!1)},w=t=>{c(a===t?null:t)},V=()=>{b(""),j(""),S(""),L(""),p(n)},k=t=>{switch(t.target.name){case"model":b(t.target.value);break;case"price":j(t.target.value);break;case"endMileage":L(t.target.value);break;case"startMileage":S(t.target.value);break;default:return}};return e.jsx(K,{children:e.jsxs(X,{children:[e.jsxs(M,{children:[e.jsx(v,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(oe,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:k,onClick:()=>w("model")}),e.jsx(Y,{onClick:()=>w("model"),type:"button",children:a==="model"?e.jsx(F,{}):e.jsx(I,{})}),a==="model"&&e.jsx(_,{children:e.jsx(ee,{children:W.map((t,r)=>e.jsx(te,{onClick:x=>{x.stopPropagation(),b(t),c(!1)},children:t},r))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(pe,{id:"priceTitle",name:"price",placeholder:"To $",value:d,onChange:k,onClick:()=>w("price")}),e.jsx(ne,{type:"button",onClick:()=>w("price"),children:a==="price"?e.jsx(F,{}):e.jsx(I,{})}),a==="price"&&e.jsx(re,{children:e.jsx(ie,{children:P.map((t,r)=>e.jsx(ae,{onClick:x=>{x.stopPropagation(),j(t),c(!1)},children:t},r))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(se,{children:[e.jsx(T,{children:"from"}),e.jsx(le,{id:"mileageTitle",name:"startMileage",value:g,onChange:k}),e.jsx(xe,{children:"to"}),e.jsx(de,{type:"number",name:"endMileage",value:u,onChange:k})]})]}),e.jsx(B,{type:"button",onClick:A,children:"Search"}),e.jsx(B,{type:"button",onClick:V,children:"Reset"})]})})},ge=o.button`
+`,he=({adverts:n,updateFilteredAdverts:p})=>{const s=R(t=>t.filter.filter),u=U(),[a,c]=r.useState(!1),[l,m]=r.useState(""),[b,D]=r.useState([]),[d,j]=r.useState(""),[h,z]=r.useState(""),[g,S]=r.useState(""),L=r.useCallback(()=>{const t=n.map(x=>x.make),o=[...new Set(t)];D(o)},[n]);r.useEffect(()=>{L()},[L]),r.useEffect(()=>{u(q({model:l,price:d,startMileage:h,endMileage:g}))},[l,d,h,g,u]);const y=30,C=500,N=10,P=[];for(let t=y;t<=C;t+=N)P.push(t);const W=b.filter(t=>t.toLowerCase().includes(l.toLowerCase())).sort((t,o)=>t.localeCompare(o)),A=async()=>{if(s.model!==""&&!/^[a-zA-Z\s]+$/i.test(s.model)){f.error("Car brand should contain only EN letters !");return}const t=n.filter(o=>{if(l&&s.model&&!o.make.toLowerCase().includes(s.model.toLowerCase()))return!1;if(d&&!isNaN(d)&&parseFloat(o.price)===parseFloat(s.price)){if(Number(d)<y)return f.warn(`Price cannot be less than ${y}!`),!1;if(Number(d)>C)return f.warn(`Price cannot be greater than ${C}!`),!1}if(h!==""&&g!==""){const x=Number(h),$=Number(g);if(x>=$)return f.warn("Start mileage should be less than end mileage!"),!1}if(h<1e3||g>7e3){f.error("Mileage should be in the range of 1000 to 7000!");return}return!0});p(t),c(!1)},w=t=>{c(a===t?null:t)},V=()=>{m(""),j(""),z(""),S(""),p(n)},k=t=>{switch(t.target.name){case"model":m(t.target.value);break;case"price":j(t.target.value);break;case"endMileage":S(t.target.value);break;case"startMileage":z(t.target.value);break;default:return}};return e.jsx(X,{children:e.jsxs(Y,{children:[e.jsxs(M,{children:[e.jsx(v,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ne,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:l,onChange:k,onClick:()=>w("model")}),e.jsx(_,{onClick:()=>w("model"),type:"button",children:a==="model"?e.jsx(I,{}):e.jsx(F,{})}),a==="model"&&e.jsx(ee,{children:e.jsx(te,{children:W.map((t,o)=>e.jsx(ie,{onClick:x=>{x.stopPropagation(),m(t),c(!1)},children:t},o))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(se,{id:"priceTitle",name:"price",placeholder:"To $",value:d,onChange:k,onClick:()=>w("price")}),e.jsx(oe,{type:"button",onClick:()=>w("price"),children:a==="price"?e.jsx(I,{}):e.jsx(F,{})}),a==="price"&&e.jsx(re,{children:e.jsx(ae,{children:P.map((t,o)=>e.jsx(pe,{onClick:x=>{x.stopPropagation(),j(t),c(!1)},children:t},o))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(le,{children:[e.jsx(T,{children:"from"}),e.jsx(de,{id:"mileageTitle",name:"startMileage",value:h,onChange:k}),e.jsx(ce,{children:"to"}),e.jsx(xe,{type:"number",name:"endMileage",value:g,onChange:k})]})]}),e.jsx(B,{type:"button",onClick:A,children:"Search"}),e.jsx(B,{type:"button",onClick:V,children:"Reset"})]})})},ge=i.button`
    width: 200px; 
    font-size: 16px;
    font-weight: 500;
    line-height: 24px;
-   padding: 13px 8px;
+   padding: 8px;
    border: transparent;
    border-radius: 12px;
    background-color: var(--blue);
@@ -347,10 +399,10 @@ left: 255px;
 &:focus {
    background-color: var(--hover-blue)
 }
-`,ue=o.div`
+`,ue=i.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 
-`,fe=({adverts:n,currentPage:p,setCurrentPage:s})=>{const[h,a]=i.useState([]),c=12;i.useEffect(()=>{a(f=>[...f,...n])},[n]);const l=()=>{s(p+1)},b=f=>{a(f)};return e.jsx(G,{children:e.jsxs(ue,{children:[e.jsx(ce,{adverts:n,updateFilteredAdverts:b}),e.jsx(Z,{adverts:h.length>0?h:n}),n.length>=c&&e.jsx(ge,{onClick:l,children:"Load more"})]})})};export{fe as default};
+`,we=({adverts:n,currentPage:p,setCurrentPage:s})=>{const[u,a]=r.useState([]),c=12;r.useEffect(()=>{a(b=>[...b,...n])},[n]);const l=()=>{s(p+1)},m=b=>{a(b)};return e.jsxs(e.Fragment,{children:[e.jsx(G,{children:e.jsxs(ue,{children:[e.jsx(he,{adverts:n,updateFilteredAdverts:m}),e.jsx(H,{adverts:u.length>0?u:n}),n.length>=c&&e.jsx(ge,{onClick:l,children:"Load more"})]})}),e.jsx(Q,{})]})};export{we as default};
