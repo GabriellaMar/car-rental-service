@@ -4,8 +4,13 @@ import { FaArrowLeft } from 'react-icons/fa';
 
 export const NavigationList = styled.ul`
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 40px;
+
+    @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `
 export const NavigationItem = styled.li`
  
@@ -64,14 +69,17 @@ export const GoBackIcon = styled(FaArrowLeft)`
   }
 `;
 export const NavigationWrapper = styled.nav`
+position: relative;
 display: flex;
 flex-direction: row;
 align-items: center;
 gap: 40px;
+border: 1px solid red;
 `
 
 export const NavBtn = styled.button`
   background: transparent;
   border: none;
   margin-left: auto;
+  cursor: pointer;
 `

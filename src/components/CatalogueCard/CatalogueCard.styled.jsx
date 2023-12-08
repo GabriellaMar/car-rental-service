@@ -19,14 +19,12 @@ export const CarInfoList = styled.ul`
     font-size: 12px;
     line-height: calc(18/12);
     display: flex;
-    /* gap: 4px; */
     align-items: center;
-    /* color: rgba(18, 20, 23, 0.5); */
 `
 
 export const CarInfoItem = styled.li`
 
-  color: var(--text-black);
+  color: var(--text-color);
   /* color: rgba(229, 225, 225, 0.5); */
   border-right: 1px solid rgba(18, 20, 23, 0.2);
   padding-right: 3px;
@@ -70,8 +68,6 @@ export const CarModelTittle = styled.h3`
    font-weight: 500;
    line-height: calc(24/16);
    color: rgb(18, 20, 23);
-   /* color: rgba(243, 240, 240, 0.996); */
-  
 
    span {
       color:  var(--blue);

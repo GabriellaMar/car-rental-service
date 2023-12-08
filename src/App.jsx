@@ -29,8 +29,6 @@ function App() {
   const adverts = useSelector(selectAdvertList);
 
 
-  console.log("Advert", adverts);
-
   return (
     <>
       <Routes>

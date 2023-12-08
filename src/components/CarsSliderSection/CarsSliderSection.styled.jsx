@@ -19,8 +19,8 @@ export const SliderSection = styled.section`
 `
 export const SliderWrapper = styled.div`
  /* position: relative;  */
-  width: 330px;
-  height: 325px;
+  width: 320px;
+  height: 255px;
   /* height: 752px; */
   overflow: hidden;
    /* margin: 0 auto;  */
@@ -84,7 +84,7 @@ export const SliderTittle = styled.h2`
 `;
 export const SliderText =styled.p`
   max-width: 300px;
-  height: 118px;
+  height: 100px;
   font-weight: 500;
   font-size: 15px;
   color: var(--text-color);
@@ -147,7 +147,7 @@ export const SliderSectionTittle = styled(ServicesTittle)`
   margin-bottom: 65px;
 
    @media (min-width: 768px) {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   font-size: 22px;
   } 
 

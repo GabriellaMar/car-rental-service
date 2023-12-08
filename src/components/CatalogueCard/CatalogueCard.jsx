@@ -37,7 +37,7 @@ export const CatalogueCard = ({ advert }) => {
         rentalPrice,
         rentalCompany,
         address,
-        mileage} = advert;
+        mileage } = advert;
 
     const [showModal, setShowModal] = useState(false);
     const favoriteCars = useSelector(selectFavorites);
@@ -52,15 +52,13 @@ export const CatalogueCard = ({ advert }) => {
     const country = location[location.length - 1];
     const city = location[(location.length - 1) - 1];
 
-   
+
 
 
 
     const toggleModal = () => {
-
         setShowModal(!showModal);
-        if (showModal) { document.body.style.overflow = 'hidden' }
-        else { document.body.style.overflow = 'auto' }
+        document.body.style.overflow = showModal ? 'auto' : 'hidden';
     };
 
 
@@ -87,8 +85,8 @@ export const CatalogueCard = ({ advert }) => {
                 </StyledBtn>
             </ImageWrapper>
             <CarInfoWrapper>
-                    <CarModelTittle>{make} <span>{model}</span>, {year}
-                    </CarModelTittle>
+                <CarModelTittle>{make} <span>{model}</span>, {year}
+                </CarModelTittle>
                 <p>{rentalPrice}</p>
             </CarInfoWrapper>
             <InfoTextWrapper>
@@ -97,17 +95,16 @@ export const CatalogueCard = ({ advert }) => {
                     <CarInfoItem>{country} </CarInfoItem>
                     <CarInfoItem>{rentalCompany}  </CarInfoItem>
                     <CarInfoItem>{type}</CarInfoItem>
-                    {/* <li>Premium</li> */}
                 </CarInfoList>
                 <CarInfoList>
-                   
+
                     <CarInfoItem>{model} </CarInfoItem>
                     <CarInfoItem>{mileage}</CarInfoItem>
                     <CarInfoItem>{functionalities[0]}</CarInfoItem>
                 </CarInfoList>
             </InfoTextWrapper>
             <CardButton type='button' onClick={toggleModal}>Learn more</CardButton>
-                {showModal && <Modal closeModal={toggleModal} data={advert} country={country} city={city} />}
+            {showModal && <Modal closeModal={toggleModal} data={advert} country={country} city={city} />}
         </CardWrapper>
     )
 }

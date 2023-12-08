@@ -24,6 +24,7 @@ export const ModalContent = styled.div`
   /* height: 90vh; */
 
   background-color: var(--white);
+  background:  rgb(212, 212, 213) ;
   border-radius: 24px;
   /* border: 1px solid rgba(220, 227, 229, 0.8); */
   box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);

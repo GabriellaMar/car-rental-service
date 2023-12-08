@@ -31,7 +31,7 @@ export const CarModalList = styled.ul`
  `
 
  export const CarModalItem = styled.li`
-    color: var(--text-black);
+    color: var(--text-color);
  `
 
  export const CarInfoTittle = styled.h3`
@@ -71,6 +71,6 @@ export const CarModalList = styled.ul`
     font-size: 12px;
     line-height: calc(18/12);
     margin-bottom: 4px;
-    color: var(--text-black);
+    color: var(--text-color);
  `
  
