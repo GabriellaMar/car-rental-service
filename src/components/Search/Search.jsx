@@ -29,6 +29,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from '../../redux/slice/filterSlice';
 
 
+
 export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
 
     const filter = useSelector(state => state.filter.filter);
@@ -53,13 +54,13 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
         getUniqueModels();
     }, [getUniqueModels]);
 
-
+   
     useEffect(() => {
         dispatch(setFilter({ model, price, startMileage, endMileage }));
     }, [model, price, startMileage, endMileage, dispatch])
 
     
-
+// console.log('DATA:', adverts)
 
     const minPrice = 30;
     const maxPrice = 500;
@@ -69,12 +70,16 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
     for (let i = minPrice; i <= maxPrice; i += step) {
         priceOptions.push(i);
     }
+  
+
+   
     const sortCars = cars.filter((car) =>
         car.toLowerCase().includes(model.toLowerCase())).sort((a, b) => a.localeCompare(b))
 
 
 
     const handleSearch = async () => {
+      
         if (filter.model !== '') {
             const isBrandValid = /^[a-zA-Z\s]+$/i.test(filter.model);
             if (!isBrandValid) {
@@ -88,8 +93,8 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
             if (model && filter.model && !advert.make.toLowerCase().includes(filter.model.toLowerCase())) {
                 return false;
             }
-
-            if (price && !isNaN(price) && parseFloat(advert.price) === parseFloat(filter.price)) {
+          
+            if (price !== '') {
                 if (Number(price) < minPrice) {
                     toast.warn(`Price cannot be less than ${minPrice}!`);
                     return false;
@@ -97,25 +102,43 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
                     toast.warn(`Price cannot be greater than ${maxPrice}!`);
                     return false;
                 }
+                 if (Number(advert.rentalPrice.substr(1)) > Number(price)) {
+                        return false;
+                    
+                }
+             
             }
 
             if (startMileage !== '' && endMileage !== '') {
                 const numberStartMileage = Number(startMileage);
                 const numberEndMileage = Number(endMileage);
+
+                if (Number(advert.mileage) > Number(endMileage)) {
+                    return false;
+            }
+
+            if (Number(advert.mileage) < Number(startMileage)) {
+                return false;
+        }
                 if (numberStartMileage >= numberEndMileage) {
                     toast.warn('Start mileage should be less than end mileage!');
                     return false;
                 }
-            }
-            if (startMileage < 1000 || endMileage > 7000) {
+                 if (startMileage < 1000 || endMileage > 7000) {
                 toast.error('Mileage should be in the range of 1000 to 7000!');
                 return;
             }
+            }
+           
 
             return true;
         });
-
-        updateFilteredAdverts(filteredCars);
+        if (filteredCars.length === 0) {
+          
+            toast.warn('No car found with the specified parameters!');
+            return;
+        }
+         updateFilteredAdverts(filteredCars);
         setIsDropdownOpen(false);
     };
 
@@ -152,11 +175,7 @@ export const SearchSection = ({ adverts, updateFilteredAdverts }) => {
             default:
                 return;
         }
-        // if (!isDropdownOpen) {
-        //     setIsDropdownOpen(true);
-        // }
     }
-
 
     return (
         <FilterContainer >

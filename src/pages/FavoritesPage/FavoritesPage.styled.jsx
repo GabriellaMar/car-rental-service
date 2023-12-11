@@ -10,7 +10,7 @@ export const AdvertList = styled.ul`
    
   `
 export const FovoritePageWrapper = styled.div`
-  /* height: 100vh; */
+    height: 100vh;  
   margin: 0 auto;
   /* background: linear-gradient(
     -60deg,

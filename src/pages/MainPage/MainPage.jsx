@@ -4,11 +4,8 @@ import { Container } from "../../components/Container/Container.jsx";
 import { Services } from "../../components/Services/Services.jsx";
 import { Hero, HeroRentalBtn, HeroSubtittle, HeroText, HeroTittle, TextWrapper } from "./MainPage.styled.jsx";
 import { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { fetchAdvertThunk } from "../../redux/operation.js";
-//  import { selectAdvertList } from "../../redux/selectors.js";
 import { Footer } from "../../components/Footer/Footer.jsx";
-// import { useSelector } from "react-redux";
+
 
 
 

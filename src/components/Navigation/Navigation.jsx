@@ -23,6 +23,7 @@ export const Navigation = () => {
     };
 
     const showGoBackBtn = isMediumScreens || (!isMediumScreens && showNavMenu );
+    
 
   return (
     <NavigationWrapper>
@@ -38,7 +39,7 @@ export const Navigation = () => {
         </NavigationList>
         ) :
         (showNavMenu ? (<NavMenu closeNavMenu ={toggleNavMenu} />) : (<NavBtn type='button'>
-            <RxHamburgerMenu color="#d4d2d2" size={25} onClick={toggleNavMenu}/>
+            <RxHamburgerMenu color="#d4d2d2" size={25} onClick={toggleNavMenu} />
           </NavBtn>)
         )
       }

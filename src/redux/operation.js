@@ -10,6 +10,7 @@ export const fetchAdvertThunk = createAsyncThunk('advert/fetchAllAdvert',
             const url = new URL(`${BASE_URL}/advert`);
             url.searchParams.append('page', page);
             url.searchParams.append('limit', limit);
+            
 
             const response = await axios.get(url.href);
             const adverts = response.data;
@@ -20,5 +21,9 @@ export const fetchAdvertThunk = createAsyncThunk('advert/fetchAllAdvert',
         }
     }
 );
+
+
+
+
 
 

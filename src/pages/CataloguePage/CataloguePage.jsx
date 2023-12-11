@@ -16,17 +16,10 @@ import { Footer } from "../../components/Footer/Footer.jsx";
 
 const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
 
-    // const adverts = useSelector(selectAdvertList);
-
-    // const dispatch = useDispatch();
     const [loadedCards, setloadedCards] = useState([]);
-    // const [currentPage, setCurrentPage] = useState(1);
+    
     const cardsPerPage = 12;
 
-    // useEffect(() => {
-    //     dispatch(fetchAdvertThunk({page: currentPage, limit: cardsPerPage}));
-        
-    // }, [dispatch, currentPage]);
 
   
     useEffect(() => {

@@ -8,11 +8,17 @@ export const SliderSection = styled.section`
     /* display: flex;
     flex-direction: row;
     justify-content: center; */
-    background: linear-gradient(
+    /* background: linear-gradient(
     -125deg,
     rgb(158, 159, 170) 47%,
     rgb(207, 207, 208) 98%,
     rgb(218, 218, 220) 130%
+  ); */
+  background: linear-gradient(
+    -125deg,
+    rgb(166, 167, 179) 47%,
+    rgb(180, 180, 182) 98%,
+    rgb(199, 199, 200) 130%
   );
      
     
@@ -61,7 +67,10 @@ export const SliderTittle = styled.h2`
   z-index: 100;
   border-radius: 10px;
   background-color: #eceaea94; 
-  background-color: #f8414192; 
+  background-color: #d1070792; 
+  /* background-color: #980d0d; */
+
+ 
   /* margin-bottom: 35px; */
   text-align: center;
 

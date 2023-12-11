@@ -91,7 +91,7 @@ export const ModelDropdown = styled.div`
     background: rgba(243, 240, 240, 0.996);
   }
   @media (max-width: 768px) {
-    width: 182px;
+    width: 240px;
    
   }
 `;
@@ -134,7 +134,7 @@ export const ModelInput = styled.input`
   padding: 10px;
   justify-content: center;
   align-items: center;
-  width: 228px;
+  width: 250px;
   gap: 32px;
   border-radius: 10px;
   background: rgba(248, 246, 246, 0.996);
@@ -151,8 +151,6 @@ export const ModelInput = styled.input`
   }
   @media (min-width: 768px) {
     padding: 12px 12px 12px 18px;
-    width: 125px;
-    /* font-size: 16px; */
   }
   @media (min-width: 1440px) {
     padding: 14px 14px 14px 18px;
@@ -221,12 +219,8 @@ export const PriceDropdown = styled.div`
     background: rgba(243, 240, 240, 0.996);
   }
   @media (max-width: 768px) {
-    width: 182px;
-   
+    width: 240px;
   }
-  /* @media (min-width: 1440px) {
-   
-  } */
 `;
 
 export const PriceList = styled.ul`
@@ -254,7 +248,7 @@ export const PriceListItem = styled.li`
 
 export const PriceInput = styled.input`
   display: flex;
-  width: 228px;
+  width: 250px;
   padding: 10px;
   justify-content: center;
   align-items: center;
@@ -331,7 +325,7 @@ export const MileageInputLeft = styled.input`
 export const MileageInputRight = styled.input`
   display: flex;
   /* width: 100px; */
-  padding: 10px 10px 10px 14px;
+  padding: 10px 10px 10px 33px;
   justify-content: center;
   align-items: center;
   gap: 32px;

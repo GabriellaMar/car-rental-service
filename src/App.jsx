@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import Layout from './components/Layout/Layout';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import { ToastContainer } from 'react-toastify';
@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAdvertList } from './redux/selectors';
 import { fetchAdvertThunk } from './redux/operation';
+import { Loader } from './components/Loader/Loader';
 
 
 
@@ -21,16 +22,18 @@ function App() {
   const cardsPerPage = 12;
 
   useEffect(() => {
-    dispatch(fetchAdvertThunk({ page: currentPage, limit: cardsPerPage }));
+    dispatch(fetchAdvertThunk({ page: currentPage, limit: cardsPerPage  }));
 
   }, [dispatch, currentPage]);
+  
 
 
   const adverts = useSelector(selectAdvertList);
 
 
   return (
-    <>
+    
+     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage adverts={adverts} />} />
@@ -40,7 +43,8 @@ function App() {
         </Route>
       </Routes>
       <ToastContainer />
-    </>
+      </Suspense>
+  
   );
 }
 export default App;

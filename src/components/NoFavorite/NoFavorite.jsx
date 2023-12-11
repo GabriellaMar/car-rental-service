@@ -1,5 +1,6 @@
-import React from 'react';
+
 import cars from '../../images/CardCars/Nocar.png';
+
 import {
     StyledWrapper,
     NoFavoriteImg,
@@ -7,11 +8,12 @@ import {
 } from './NoFavorite.styled';
 
 
- export const NoFaviriteCars = () => {
+ export const NoFavoriteCars = () => {
   return (
+
     <StyledWrapper>
       <NoFavoriteText>No cars available</NoFavoriteText>
-      <NoFavoriteImg src={cars} alt="set Of Cars" />
+       <NoFavoriteImg src={cars} alt="set Of Cars" /> 
     </StyledWrapper>
   );
 };

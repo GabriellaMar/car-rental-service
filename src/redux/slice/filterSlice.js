@@ -4,12 +4,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     filter : '',
-    // filter: {
-    // model: '',
-    // price: '',
-    // startMileage: '',
-    // endMileage: '',
-    // }
   };
 
 export const filterSlice = createSlice({

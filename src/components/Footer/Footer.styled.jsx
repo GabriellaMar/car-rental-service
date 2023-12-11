@@ -3,6 +3,9 @@ import { BsFillTelephoneInboundFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 
 export const FooterWrapper = styled.footer`
+position: relative;
+bottom: 0;
+left: 0;
 display: flex;
 
     width: 100%;
@@ -91,7 +94,14 @@ width: 170px;
 `
 export const FooterContentWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    
     align-items: center;
     padding-top: 15px;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+ 
 `

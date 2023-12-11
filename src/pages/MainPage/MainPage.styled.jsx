@@ -80,8 +80,6 @@ border-color: transparent;
 border-radius: 12px;
 margin-top: 276px;
 margin-left: auto;
-/* margin-right: 20px; */
-/* margin-bottom: 15px; */
 transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
@@ -129,16 +127,7 @@ export const Hero = styled.div`
 
   @media (min-width: 1440px) {
     padding: 35px 0px;
-    /* background: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.1),
-      rgba(47, 48, 58, 0.5)
-    ),
-    url(${heroImg});
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 600px;
-  } */}
+  }
 `;
 export const TextWrapper = styled.div`
  text-align: center; 

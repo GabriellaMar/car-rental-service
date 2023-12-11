@@ -94,10 +94,10 @@ export const CatalogueCard = ({ advert }) => {
                     <CarInfoItem>{city} </CarInfoItem>
                     <CarInfoItem>{country} </CarInfoItem>
                     <CarInfoItem>{rentalCompany}  </CarInfoItem>
-                    <CarInfoItem>{type}</CarInfoItem>
+                    
                 </CarInfoList>
                 <CarInfoList>
-
+                <CarInfoItem>{type}</CarInfoItem>
                     <CarInfoItem>{model} </CarInfoItem>
                     <CarInfoItem>{mileage}</CarInfoItem>
                     <CarInfoItem>{functionalities[0]}</CarInfoItem>
