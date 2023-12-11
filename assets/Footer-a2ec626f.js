@@ -1,4 +1,7 @@
-import{G as o,s as i,M as a,j as t,C as r}from"./index-f69e0c91.js";function s(n){return o({tag:"svg",attr:{fill:"currentColor",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"}}]})(n)}const c=i.footer`
+import{G as o,s as i,M as a,j as t,C as r}from"./index-0cd8ca45.js";function s(n){return o({tag:"svg",attr:{fill:"currentColor",viewBox:"0 0 16 16"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0z"}}]})(n)}const l=i.footer`
+position: relative;
+bottom: 0;
+left: 0;
 display: flex;
 
     width: 100%;
@@ -10,7 +13,7 @@ display: flex;
     rgb(191, 195, 199) 98%,
     rgb(244, 246, 249) 130%
   );
-`,l=i.div`
+`,c=i.div`
   display: flex;
   padding: 30px, 35px; 
   justify-content: center;
@@ -77,7 +80,14 @@ width: 170px;
 
 `,f=i.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    
     align-items: center;
     padding-top: 15px;
-`,h="/car-rental-service/assets/footerBmw-d5818492.png",w=()=>t.jsx(c,{children:t.jsx(r,{children:t.jsxs(f,{children:[t.jsx(m,{src:h,alt:"bmw car"}),t.jsxs(l,{children:[t.jsx(p,{children:"Contact Us"}),t.jsxs(e,{children:[t.jsx(x,{})," +38 (095) 111 11 11"]}),t.jsxs(e,{children:[t.jsx(d,{})," rentCar@gmail.com"]})]})]})})});export{w as F};
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+ 
+`,h="/car-rental-service/assets/footerBmw-d5818492.png",w=()=>t.jsx(l,{children:t.jsx(r,{children:t.jsxs(f,{children:[t.jsx(m,{src:h,alt:"bmw car"}),t.jsxs(c,{children:[t.jsx(p,{children:"Contact Us"}),t.jsxs(e,{children:[t.jsx(x,{})," +38 (095) 111 11 11"]}),t.jsxs(e,{children:[t.jsx(d,{})," rentCar@gmail.com"]})]})]})})});export{w as F};
