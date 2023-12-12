@@ -9,8 +9,9 @@ export const NavMenu = ({ closeNavMenu}) => {
    
     const pageLocation = location.pathname === '/catalog' || location.pathname === '/favorites';
 
+
     return (
-        <NavMenuWrapper >
+        <NavMenuWrapper > 
             <IconWrapper onClick={closeNavMenu} size={20} >
             </IconWrapper>
             <NavigationList>

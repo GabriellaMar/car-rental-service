@@ -22,6 +22,8 @@ export const Navigation = () => {
       document.body.style.overflow = showNavMenu ? 'auto' : 'hidden';
     };
 
+ 
+
     const showGoBackBtn = isMediumScreens || (!isMediumScreens && showNavMenu );
     
 

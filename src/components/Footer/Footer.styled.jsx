@@ -3,13 +3,8 @@ import { BsFillTelephoneInboundFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 
 export const FooterWrapper = styled.footer`
-position: relative;
-bottom: 0;
-left: 0;
-display: flex;
-
+    display: flex;
     width: 100%;
-    height: 100%;
     background: linear-gradient(
     -125deg,
     rgb(21, 20, 25) 37%,
@@ -50,15 +45,15 @@ export const ContactText = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   font-weight: 400;
   color: #fff;
   opacity: 0.6;
   margin-bottom: 8px;
+  gap:5px;
 
   @media (min-width: 768px) {
-    font-size: 14px;
     margin-bottom: 10px;
   }
   @media (min-width: 1440px) {
@@ -83,6 +78,7 @@ export const EmailIcon = styled(MdEmail)`
 `;
 export const CarImg = styled.img`
 width: 170px;
+width: 210px;
 
 @media (min-width: 768px) {
   width: 220px;
