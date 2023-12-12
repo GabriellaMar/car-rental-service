@@ -1,4 +1,4 @@
-import{s as i,j as e,G as B,u as R,a as U,r,b as q,Q as h,C as G}from"./index-0cd8ca45.js";import{C as O}from"./CatalogueCard-4d7e3f6e.js";import{F as Q}from"./Footer-a2ec626f.js";const Z=i.ul`
+import{s as i,j as e,G as B,u as R,a as U,r,b as q,Q as h,C as G}from"./index-81fe8e87.js";import{C as O}from"./CatalogueCard-2b8fd159.js";import{F as Q}from"./Footer-88fa4a63.js";const Z=i.ul`
    display: flex;
    flex-wrap: wrap;
    column-gap: 30px;

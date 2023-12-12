@@ -1,24 +1,12 @@
-import{s as e,j as t,r as o,u as n,C as s}from"./index-0cd8ca45.js";import{C as p}from"./CatalogueCard-4d7e3f6e.js";import{F as d}from"./Footer-a2ec626f.js";const x=e.ul`
+import{s as i,j as t,u as a,C as n}from"./index-81fe8e87.js";import{C as o}from"./CatalogueCard-2b8fd159.js";import{F as s}from"./Footer-88fa4a63.js";const p=i.ul`
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
    column-gap: 20px;
    row-gap: 30px;
    padding : 20px;
-   
-  `,c=e.div`
-    height: 100vh;  
-  margin: 0 auto;
-  /* background: linear-gradient(
-    -60deg,
-    rgb(23, 26, 32) 49%,
-    rgb(187, 206, 226) 100%,
-    rgb(206, 206, 206) 70%
-  ); */
-`,g="/car-rental-service/assets/Nocar-bdb983a9.png",l=e.section`
+  `,x="/car-rental-service/assets/Nocar-bdb983a9.png",d=i.section`
   display: flex;
- 
- 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -28,7 +16,7 @@ import{s as e,j as t,r as o,u as n,C as s}from"./index-0cd8ca45.js";import{C as 
     rgb(181, 186, 196) 100%,
     rgb(205, 206, 206) 50%
   ); */
-`,h=e.img`
+`,c=i.img`
   display: block;
   width: 100%;
   height: 100%;
@@ -43,7 +31,7 @@ import{s as e,j as t,r as o,u as n,C as s}from"./index-0cd8ca45.js";import{C as 
     width: 100%;
     height: 100%;
   }
-`,m=e.p`
+`,g=i.p`
   background-color: transparent;
   border: none;
   padding: 28px;
@@ -70,4 +58,4 @@ import{s as e,j as t,r as o,u as n,C as s}from"./index-0cd8ca45.js";import{C as 
     font-size: 38px;
     margin-top: 100px;
   }
-`,f=()=>t.jsxs(l,{children:[t.jsx(m,{children:"No cars available"}),t.jsx(h,{src:g,alt:"set Of Cars"})]}),w=()=>{const[a,b]=o.useState(!0),i=n(r=>r.favorite.favorite);return t.jsxs(t.Fragment,{children:[t.jsx(c,{children:t.jsx(s,{children:i.length>0?t.jsx(x,{children:a&&i.map(r=>t.jsx(p,{advert:r},r.id))}):t.jsx(f,{})})}),t.jsx(d,{})]})};export{w as default};
+`,l=()=>t.jsxs(d,{children:[t.jsx(g,{children:"No cars available"}),t.jsx(c,{src:x,alt:"set Of Cars"})]}),j=()=>{const r=a(e=>e.favorite.favorite);return t.jsxs(t.Fragment,{children:[t.jsx(n,{children:r.length>0?t.jsx(p,{children:r.map(e=>t.jsx(o,{advert:e},e.id))}):t.jsx(l,{})}),t.jsx(s,{})]})};export{j as default};
