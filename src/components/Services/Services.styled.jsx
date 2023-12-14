@@ -9,7 +9,7 @@ background: linear-gradient(
     rgb(164, 164, 166) 98%,
     rgb(199, 199, 200) 130%
   );
-    
+  background:  rgba(164, 164, 166, 0.953) 98%;
   
 `
 
@@ -17,7 +17,7 @@ export const ServicesItem = styled.li`
   position: relative;
   width: 115px;
   height: 115px; 
-  background:  rgb(120, 122, 131) ;
+  background:  rgba(164, 164, 166, 0.976) 98%;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 10px;
   overflow: hidden;

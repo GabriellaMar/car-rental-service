@@ -4,32 +4,21 @@ import { ServicesTittle } from '../Services/Services.styled';
 export const SliderSection = styled.section`
     padding: 30px 20px;
     padding-bottom: 35px;
-    background:  rgba(205, 205, 205, 0.923) 37%;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: center; */
-    /* background: linear-gradient(
-    -125deg,
-    rgb(158, 159, 170) 47%,
-    rgb(207, 207, 208) 98%,
-    rgb(218, 218, 220) 130%
-  ); */
-  background: linear-gradient(
+    background:  rgba(194, 194, 194, 0.961) 37%;
+  
+  /* background: linear-gradient(
     -125deg,
     rgb(166, 167, 179) 47%,
     rgb(180, 180, 182) 98%,
     rgb(199, 199, 200) 130%
-  );
+  ); */
      
     
 `
 export const SliderWrapper = styled.div`
- /* position: relative;  */
   width: 320px;
   height: 255px;
-  /* height: 752px; */
   overflow: hidden;
-   /* margin: 0 auto;  */
   z-index: 5;
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -66,9 +55,8 @@ export const SliderTittle = styled.h2`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 100;
   border-radius: 10px;
-  background-color: #eceaea94; 
   background-color: #d1070792; 
-  /* background-color: #980d0d; */
+
 
  
   /* margin-bottom: 35px; */
