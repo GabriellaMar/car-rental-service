@@ -17,11 +17,8 @@ import { Footer } from "../../components/Footer/Footer.jsx";
 const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
 
     const [loadedCards, setloadedCards] = useState([]);
-    
     const cardsPerPage = 12;
 
-
-  
     useEffect(() => {
         setloadedCards(prevLoadedCards => [...prevLoadedCards, ...adverts]);
     }, [adverts]);
@@ -29,11 +26,8 @@ const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
 
     const loadMore = ()=>{
         setCurrentPage(currentPage + 1);
-       
     }
 
-
-    
     const updateFilteredAdverts = (filteredData) => {
         setloadedCards(filteredData);
     };

@@ -4,16 +4,7 @@ import { ServicesTittle } from '../Services/Services.styled';
 export const SliderSection = styled.section`
     padding: 30px 20px;
     padding-bottom: 35px;
-    background:  rgba(194, 194, 194, 0.961) 37%;
-  
-  /* background: linear-gradient(
-    -125deg,
-    rgb(166, 167, 179) 47%,
-    rgb(180, 180, 182) 98%,
-    rgb(199, 199, 200) 130%
-  ); */
-     
-    
+    background:  rgba(194, 194, 194, 0.961) 37%;  
 `
 export const SliderWrapper = styled.div`
   width: 320px;
@@ -56,10 +47,6 @@ export const SliderTittle = styled.h2`
   z-index: 100;
   border-radius: 10px;
   background-color: #d1070792; 
-
-
- 
-  /* margin-bottom: 35px; */
   text-align: center;
 
   @media (min-width: 768px) {
@@ -88,7 +75,6 @@ export const SliderText =styled.p`
 
    @media (min-width: 768px) {
     max-width: 300px;
-    /* height: 125px; */
     font-size: 15px;
     
   } 
@@ -153,12 +139,3 @@ export const SliderSectionTittle = styled(ServicesTittle)`
   margin-bottom: 15px;
   } 
 `
-// export const Description = styled.p`
-//   position: absolute;
-//  top: 10px; 
-//  right: 20px;/* Змініть це значення за необхідності */
-//   color: white;
-//   background-color: #ffffff7b;
-//   padding: 10px;
-//   z-index: 100;
-// `;

@@ -1,4 +1,4 @@
-// import { NavLink } from "react-router-dom"
+
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Logo } from "../Logo/Logo.jsx"
 import { NavigationItem, NavigationWrapper, NavLinkStyled, NavigationList, GoBackIcon, NavBtn } from "./Navigation.styled"
@@ -23,10 +23,8 @@ export const Navigation = () => {
     };
 
 
-
     const showGoBackBtn = isMediumScreens || (!isMediumScreens && showNavMenu );
     
-
   return (
     <NavigationWrapper>
       <NavLinkStyled to='/'><Logo /></NavLinkStyled>

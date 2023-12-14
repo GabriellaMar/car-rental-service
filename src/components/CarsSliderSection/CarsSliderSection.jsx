@@ -1,12 +1,9 @@
-// import { useDispatch, useSelector } from "react-redux";
+
 import gsap from 'gsap';
 import { useCallback, useEffect, useState } from "react";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import { SliderSection, SliderWrapper, SlideImage, SliderTittle, SliderText, FlexWrapper, ArrowWrapper, SliderSectionTittle } from "./CarsSliderSection.styled"
 import { Container } from '../Container/Container';
-// import { selectAdvertList } from "../../redux/selectors";
-// import { fetchAdvertThunk } from "../../redux/operation";
-// import { useEffect } from "react";
 
 
 

@@ -4,12 +4,6 @@ export const StyledWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(
-    -60deg,
-    rgb(17, 20, 25) 29%,
-    rgb(181, 186, 196) 100%,
-    rgb(205, 206, 206) 50%
-  ); */
 `;
 
 export const NoFavoriteImg = styled.img`

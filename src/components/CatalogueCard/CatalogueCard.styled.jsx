@@ -9,7 +9,6 @@ export const CarInfoWrapper = styled.div`
 
 export const CardWrapper = styled.li`
     max-height: 426px;
-    /* margin: 0 auto; */
  `
 
 
@@ -25,7 +24,6 @@ export const CarInfoList = styled.ul`
 export const CarInfoItem = styled.li`
 
   color: var(--text-color);
-  /* color: rgba(229, 225, 225, 0.5); */
   border-right: 1px solid rgba(18, 20, 23, 0.2);
   padding-right: 3px;
   padding-left: 3px;

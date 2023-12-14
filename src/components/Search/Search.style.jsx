@@ -21,8 +21,6 @@ export const InputsWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
-  
   justify-content: center;
   align-items: flex-end;
   gap: 18px;
@@ -60,7 +58,6 @@ export const ModelDropdown = styled.div`
   flex-direction: column;
   top: 100%;
   width: 224px;
-  /* max-height: 272px; */
   height: 272px;
   overflow: auto;
   padding: 8px 8px 8px 18px;
@@ -73,23 +70,6 @@ export const ModelDropdown = styled.div`
   margin-top: 7px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 130px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(18, 20, 23, 0.05);
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(243, 240, 240, 0.996);
-  }
-
-  ::-webkit-scrollbar-track {
-    background: rgba(243, 240, 240, 0.996);
-  }
   @media (max-width: 768px) {
     width: 240px;
   }
@@ -129,7 +109,6 @@ export const Label = styled.label`
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  /* color: #fff; */
   color:  #6e6e6e ;
   margin-bottom: 8px;
   `
@@ -205,23 +184,6 @@ export const PriceDropdown = styled.div`
   box-shadow: 0px 4px 36px 0px rgba(0, 0, 0, 0.02);
   margin-top: 3px;
 
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 66px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(18, 20, 23, 0.05);
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(243, 240, 240, 0.996);
-  }
-
-  ::-webkit-scrollbar-track {
-    background: rgba(243, 240, 240, 0.996);
-  }
   @media (max-width: 768px) {
     width: 240px;
   }
@@ -295,9 +257,7 @@ export const MileageInputWrapper = styled.div`
 `;
 
 export const MileageInputLeft = styled.input`
-  /* position: relative; */
   display: flex;
-  /* width: 100px; */
   padding: 10px 10px 10px 50px;
   justify-content: center;
   align-items: center;
@@ -332,14 +292,12 @@ export const MileageInputLeft = styled.input`
 
 export const MileageInputRight = styled.input`
   display: flex;
-  /* width: 100px; */
   padding: 10px 10px 10px 33px;
   justify-content: center;
   align-items: center;
   gap: 32px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  /* background: #f7f7fb; */
   background: rgba(248, 246, 246, 0.996);
   border: none;
   outline: none;
@@ -367,7 +325,6 @@ export const MileageInputRight = styled.input`
 
 export const MileageFirstText = styled.p`
 position: absolute;
-/* top: 12px; */
   left: 10px;
   font-family: 'Manrope', sans-serif;
   font-size: 16px;

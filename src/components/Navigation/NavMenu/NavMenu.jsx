@@ -10,18 +10,11 @@ export const NavMenu = ({ closeNavMenu}) => {
    
     const pageLocation = location.pathname === '/catalog' || location.pathname === '/favorites';
 
-    // const handleBodyClick = (event) => {
-    //     console.log("Click, click")
-    //     if (event.currentTarget === event.target) {
-    //       closeNavMenu();
-    //     }
-    //   };
     const menuRef = useRef(null);
 
     useEffect(() => {
       const handleBodyClick = (event) => {
         if (menuRef.current && !menuRef.current.contains(event.target)) {
-          // Клік поза меню, закрити меню
           closeNavMenu();
         }
       };

@@ -20,8 +20,6 @@ export const ModalContent = styled.div`
   justify-content: center;
   align-items: center;
   max-width: 300px;
-  /* height: 85vh;  */
-
   background-color: var(--white);
   background:  rgb(212, 212, 213) ;
   border-radius: 24px;

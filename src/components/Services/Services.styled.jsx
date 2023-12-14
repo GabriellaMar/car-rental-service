@@ -76,7 +76,6 @@ export const ServicesItem = styled.li`
 `
 export const ServicesList = styled.ul`
 display: flex;
-/* flex-direction: column; */
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;

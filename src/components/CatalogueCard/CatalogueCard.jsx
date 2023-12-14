@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-
 import {
     CarImg,
     CarInfoList,
@@ -15,13 +14,10 @@ import {
     StyledBtn,
     InfoTextWrapper
 } from './CatalogueCard.styled'
-
 import { Modal } from '../Modal/Modal';
 import { useState } from 'react';
 import { selectFavorites } from '../../redux/selectors';
-
 import { addFavorite, deleteFavorite } from '../../redux/slice/favoriteSlice';
-
 
 
 export const CatalogueCard = ({ advert }) => {
@@ -45,14 +41,9 @@ export const CatalogueCard = ({ advert }) => {
 
     const dispatch = useDispatch();
 
-
-
     const location = address.split(' ');
     const country = location[location.length - 1];
     const city = location[(location.length - 1) - 1];
-
-
-
 
 
     const toggleModal = () => {
@@ -60,11 +51,8 @@ export const CatalogueCard = ({ advert }) => {
         document.body.style.overflow = showModal ? 'auto' : 'hidden';
     };
 
-
-
     const handleAddFavorites = () => {
         dispatch(addFavorite(advert))
-
     }
 
     const handleDeleteFavorites = () => {

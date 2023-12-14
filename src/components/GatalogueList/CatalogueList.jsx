@@ -1,7 +1,7 @@
 
 import { CatalogueCard } from "../CatalogueCard/CatalogueCard.jsx"
 import { AdvertList } from './CatalogueList.styled'
-// import { useState } from 'react';
+
 
 
 export const CatalogueList = ({ adverts }) => {
