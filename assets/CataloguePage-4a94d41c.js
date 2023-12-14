@@ -1,4 +1,4 @@
-import{s as i,j as e,G as B,u as R,a as U,r,b as q,Q as h,C as G}from"./index-81fe8e87.js";import{C as O}from"./CatalogueCard-2b8fd159.js";import{F as Q}from"./Footer-88fa4a63.js";const Z=i.ul`
+import{s as i,j as e,G as B,u as R,a as U,r,b as q,Q as g,C as G}from"./index-470b59db.js";import{C as O}from"./CatalogueCard-a6d38e16.js";import{F as Q}from"./Footer-5f2df21d.js";const Z=i.ul`
    display: flex;
    flex-wrap: wrap;
    column-gap: 30px;
@@ -87,8 +87,12 @@ import{s as i,j as e,G as B,u as R,a as U,r,b as q,Q as h,C as G}from"./index-81
   }
   @media (max-width: 768px) {
     width: 240px;
+  }
+  @media (min-width: 768px) {
+    width: 250px;
    
   }
+  
 `,te=i.ul`
 
   display: flex;
@@ -198,6 +202,10 @@ import{s as i,j as e,G as B,u as R,a as U,r,b as q,Q as h,C as G}from"./index-81
   @media (max-width: 768px) {
     width: 240px;
   }
+  @media (min-width: 768px) {
+    width: 125px;
+  }
+
 `,ae=i.ul`
   display: flex;
   flex-direction: column;
@@ -373,7 +381,7 @@ position: absolute;
   @media (min-width: 1440px) {
     padding: 13px 44px;
   }
-`,ue=({adverts:n,updateFilteredAdverts:p})=>{const u=R(t=>t.filter.filter),m=U(),[a,g]=r.useState(!1),[s,b]=r.useState(""),[f,T]=r.useState([]),[l,j]=r.useState(""),[d,z]=r.useState(""),[x,S]=r.useState(""),L=r.useCallback(()=>{const t=n.map(c=>c.make),o=[...new Set(t)];T(o)},[n]);r.useEffect(()=>{L()},[L]),r.useEffect(()=>{m(q({model:s,price:l,startMileage:d,endMileage:x}))},[s,l,d,x,m]);const y=30,C=500,D=10,P=[];for(let t=y;t<=C;t+=D)P.push(t);const W=f.filter(t=>t.toLowerCase().includes(s.toLowerCase())).sort((t,o)=>t.localeCompare(o)),A=async()=>{if(u.model!==""&&!/^[a-zA-Z\s]+$/i.test(u.model)){h.error("Car brand should contain only EN letters !");return}const t=n.filter(o=>{if(s&&u.model&&!o.make.toLowerCase().includes(u.model.toLowerCase()))return!1;if(l!==""){if(Number(l)<y)return h.warn(`Price cannot be less than ${y}!`),!1;if(Number(l)>C)return h.warn(`Price cannot be greater than ${C}!`),!1;if(Number(o.rentalPrice.substr(1))>Number(l))return!1}if(d!==""&&x!==""){const c=Number(d),$=Number(x);if(Number(o.mileage)>Number(x)||Number(o.mileage)<Number(d))return!1;if(c>=$)return h.warn("Start mileage should be less than end mileage!"),!1;if(d<1e3||x>7e3){h.error("Mileage should be in the range of 1000 to 7000!");return}}return!0});if(t.length===0){h.warn("No car found with the specified parameters!");return}p(t),g(!1)},w=t=>{g(a===t?null:t)},V=()=>{b(""),j(""),z(""),S(""),p(n)},k=t=>{switch(t.target.name){case"model":b(t.target.value);break;case"price":j(t.target.value);break;case"endMileage":S(t.target.value);break;case"startMileage":z(t.target.value);break;default:return}};return e.jsx(X,{children:e.jsxs(Y,{children:[e.jsxs(M,{children:[e.jsx(v,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ne,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:s,onChange:k,onClick:()=>w("model")}),e.jsx(_,{onClick:()=>w("model"),type:"button",children:a==="model"?e.jsx(N,{}):e.jsx(I,{})}),a==="model"&&e.jsx(ee,{children:e.jsx(te,{children:W.map((t,o)=>e.jsx(ie,{onClick:c=>{c.stopPropagation(),b(t),g(!1)},children:t},o))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(se,{id:"priceTitle",name:"price",placeholder:"To $",value:l,onChange:k,onClick:()=>w("price")}),e.jsx(oe,{type:"button",onClick:()=>w("price"),children:a==="price"?e.jsx(N,{}):e.jsx(I,{})}),a==="price"&&e.jsx(re,{children:e.jsx(ae,{children:P.map((t,o)=>e.jsx(pe,{onClick:c=>{c.stopPropagation(),j(t),g(!1)},children:t},o))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(le,{children:[e.jsx(E,{children:"from"}),e.jsx(de,{id:"mileageTitle",name:"startMileage",value:d,onChange:k}),e.jsx(ce,{children:"to"}),e.jsx(xe,{type:"number",name:"endMileage",value:x,onChange:k})]})]}),e.jsx(F,{type:"button",onClick:A,children:"Search"}),e.jsx(F,{type:"button",onClick:V,children:"Reset"})]})})},ge=i.button`
+`,he=({adverts:n,updateFilteredAdverts:p})=>{const h=R(t=>t.filter.filter),m=U(),[a,u]=r.useState(!1),[s,b]=r.useState(""),[f,T]=r.useState([]),[l,j]=r.useState(""),[d,z]=r.useState(""),[x,S]=r.useState(""),L=r.useCallback(()=>{const t=n.map(c=>c.make),o=[...new Set(t)];T(o)},[n]);r.useEffect(()=>{L()},[L]),r.useEffect(()=>{m(q({model:s,price:l,startMileage:d,endMileage:x}))},[s,l,d,x,m]);const y=30,C=500,D=10,P=[];for(let t=y;t<=C;t+=D)P.push(t);const W=f.filter(t=>t.toLowerCase().includes(s.toLowerCase())).sort((t,o)=>t.localeCompare(o)),A=async()=>{if(h.model!==""&&!/^[a-zA-Z\s]+$/i.test(h.model)){g.error("Car brand should contain only EN letters !");return}const t=n.filter(o=>{if(s&&h.model&&!o.make.toLowerCase().includes(h.model.toLowerCase()))return!1;if(l!==""){if(Number(l)<y)return g.warn(`Price cannot be less than ${y}!`),!1;if(Number(l)>C)return g.warn(`Price cannot be greater than ${C}!`),!1;if(Number(o.rentalPrice.substr(1))>Number(l))return!1}if(d!==""&&x!==""){const c=Number(d),$=Number(x);if(Number(o.mileage)>Number(x)||Number(o.mileage)<Number(d))return!1;if(c>=$)return g.warn("Start mileage should be less than end mileage!"),!1;if(d<1e3||x>7e3){g.error("Mileage should be in the range of 1000 to 7000!");return}}return!0});if(t.length===0){g.warn("No car found with the specified parameters!");return}p(t),u(!1)},w=t=>{u(a===t?null:t)},V=()=>{b(""),j(""),z(""),S(""),p(n)},k=t=>{switch(t.target.name){case"model":b(t.target.value);break;case"price":j(t.target.value);break;case"endMileage":S(t.target.value);break;case"startMileage":z(t.target.value);break;default:return}};return e.jsx(X,{children:e.jsxs(Y,{children:[e.jsxs(M,{children:[e.jsx(v,{htmlFor:"modelTitle",children:"Car brand"}),e.jsx(ne,{id:"modelTitle",name:"model",placeholder:"Enter the text",value:s,onChange:k,onClick:()=>w("model")}),e.jsx(_,{onClick:()=>w("model"),type:"button",children:a==="model"?e.jsx(N,{}):e.jsx(I,{})}),a==="model"&&e.jsx(ee,{children:e.jsx(te,{children:W.map((t,o)=>e.jsx(ie,{onClick:c=>{c.stopPropagation(),b(t),u(!1)},children:t},o))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"priceTitle",children:"Price/ 1 hour "}),e.jsx(se,{id:"priceTitle",name:"price",placeholder:"To $",value:l,onChange:k,onClick:()=>w("price")}),e.jsx(oe,{type:"button",onClick:()=>w("price"),children:a==="price"?e.jsx(N,{}):e.jsx(I,{})}),a==="price"&&e.jsx(re,{children:e.jsx(ae,{children:P.map((t,o)=>e.jsx(pe,{onClick:c=>{c.stopPropagation(),j(t),u(!1)},children:t},o))})})]}),e.jsxs(M,{children:[e.jsx(v,{htmlFor:"mileageTitle",children:"Сar mileage / km "}),e.jsxs(le,{children:[e.jsx(E,{children:"from"}),e.jsx(de,{id:"mileageTitle",name:"startMileage",value:d,onChange:k}),e.jsx(ce,{children:"to"}),e.jsx(xe,{type:"number",name:"endMileage",value:x,onChange:k})]})]}),e.jsx(F,{type:"button",onClick:A,children:"Search"}),e.jsx(F,{type:"button",onClick:V,children:"Reset"})]})})},ue=i.button`
    width: 200px; 
    font-size: 16px;
    font-weight: 500;
@@ -393,10 +401,10 @@ position: absolute;
 &:focus {
    background-color: var(--hover-blue)
 }
-`,he=i.div`
+`,ge=i.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
 
-`,we=({adverts:n,currentPage:p,setCurrentPage:u})=>{const[m,a]=r.useState([]),g=12;r.useEffect(()=>{a(f=>[...f,...n])},[n]);const s=()=>{u(p+1)},b=f=>{a(f)};return e.jsxs(e.Fragment,{children:[e.jsx(G,{children:e.jsxs(he,{children:[e.jsx(ue,{adverts:n,updateFilteredAdverts:b}),e.jsx(H,{adverts:m.length>0?m:n}),n.length>=g&&e.jsx(ge,{onClick:s,children:"Load more"})]})}),e.jsx(Q,{})]})};export{we as default};
+`,we=({adverts:n,currentPage:p,setCurrentPage:h})=>{const[m,a]=r.useState([]),u=12;r.useEffect(()=>{a(f=>[...f,...n])},[n]);const s=()=>{h(p+1)},b=f=>{a(f)};return e.jsxs(e.Fragment,{children:[e.jsx(G,{children:e.jsxs(ge,{children:[e.jsx(he,{adverts:n,updateFilteredAdverts:b}),e.jsx(H,{adverts:m.length>0?m:n}),n.length>=u&&e.jsx(ue,{onClick:s,children:"Load more"})]})}),e.jsx(Q,{})]})};export{we as default};
