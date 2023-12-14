@@ -22,7 +22,7 @@ export const CarsSliderSection = ({ adverts }) => {
       opacity: 0,
     }, 
     { 
-      duration: 2,
+      duration: 3,
       x: 0,
       opacity: 1,
     } )
@@ -31,7 +31,7 @@ export const CarsSliderSection = ({ adverts }) => {
       opacity: 0,
     }, 
     { 
-      duration: 2,
+      duration: 3,
       y: 0,
       opacity: 1,
     }, "-=1.3");
@@ -85,10 +85,10 @@ export const CarsSliderSection = ({ adverts }) => {
       <SliderSectionTittle>Our Cars</SliderSectionTittle>
          <FlexWrapper> 
         {adverts.map((advert, index) => (index === activeSlide &&
-          <>
+           <div key={advert.id}>
             <SliderTittle className='car-tittle'>{advert.make} {advert.model}</SliderTittle>
             <SliderText className= 'description' >{advert.description}</SliderText>
-          </>
+            </div>
         ))
         }
         <SliderWrapper onMouseEnter={pause} onMouseLeave={resume}>

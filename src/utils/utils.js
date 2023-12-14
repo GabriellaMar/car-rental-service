@@ -3,3 +3,5 @@ export   const handleBackdropClick = (event) => {
       closeModal();
     }
   };
+
+  document.body.addEventListener('click', handleBackdropClick)

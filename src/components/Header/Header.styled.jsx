@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-  position: relative;
+  /* position: relative; */
   padding: 10px 0px;
   background: linear-gradient(
     -125deg,

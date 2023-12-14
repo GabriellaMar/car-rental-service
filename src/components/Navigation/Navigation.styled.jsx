@@ -7,10 +7,10 @@ export const NavigationList = styled.ul`
     flex-direction: column;
     align-items: center;
     gap: 40px;
-
+    margin-right: auto;
     @media (min-width: 768px) {
     flex-direction: row;
-    margin-right: auto;
+    
   }
 `
 export const NavigationItem = styled.li`
@@ -49,31 +49,36 @@ export const NavLinkStyled = styled(NavLink)`
 export const GoBackIcon = styled(FaArrowLeft)`
   width: 13px;
   height: 13px;
-  /* margin-left: 10px; */
   padding: 10px;
   color:  #e7e4e4f4;
   border-radius: 50%;
   border: 2px solid #e7e4e4f4;
   display: flex;
-  justify-content: flex-end;
+ 
+  /* justify-content: flex-end; */
   align-items: center;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: rgb(188 221 244) 0px 1px 8px;
   
 
   @media (min-width: 768px) {
-    margin: 0;
+   
+    margin-right: 0;
   }
   @media (min-width: 1440px) {
     margin: 0;
+    top: 16px;
+    right: 100px;
   }
+
 `;
 export const NavigationWrapper = styled.nav`
 position: relative;
 display: flex;
 flex-direction: row;
 align-items: center;
-gap: 40px;
+gap: 10px;
+
 `
 
 export const NavBtn = styled.button`

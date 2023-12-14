@@ -25,7 +25,6 @@ import { addFavorite, deleteFavorite } from '../../redux/slice/favoriteSlice';
 
 
 export const CatalogueCard = ({ advert }) => {
-    // console.log('ДАНІ В КАРДЦІ:', advert)
     const {
         id,
         year,
@@ -64,15 +63,12 @@ export const CatalogueCard = ({ advert }) => {
 
 
     const handleAddFavorites = () => {
-        console.log("ADDDDDD!!!")
         dispatch(addFavorite(advert))
 
     }
 
     const handleDeleteFavorites = () => {
-        console.log(id);
-        console.log('Delete!!!');
-
+     
         dispatch(deleteFavorite(id));
     }
 

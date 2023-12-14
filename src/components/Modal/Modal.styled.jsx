@@ -19,39 +19,36 @@ export const ModalContent = styled.div`
   position: fixed;
   justify-content: center;
   align-items: center;
-  max-width: 541px;
-  max-height: 752px; 
-  /* height: 90vh; */
+  max-width: 300px;
+  /* height: 85vh;  */
 
   background-color: var(--white);
   background:  rgb(212, 212, 213) ;
   border-radius: 24px;
-  /* border: 1px solid rgba(220, 227, 229, 0.8); */
   box-shadow: 0px 4px 57px 0px rgba(17, 17, 17, 0.05);
   margin: 0 20px;
-   padding: 40px; 
+  padding: 40px 15px; 
   overflow: hidden;
   overflow-y: scroll;
+  
 
-
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     max-width: 441px;
+    max-height: 752px;  
  
   }
 
   @media screen and (min-width: 1440px) {
     max-width: 541px;
-  max-height: 752px; 
+    height: 85vh; 
     margin: 0 auto;
-    /* padding: 32px; */
   }
 `;
 
 export const CloseModalBtn = styled(RxCross2)`
-  position: relative;
+  position: absolute;
   width: 24px;
   height: 24px;
-  top: 0px;
-  left: 520px;
-  margin-left: auto;
+  top: 10px;
+  right: 20px;
 `

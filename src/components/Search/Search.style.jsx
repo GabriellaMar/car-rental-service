@@ -92,8 +92,12 @@ export const ModelDropdown = styled.div`
   }
   @media (max-width: 768px) {
     width: 240px;
+  }
+  @media (min-width: 768px) {
+    width: 250px;
    
   }
+  
 `;
 
 export const ModelList = styled.ul`
@@ -221,6 +225,10 @@ export const PriceDropdown = styled.div`
   @media (max-width: 768px) {
     width: 240px;
   }
+  @media (min-width: 768px) {
+    width: 125px;
+  }
+
 `;
 
 export const PriceList = styled.ul`
