@@ -1,4 +1,4 @@
-import{G as Vi,s as V,r as bt,j as P,C as si}from"./index-40950660.js";import{F as Ur}from"./Footer-04776c82.js";function xt(u){if(u===void 0)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return u}function Ui(u,t){u.prototype=Object.create(t.prototype),u.prototype.constructor=u,u.__proto__=t}/*!
+import{G as Vi,s as V,r as bt,j as P,C as si}from"./index-1183f473.js";import{F as Ur}from"./Footer-35debc95.js";function xt(u){if(u===void 0)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return u}function Ui(u,t){u.prototype=Object.create(t.prototype),u.prototype.constructor=u,u.__proto__=t}/*!
  * GSAP 3.12.3
  * https://gsap.com
  *
@@ -87,7 +87,6 @@ background: linear-gradient(
   } 
 `,os=V.ul`
 display: flex;
-/* flex-direction: column; */
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
@@ -137,16 +136,7 @@ gap: 20px;
 `,us=V.section`
     padding: 30px 20px;
     padding-bottom: 35px;
-    background:  rgba(194, 194, 194, 0.961) 37%;
-  
-  /* background: linear-gradient(
-    -125deg,
-    rgb(166, 167, 179) 47%,
-    rgb(180, 180, 182) 98%,
-    rgb(199, 199, 200) 130%
-  ); */
-     
-    
+    background:  rgba(194, 194, 194, 0.961) 37%;  
 `,ls=V.div`
   width: 320px;
   height: 255px;
@@ -184,10 +174,6 @@ gap: 20px;
   z-index: 100;
   border-radius: 10px;
   background-color: #d1070792; 
-
-
- 
-  /* margin-bottom: 35px; */
   text-align: center;
 
   @media (min-width: 768px) {
@@ -215,7 +201,6 @@ gap: 20px;
 
    @media (min-width: 768px) {
     max-width: 300px;
-    /* height: 125px; */
     font-size: 15px;
     
   } 

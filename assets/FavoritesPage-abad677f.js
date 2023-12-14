@@ -1,4 +1,4 @@
-import{s as i,j as t,u as a,C as n}from"./index-40950660.js";import{C as o}from"./CatalogueCard-01b26879.js";import{F as s}from"./Footer-04776c82.js";const p=i.ul`
+import{s as i,j as t,u as a,C as o}from"./index-1183f473.js";import{C as n}from"./CatalogueCard-848970c4.js";import{F as s}from"./Footer-35debc95.js";const p=i.ul`
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -10,12 +10,6 @@ import{s as i,j as t,u as a,C as n}from"./index-40950660.js";import{C as o}from"
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(
-    -60deg,
-    rgb(17, 20, 25) 29%,
-    rgb(181, 186, 196) 100%,
-    rgb(205, 206, 206) 50%
-  ); */
 `,c=i.img`
   display: block;
   width: 100%;
@@ -31,7 +25,7 @@ import{s as i,j as t,u as a,C as n}from"./index-40950660.js";import{C as o}from"
     width: 100%;
     height: 100%;
   }
-`,g=i.p`
+`,l=i.p`
   background-color: transparent;
   border: none;
   padding: 28px;
@@ -58,4 +52,4 @@ import{s as i,j as t,u as a,C as n}from"./index-40950660.js";import{C as o}from"
     font-size: 38px;
     margin-top: 100px;
   }
-`,l=()=>t.jsxs(d,{children:[t.jsx(g,{children:"No cars available"}),t.jsx(c,{src:x,alt:"set Of Cars"})]}),j=()=>{const r=a(e=>e.favorite.favorite);return t.jsxs(t.Fragment,{children:[t.jsx(n,{children:r.length>0?t.jsx(p,{children:r.map(e=>t.jsx(o,{advert:e},e.id))}):t.jsx(l,{})}),t.jsx(s,{})]})};export{j as default};
+`,m=()=>t.jsxs(d,{children:[t.jsx(l,{children:"No cars available"}),t.jsx(c,{src:x,alt:"set Of Cars"})]}),j=()=>{const r=a(e=>e.favorite.favorite);return t.jsxs(t.Fragment,{children:[t.jsx(o,{children:r.length>0?t.jsx(p,{children:r.map(e=>t.jsx(n,{advert:e},e.id))}):t.jsx(m,{})}),t.jsx(s,{})]})};export{j as default};
