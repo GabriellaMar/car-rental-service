@@ -1,4 +1,4 @@
-import{s as i,j as t,u as a,C as o}from"./index-1183f473.js";import{C as n}from"./CatalogueCard-848970c4.js";import{F as s}from"./Footer-35debc95.js";const p=i.ul`
+import{s as i,j as t,u as a,C as o}from"./index-32cf2021.js";import{C as n}from"./CatalogueCard-1568b00c.js";import{F as s}from"./Footer-b7b89cdc.js";const p=i.ul`
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
