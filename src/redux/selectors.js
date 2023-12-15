@@ -10,3 +10,6 @@ export const selectAdvertLoading = state => state.advert.isLoading;
 export const selectAdvertError = state => state.advert.error;
 // Селектор для додавання фавориту
 export const selectFavorites = state=> state.favorite.favorite;
+// Селектор для фільтрування автомобілів
+export const selectFilterCars = state =>state.filter.filter
+

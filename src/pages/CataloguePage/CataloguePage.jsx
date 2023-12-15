@@ -1,20 +1,13 @@
-
-// import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-// import { fetchAdvertThunk } from "../../redux/operation.js";
-// import { Container } from '../../components/Container/Container.jsx';
-// import { selectAdvertList } from "../../redux/selectors.js";
 import { CatalogueList } from "../../components/GatalogueList/CatalogueList.jsx";
 import SearchSection from "../../components/Search/Search.jsx";
-
-import {StyledWrapper } from "../CataloguePage/CataloguePage.styled.jsx";
+import { StyledWrapper } from "../CataloguePage/CataloguePage.styled.jsx";
 import { LoadMoreBtn } from "./CataloguePage.styled.jsx";
 import { Container } from "../../components/Container/Container.jsx";
 import { Footer } from "../../components/Footer/Footer.jsx";
 
 
-
-const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
+const CatalogPage = ({ adverts, currentPage, setCurrentPage }) => {
 
     const [loadedCards, setloadedCards] = useState([]);
     const cardsPerPage = 12;
@@ -24,7 +17,7 @@ const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
     }, [adverts]);
 
 
-    const loadMore = ()=>{
+    const loadMore = () => {
         setCurrentPage(currentPage + 1);
     }
 
@@ -32,21 +25,21 @@ const CatalogPage = ({adverts, currentPage, setCurrentPage}) => {
         setloadedCards(filteredData);
     };
 
-
     return (
-            <>
+        <>
             <Container>
                 < StyledWrapper>
-                <SearchSection adverts={adverts} updateFilteredAdverts={updateFilteredAdverts} />
-                <CatalogueList adverts={loadedCards.length > 0 ? loadedCards : adverts} >
-                 </CatalogueList>
-                 {adverts.length>=cardsPerPage  && (
-                <LoadMoreBtn onClick={loadMore}>Load more</LoadMoreBtn>
-                )}
+                    <SearchSection adverts={adverts} updateFilteredAdverts={updateFilteredAdverts} />
+                    <CatalogueList adverts={loadedCards.length > 0 ? loadedCards : adverts} >
+                    </CatalogueList>
+                    {(adverts.length >= cardsPerPage && loadedCards.length >= adverts.length) && (
+                        <LoadMoreBtn onClick={loadMore}>Load more</LoadMoreBtn>
+                    )}
+
                 </StyledWrapper>
             </Container>
             <Footer />
-            </>
+        </>
     );
 }
 
